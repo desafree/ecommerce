@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction, createSelector } from "@reduxjs/toolkit";
 import { currentLocale } from "../types/currentLocale";
-import { RootState } from "../../store";
+import { RootState } from "../../store/index";
 
 const initialState: { currentLocale: currentLocale } = {
   currentLocale: "en",

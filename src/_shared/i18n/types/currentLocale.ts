@@ -1,1 +1,1 @@
-export type currentLocale = "en";
+export type currentLocale = "en" | "it";
