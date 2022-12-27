@@ -1,21 +1,36 @@
 import React from "react";
-import { initialization as initializeLanguages } from "./_shared/i18n/utils/initialization";
+import { initialization as initializeLanguages } from "./_shared";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./products/views/Home/Home";
-import { Layout } from "./_layout/components";
+import { Home, CategoryPage } from "./products";
+import { Layout } from "./_layout";
+import { useInitFetchProducts } from "./products";
 
 initializeLanguages();
 
 function App() {
+  const status = useInitFetchProducts();
+
   return (
     <BrowserRouter>
       <Routes>
         <Route
           path="/"
           element={
-            <Layout>
-              <Home />
-            </Layout>
+            status === "succeeded" ? (
+              <Layout>
+                <Home />
+              </Layout>
+            ) : null
+          }
+        />
+        <Route
+          path="/:category"
+          element={
+            status === "succeeded" ? (
+              <Layout>
+                <CategoryPage />
+              </Layout>
+            ) : null
           }
         />
       </Routes>

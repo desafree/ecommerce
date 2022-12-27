@@ -5,6 +5,7 @@ import {
   selectProductsStatus,
   selectProductsByCategory,
   selectProductsById,
+  selectProductsBySlug,
   reducer,
   actions,
 } from "./slice";
@@ -16,6 +17,7 @@ export {
   selectProductsStatus,
   selectProductsByCategory,
   selectProductsById,
+  selectProductsBySlug,
   reducer,
   actions,
 };
