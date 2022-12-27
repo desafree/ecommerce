@@ -3,10 +3,9 @@ import {
   createSelector,
   createSlice,
 } from "@reduxjs/toolkit";
-import { Product } from "../types/Product";
-import { RootState } from "../../_shared/store";
-import { getProducts } from "../apis/getProducts";
-import { Status } from "../../_shared/types/interfaces/Status";
+import { Product } from "../types";
+import { RootState, Status } from "../../_shared";
+import { getProducts } from "../apis";
 
 const initialState: { products: Product[]; status: Status } = {
   products: [],
@@ -16,11 +15,7 @@ const initialState: { products: Product[]; status: Status } = {
 const slice = createSlice({
   name: "products",
   initialState,
-  reducers: {
-    /*    initializeProducts(state, action: PayloadAction<Product[]>) {
-      state.products = action.payload;
-    },*/
-  },
+  reducers: {},
   extraReducers(builder) {
     builder
       .addCase(fetchProducts.pending, (state) => {

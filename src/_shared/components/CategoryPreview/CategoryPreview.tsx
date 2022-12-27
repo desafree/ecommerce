@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import { Category } from "../../../products";
 import { CategoryPreviewStyled } from "./CategoryPreview.styled";
-import { Typography } from "../Typography";
-import { Button } from "../index";
+import { Typography, Button } from "../index";
 
 interface Props {
   category: Category;

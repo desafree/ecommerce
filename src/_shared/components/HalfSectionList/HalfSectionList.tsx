@@ -3,7 +3,7 @@ import { Grid } from "../Grid";
 import { Typography } from "../Typography";
 import { List } from "@mui/material";
 import { ListItem } from "@mui/material";
-import { Box } from "@mui/material";
+import { Box } from "../Box";
 
 interface Props {
   title1: string;

@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import { Button as ButtonMUI } from "@mui/material";
-import { ButtonTypes } from "../types/types/ButtonTypes";
-import { defineStyleForButton } from "../utils/defineStyleForButton";
+import { ButtonTypes } from "../../types";
+import { defineStyleForButton } from "../../utils";
 
 interface Props {
   children: ReactNode;

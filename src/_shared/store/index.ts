@@ -1,5 +1,4 @@
-import store from "./store";
+import store, { RootState, AppDispatch } from "./store";
 import { reducers } from "./reducers";
-import { RootState } from "./store";
 
-export { store, reducers, type RootState };
+export { store, reducers, type RootState, type AppDispatch };

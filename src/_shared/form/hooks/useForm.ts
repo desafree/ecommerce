@@ -7,7 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup/dist/yup";
 import { NestedValue } from "react-hook-form/dist/types/form";
 import { BrowserNativeObject } from "react-hook-form/dist/types/utils";
 
-export type DeepPartial<T> = T extends BrowserNativeObject | NestedValue
+type DeepPartial<T> = T extends BrowserNativeObject | NestedValue
   ? T
   : {
       [K in keyof T]?: DeepPartial<T[K]>;

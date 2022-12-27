@@ -4,15 +4,18 @@ export const CategoryPreviewStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 350px;
+  width: 350px;
+  background: #f1f1f1;
+  position: relative;
 
   h6 {
-    margin-top: -15px;
+    padding-top: 116px;
   }
 
   .img-container {
-    width: 150px;
-
+    top: -100px;
+    width: 250px;
+    position: absolute;
     img {
       width: 100%;
     }

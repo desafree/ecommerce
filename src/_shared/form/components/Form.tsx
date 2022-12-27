@@ -1,6 +1,6 @@
 import React from "react";
-import { UseFormReturn } from "../hooks/useForm";
 import { FormProvider } from "react-hook-form";
+import { UseFormReturn } from "../hooks";
 
 type FormProps<T extends Record<string, any>> = {
   children: React.ReactNode;

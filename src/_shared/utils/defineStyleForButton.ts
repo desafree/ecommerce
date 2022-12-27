@@ -7,7 +7,11 @@ export const defineStyleForButton = (variant: ButtonTypes) => {
     gap: "13px",
     padding: "15px 30px",
     background:
-      variant === "orange" ? "#D87D4A" : variant === "black" ? "#FFF" : "#FFF",
+      variant === "orange"
+        ? "#D87D4A"
+        : variant === "black"
+        ? "#FFF"
+        : "transparent",
     borderRadius: 0,
     fontWeight: 700,
     fontSize: "13px",

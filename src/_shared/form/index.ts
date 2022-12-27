@@ -1,4 +1,4 @@
 import { Input, Select, Form } from "./components";
-import { useForm } from "./hooks/useForm";
+import { useForm, UseFormReturn } from "./hooks";
 
-export { Input, Select, Form, useForm };
+export { Input, Select, Form, useForm, type UseFormReturn };

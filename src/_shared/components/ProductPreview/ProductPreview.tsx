@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { ProductPreviewStyled } from "./ProductPreview.styled";
 import { Typography } from "../Typography";
-import { Button } from "../index";
+import { Button } from "../Button";
 
 interface Props {
   product: string;
