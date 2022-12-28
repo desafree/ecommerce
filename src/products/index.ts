@@ -8,6 +8,9 @@ import {
   Thumbnail3,
   CategoryHeader,
   HalfSectionProduct,
+  ProductDetail,
+  ImageContainer,
+  TextContainer,
 } from "./components";
 
 import {
@@ -25,10 +28,12 @@ import {
 import { Category, Product, Image, CartProduct } from "./types";
 
 import { Checkout, Category as CategoryPage, Detail, Home } from "./views";
+
 import {
   useInitFetchProducts,
   useSelectProductBySlug,
   useSelectProductByCategory,
+  useGoBack,
 } from "./hooks";
 
 export {
@@ -40,6 +45,9 @@ export {
   Thumbnail2,
   Thumbnail3,
   CategoryHeader,
+  ProductDetail,
+  ImageContainer,
+  TextContainer,
   HalfSectionProduct,
   fetchProducts,
   Checkout,
@@ -55,6 +63,7 @@ export {
   useInitFetchProducts,
   useSelectProductBySlug,
   useSelectProductByCategory,
+  useGoBack,
   reducer as productsReducer,
   actions,
   type Category,
