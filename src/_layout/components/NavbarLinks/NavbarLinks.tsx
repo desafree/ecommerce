@@ -6,16 +6,16 @@ export const NavbarLinks = () => {
   return (
     <NavbarLinksStyled>
       <li>
-        <Link to={"/"}>Home</Link>{" "}
+        <Link to="/">Home</Link>{" "}
       </li>
       <li>
-        <Link to={"/"}>Headphones</Link>{" "}
+        <Link to="/">Headphones</Link>{" "}
       </li>
       <li>
-        <Link to={"/"}>Speakers</Link>{" "}
+        <Link to="/">Speakers</Link>{" "}
       </li>
       <li>
-        <Link to={"/"}>Earphones</Link>{" "}
+        <Link to="/">Earphones</Link>{" "}
       </li>
     </NavbarLinksStyled>
   );

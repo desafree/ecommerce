@@ -7,18 +7,18 @@ import { HalfSectionImage } from "../../../_shared/components";
 import { useTranslate } from "../../../_shared/i18n";
 
 export const Home = () => {
-  const translation = useTranslate();
+  const translate = useTranslate();
 
   return (
     <>
       <Header></Header>
-      <Container maxWidth={"lg"}>
+      <Container maxWidth="lg">
         <Categories />
         <ProductsThumbnail />
         <HalfSectionImage
-          title={translation("info.title")}
-          text={translation("info.description")}
-          imgUrl={"/assets/shared/desktop/image-best-gear.jpg"}
+          title={translate("info.title")}
+          text={translate("info.description")}
+          imgUrl="/assets/shared/desktop/image-best-gear.jpg"
         ></HalfSectionImage>
       </Container>
     </>

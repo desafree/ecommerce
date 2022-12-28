@@ -13,16 +13,16 @@ interface Props {
 export const HalfSectionImage: FC<Props> = ({ title, text, imgUrl }) => {
   return (
     <Section>
-      <Grid container={true} alignItems={"center"}>
-        <Grid item={true} xs={12} md={6}>
+      <Grid container alignItems="center">
+        <Grid item xs={12} md={6}>
           <Box mr={5}>
             <Box mb={3}>
-              <Typography variant={"h3"}>{title}</Typography>
+              <Typography variant="h3">{title}</Typography>
             </Box>{" "}
-            <Typography variant={"body1"}>{text}</Typography>
+            <Typography variant="body1">{text}</Typography>
           </Box>
         </Grid>
-        <Grid item={true} xs={12} md={6}>
+        <Grid item xs={12} md={6}>
           <div className="container">
             <img src={imgUrl} alt="" />
           </div>

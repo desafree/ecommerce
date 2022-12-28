@@ -10,7 +10,7 @@ interface Props {
 export const CategoryHeader: FC<Props> = ({ category }) => {
   return (
     <CategoryHeaderStyled>
-      <Typography variant={"h2"}>{category}</Typography>
+      <Typography variant="h2">{category}</Typography>
     </CategoryHeaderStyled>
   );
 };

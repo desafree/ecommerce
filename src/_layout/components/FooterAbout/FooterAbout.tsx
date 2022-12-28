@@ -6,25 +6,25 @@ import { ReactComponent as Twitter } from "./icon-twitter.svg";
 import { ReactComponent as Instagram } from "./icon-instagram.svg";
 
 export const FooterAbout = () => {
-  const translation = useTranslate();
+  const translate = useTranslate();
 
   return (
     <FooterAboutStyled>
-      <p>{translation("footer.text")}</p>
+      <p>{translate("footer.text")}</p>
       <ul>
         <li>
           <a href="/">
-            <Facebook fill="white" className={"icon"} />
+            <Facebook fill="white" className="icon" />
           </a>
         </li>
         <li>
           <a href="/">
-            <Twitter fill="white" className={"icon"} />
+            <Twitter fill="white" className="icon" />
           </a>
         </li>
         <li>
           <a href="/">
-            <Instagram fill="white" className={"icon"} />
+            <Instagram fill="white" className="icon" />
           </a>
         </li>
       </ul>

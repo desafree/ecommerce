@@ -12,7 +12,7 @@ export const useInitFetchProducts = () => {
     if (status === "idle") {
       dispatch(fetchProducts());
     }
-  }, [status]);
+  }, [status, dispatch]);
 
   return status;
 };

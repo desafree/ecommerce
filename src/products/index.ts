@@ -25,7 +25,11 @@ import {
 import { Category, Product, Image, CartProduct } from "./types";
 
 import { Checkout, Category as CategoryPage, Detail, Home } from "./views";
-import { useInitFetchProducts } from "./hooks";
+import {
+  useInitFetchProducts,
+  useSelectProductBySlug,
+  useSelectProductByCategory,
+} from "./hooks";
 
 export {
   getProducts,
@@ -49,6 +53,8 @@ export {
   selectProductsById,
   selectProductsBySlug,
   useInitFetchProducts,
+  useSelectProductBySlug,
+  useSelectProductByCategory,
   reducer as productsReducer,
   actions,
   type Category,

@@ -31,12 +31,3 @@ export const Thumbnail1Styled = styled.div`
     }
   }
 `;
-
-/*<Thumbnail1Styled>
-    <Typography variant={"h2"}>ZX9 SPEAKER</Typography>
-    <Typography variant={"body1"}>
-        Upgrade to premium speakers that are phenomenally built to deliver truly
-        remarkable sound.
-    </Typography>
-    <Button variant={"black"}>see product</Button>
-</Thumbnail1Styled>*/

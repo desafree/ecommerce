@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import { HalfSectionProductStyled } from "./HalfSectionProduct.styled";
-import { selectProductsBySlug } from "../../slice";
-import { useSelector } from "react-redux";
-import { Grid, Typography, Button, Box } from "../../../_shared";
+import { Grid, Typography, Button, Box, useTranslate } from "../../../_shared";
+import { useSelectProductBySlug } from "../../hooks";
 
 interface Props {
   product: string;
@@ -10,43 +9,42 @@ interface Props {
 }
 
 export const HalfSectionProduct: FC<Props> = ({ product, direction }) => {
-  const productData = useSelector((state) =>
-    selectProductsBySlug(state, product)
-  );
+  const productData = useSelectProductBySlug(product)!;
+
+  const translate = useTranslate();
 
   return (
     <HalfSectionProductStyled>
       <Grid
-        container={true}
-        alignItems={"center"}
-        justifyContent={"center"}
+        container
+        alignItems="center"
+        justifyContent="center"
         direction={direction === "right" ? "row" : "row-reverse"}
       >
-        <Grid item={true} xs={12} md={6} className="img-container">
+        <Grid item xs={12} md={6} className="img-container">
           <Box
             mr={direction === "right" ? 5 : 0}
             ml={direction === "right" ? 0 : 5}
           >
-            <img
-              src={`/assets/product-${productData.slug}/desktop/image-product.jpg`}
-              alt={productData.name}
-            />
+            <img src={productData.image.desktop} alt={productData.name} />
           </Box>
         </Grid>
-        <Grid item={true} xs={12} md={6} className={"text"}>
+        <Grid item xs={12} md={6} className="text">
           {productData.new && (
             <Box mb={3}>
-              <Typography variant={"overline"}>new product</Typography>
+              <Typography variant="overline">
+                {translate("productAction.new")}
+              </Typography>
             </Box>
           )}
 
           <Box mb={3}>
-            <Typography variant={"h2"}>{productData.name}</Typography>
+            <Typography variant="h2">{productData.name}</Typography>
           </Box>
           <Box mb={3}>
-            <Typography variant={"body1"}>{productData.description}</Typography>
+            <Typography variant="body1">{productData.description}</Typography>
           </Box>
-          <Button variant={"orange"}>see product</Button>
+          <Button variant="orange">see product</Button>
         </Grid>
       </Grid>
     </HalfSectionProductStyled>

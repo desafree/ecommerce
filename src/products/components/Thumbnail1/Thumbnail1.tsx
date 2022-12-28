@@ -9,12 +9,12 @@ export const Thumbnail1 = () => {
         <img src="/assets/home/desktop/image-speaker-zx9.png" alt="" />
       </div>
       <div className="text">
-        <Typography variant={"h2"}>ZX9 SPEAKER</Typography>
-        <Typography variant={"body1"}>
+        <Typography variant="h2">ZX9 SPEAKER</Typography>
+        <Typography variant="body1">
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </Typography>
-        <Button variant={"black"}>see product</Button>
+        <Button variant="black">see product</Button>
       </div>
     </Thumbnail1Styled>
   );

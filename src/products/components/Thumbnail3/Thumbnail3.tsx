@@ -7,8 +7,8 @@ export const Thumbnail3 = () => {
     <Thumbnail3Styled>
       <div className="img-container"></div>
       <div className="text">
-        <Typography variant={"h3"}>YX1 EARPHONES</Typography>
-        <Button variant={"black"}>SEE PRODUCT</Button>
+        <Typography variant="h3">YX1 EARPHONES</Typography>
+        <Button variant="black">SEE PRODUCT</Button>
       </div>
     </Thumbnail3Styled>
   );
