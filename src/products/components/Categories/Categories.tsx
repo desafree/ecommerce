@@ -5,9 +5,9 @@ import { CategoryPreview } from "../../../_shared";
 export const Categories = () => {
   return (
     <CategoriesStyled>
-      <CategoryPreview category={"headphones"} />
-      <CategoryPreview category={"speakers"} />
-      <CategoryPreview category={"earphones"} />
+      <CategoryPreview category="headphones" />
+      <CategoryPreview category="speakers" />
+      <CategoryPreview category="earphones" />
     </CategoriesStyled>
   );
 };

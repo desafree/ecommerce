@@ -55,10 +55,17 @@ export const selectProductsByCategory = createSelector(
   }
 );
 
+export const selectProductsBySlug = createSelector(
+  [selectIProductsSlice, (state, slug) => slug],
+  (products, slug) => {
+    return products.products.find((product) => product.slug === slug);
+  }
+);
+
 export const selectProductsById = createSelector(
   [selectIProductsSlice, (state, id) => id],
   (products, id) => {
-    return products.products.filter((product) => product.id === Number(id));
+    return products.products.find((product) => product.id === Number(id));
   }
 );
 /*const items = useSelector(state => selectProductsByCategory(state, 'headphones'));*/

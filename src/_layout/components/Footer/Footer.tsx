@@ -5,14 +5,14 @@ import { FooterNavigation } from "../FooterNavigation";
 import { FooterAbout } from "../FooterAbout";
 
 export const Footer = () => {
-  const translation = useTranslate();
+  const translate = useTranslate();
 
   return (
     <FooterStyled>
-      <Container maxWidth={"lg"}>
+      <Container maxWidth="lg">
         <FooterNavigation></FooterNavigation>
         <FooterAbout></FooterAbout>
-        <p>{translation("footer.copyright")}</p>
+        <p>{translate("footer.copyright")}</p>
       </Container>
     </FooterStyled>
   );

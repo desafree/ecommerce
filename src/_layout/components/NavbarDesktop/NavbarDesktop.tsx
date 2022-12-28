@@ -7,8 +7,8 @@ import { Container } from "../../../_shared";
 export const NavbarDesktop = () => {
   return (
     <NavbarDesktopStyled>
-      <Container maxWidth={"lg"}>
-        <Link to="/" className={"logo"}>
+      <Container maxWidth="lg">
+        <Link to="/" className="logo">
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
         </Link>
         <NavbarLinks />

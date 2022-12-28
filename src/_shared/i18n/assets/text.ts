@@ -1,5 +1,9 @@
 export const text = {
   en: {
+    productAction: {
+      new: "new product",
+      see: "see product",
+    },
     navigation: {
       home: "home",
       headphones: "headphones",
@@ -31,6 +35,10 @@ export const text = {
     },
   },
   it: {
+    productAction: {
+      new: "nuovo prodotto",
+      see: "scopri di più",
+    },
     navigation: {
       home: "home",
       headphones: "cuffie",
