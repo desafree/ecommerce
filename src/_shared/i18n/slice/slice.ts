@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction, createSelector } from "@reduxjs/toolkit";
-import { currentLocale } from "../types/CurrentLocale";
+import { CurrentLocale } from "../types/CurrentLocale";
 import { RootState } from "../../store";
 
-const initialState: { currentLocale: currentLocale } = {
+const initialState: { currentLocale: CurrentLocale } = {
   currentLocale: "en",
 };
 
@@ -10,7 +10,7 @@ const slice = createSlice({
   name: "i18n",
   initialState,
   reducers: {
-    changeLanguage(state, action: PayloadAction<currentLocale>) {
+    changeLanguage(state, action: PayloadAction<CurrentLocale>) {
       state.currentLocale = action.payload;
     },
   },
