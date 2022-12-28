@@ -1,9 +1,10 @@
 import { Product } from "../types";
 
 export async function getProducts(): Promise<Product[]> {
-  const res = await fetch("http://localhost:3000/items");
+  const res = await fetch(process.env.REACT_APP_API_URL!);
+  console.log(process.env.REACT_APP_API_URL);
   if (!res.ok) {
-    throw new Error("Something went wtrong");
+    throw new Error("Something went wrong");
   }
 
   return res.json();
