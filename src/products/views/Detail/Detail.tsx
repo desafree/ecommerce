@@ -6,6 +6,7 @@ import { HalfSectionList } from "../../../_shared";
 import { useSelectProductBySlug } from "../../hooks";
 import { ProductImages } from "../../components";
 import { ProductsSuggestion } from "../../components";
+import { Categories } from "../../components";
 
 export const Detail = () => {
   const { id: productSlug } = useParams<string>();
@@ -30,6 +31,7 @@ export const Detail = () => {
         />
         <ProductImages imageList={galleryList} />
         <ProductsSuggestion suggestions={product!.others} />
+        <Categories></Categories>
       </Container>
     </>
   );
