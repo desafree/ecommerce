@@ -4,7 +4,7 @@ import { TextContainer } from "../TextContainer";
 import { Grid } from "../../../_shared";
 import { Product } from "../../types";
 import { ImageContainer } from "../ImageContainer";
-import { GoBack } from "../GoBack";
+import { Link } from "../../../_shared";
 
 interface Props {
   productData: Product;
@@ -13,7 +13,9 @@ interface Props {
 export const ProductDetail: FC<Props> = ({ productData }) => {
   return (
     <ProductDetailStyled>
-      <GoBack />
+      <Link variant="goback" to={"/"}>
+        Go back
+      </Link>
       <Grid container alignItems="center" justifyContent="center">
         <Grid item xs={12} md={6}>
           <ImageContainer

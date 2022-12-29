@@ -8,6 +8,7 @@ import {
   ProductPreview,
   Box,
   Container,
+  Link,
 } from "./components";
 import { Input, Select, Form, useForm, UseFormReturn } from "./form";
 import {
@@ -21,7 +22,7 @@ import {
 } from "./i18n";
 import { store, reducers, RootState, AppDispatch } from "./store";
 import { GlobalStyle, theme } from "./styles";
-import { Status, ButtonTypes } from "./types";
+import { Status, ButtonTypes, LinkTypes } from "./types";
 import { defineStyleForButton } from "./utils";
 
 export {
@@ -55,4 +56,5 @@ export {
   type Status,
   type ButtonTypes,
   defineStyleForButton,
+  Link,
 };

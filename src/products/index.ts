@@ -13,7 +13,6 @@ import {
   TextContainer,
   ProductImages,
   ProductsSuggestion,
-  GoBack,
   Quantity,
 } from "./components";
 
@@ -57,7 +56,6 @@ export {
   ProductImages,
   ProductsSuggestion,
   CategoryHeader,
-  GoBack,
   Quantity,
   ProductDetail,
   ImageContainer,

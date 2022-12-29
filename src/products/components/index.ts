@@ -11,7 +11,6 @@ import { ImageContainer } from "./ImageContainer";
 import { TextContainer } from "./TextContainer";
 import { ProductImages } from "./ProductImages";
 import { ProductsSuggestion } from "./ProductsSuggestion";
-import { GoBack } from "./GoBack";
 import { Quantity } from "./Quantity";
 
 export {
@@ -28,6 +27,5 @@ export {
   TextContainer,
   ProductImages,
   ProductsSuggestion,
-  GoBack,
   Quantity,
 };

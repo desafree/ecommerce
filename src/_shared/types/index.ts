@@ -1,4 +1,4 @@
 import { Status } from "./interfaces";
-import { ButtonTypes } from "./types";
+import { ButtonTypes, LinkTypes } from "./types";
 
-export { type Status, type ButtonTypes };
+export { type Status, type ButtonTypes, type LinkTypes };
