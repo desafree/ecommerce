@@ -9,6 +9,7 @@ import { HalfSectionProduct } from "./HalfSectionProduct";
 import { ProductDetail } from "./ProductDetail";
 import { ImageContainer } from "./ImageContainer";
 import { TextContainer } from "./TextContainer";
+import { ProductImages } from "./ProductImages";
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   ProductDetail,
   ImageContainer,
   TextContainer,
+  ProductImages,
 };

@@ -11,6 +11,7 @@ import {
   ProductDetail,
   ImageContainer,
   TextContainer,
+  ProductImages,
 } from "./components";
 
 import {
@@ -44,6 +45,7 @@ export {
   Thumbnail1,
   Thumbnail2,
   Thumbnail3,
+  ProductImages,
   CategoryHeader,
   ProductDetail,
   ImageContainer,
