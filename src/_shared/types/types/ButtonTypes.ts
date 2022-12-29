@@ -1,1 +1,1 @@
-export type ButtonTypes = "orange" | "black" | "transparent";
+export type ButtonTypes = "orange" | "black" | "transparent" | "text";

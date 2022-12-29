@@ -1,8 +1,12 @@
 import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { CartProduct } from "../../products/types";
 import { RootState } from "../../_shared/store";
+import { stat } from "fs";
 
-const initialState: CartProduct[] = [{ id: 1, qty: 10 }];
+const initialState: CartProduct[] = [
+  { id: 1, qty: 10 },
+  { id: 2, qty: 10 },
+];
 
 const slice = createSlice({
   name: "cart",
@@ -22,6 +26,19 @@ const slice = createSlice({
       }
     },
     removeFromCart(state, action: PayloadAction<{ id: number }>) {
+      const index = state.findIndex(
+        (cartProduct) => cartProduct.id === action.payload.id
+      );
+      if (index !== -1 && state[index].qty > 1) {
+        state[index].qty--;
+      } else if (state[index].qty === 1) {
+        return state.filter((product) => {
+          return product.id !== action.payload.id;
+        });
+        return;
+      }
+    },
+    removeItemFromCart(state, action: PayloadAction<{ id: number }>) {
       return state.filter((product) => {
         return product.id !== action.payload.id;
       });

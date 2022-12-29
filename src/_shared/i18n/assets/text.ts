@@ -1,5 +1,10 @@
 export const text = {
   en: {
+    cart: {
+      total: "total",
+      checkout: "checkout",
+    },
+
     productAction: {
       new: "new product",
       see: "see product",

@@ -9,6 +9,7 @@ import {
   Box,
   Container,
   Link,
+  PopUpWrapper,
 } from "./components";
 import { Input, Select, Form, useForm, UseFormReturn } from "./form";
 import {
@@ -37,6 +38,7 @@ export {
   Container,
   Input,
   Select,
+  PopUpWrapper,
   Form,
   useForm,
   type UseFormReturn,

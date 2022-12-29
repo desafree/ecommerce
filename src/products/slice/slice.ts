@@ -62,12 +62,20 @@ export const selectProductsBySlug = createSelector(
   }
 );
 
-export const selectProductsById = createSelector(
+export const selectProductById = createSelector(
   [selectIProductsSlice, (state, id) => id],
   (products, id) => {
     return products.products.find((product) => product.id === Number(id));
   }
 );
+
+export const selectProductsById = createSelector(
+  [selectIProductsSlice, (state, ids) => ids],
+  (products, ids) => {
+    return products.products.filter((product) => ids.includes(product.id));
+  }
+);
+
 /*const items = useSelector(state => selectProductsByCategory(state, 'headphones'));*/
 
 export const reducer = slice.reducer;

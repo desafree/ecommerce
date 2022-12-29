@@ -22,8 +22,9 @@ import {
   selectProducts,
   selectProductsStatus,
   selectProductsByCategory,
-  selectProductsById,
+  selectProductById,
   selectProductsBySlug,
+  selectProductsById,
   reducer,
   actions,
 } from "./slice";
@@ -70,6 +71,7 @@ export {
   selectProducts,
   selectProductsStatus,
   selectProductsByCategory,
+  selectProductById,
   selectProductsById,
   selectProductsBySlug,
   useInitFetchProducts,
