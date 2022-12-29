@@ -29,7 +29,11 @@ export const HalfSectionList: FC<Props> = ({ title1, text1, title2, list }) => {
         <List>
           {list.map((item) => {
             return (
-              <ListItem disableGutters={true} disablePadding={true}>
+              <ListItem
+                disableGutters={true}
+                disablePadding={true}
+                key={item.item}
+              >
                 <Typography variant="subtitle1">
                   {String(item.quantity) + "x"}
                 </Typography>

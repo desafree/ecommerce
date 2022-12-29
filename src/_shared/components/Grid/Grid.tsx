@@ -55,22 +55,32 @@ export const Grid: FC<Props> = ({
   alignItems = "stretch",
   className,
 }) => {
+  if (container) {
+    return (
+      <GridMUI
+        columnSpacing={columnSpacing}
+        container={container}
+        rowSpacing={rowSpacing}
+        spacing={spacing}
+        wrap={wrap}
+        direction={direction}
+        alignItems={alignItems}
+        justifyContent={justifyContent}
+        className={className}
+      >
+        {children}
+      </GridMUI>
+    );
+  }
+
   return (
     <GridMUI
-      columnSpacing={columnSpacing}
-      container={container}
       item={item}
-      rowSpacing={rowSpacing}
       xs={xs}
       sm={sm}
       md={md}
       lg={lg}
       xl={xl}
-      spacing={spacing}
-      wrap={wrap}
-      direction={direction}
-      alignItems={alignItems}
-      justifyContent={justifyContent}
       className={className}
     >
       {children}
