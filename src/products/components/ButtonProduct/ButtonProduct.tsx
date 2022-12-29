@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { ButtonProductStyled } from "./ButtonProduct.styled";
-import { Button } from "../../../_shared";
+import { Button, useTranslate } from "../../../_shared";
 
 export const ButtonProduct = () => {
+  const translate = useTranslate();
   const [qty, setQty] = useState(1);
 
   const handleCLickMinus = () => {
@@ -21,7 +22,7 @@ export const ButtonProduct = () => {
         <p>{qty}</p>
         <button onClick={handleClickPlus}>+</button>
       </div>
-      <Button variant={"orange"}>ADD TO CART</Button>
+      <Button variant="orange">{translate("productAction.add")}</Button>
     </ButtonProductStyled>
   );
 };

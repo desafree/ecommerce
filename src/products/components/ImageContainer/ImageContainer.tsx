@@ -3,16 +3,13 @@ import { ImageContainerStyled } from "./ImageContainer.styled";
 
 interface Props {
   name: string;
-  slug: string;
+  imgUrl: string;
 }
 
-export const ImageContainer: FC<Props> = ({ name, slug }) => {
+export const ImageContainer: FC<Props> = ({ name, imgUrl }) => {
   return (
     <ImageContainerStyled>
-      <img
-        src={`/assets/product-${slug}/desktop/image-product.jpg`}
-        alt={name}
-      />
+      <img src={imgUrl} alt={name} />
     </ImageContainerStyled>
   );
 };

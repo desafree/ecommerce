@@ -1,26 +1,24 @@
 import React from "react";
-import { Container } from "../../../_shared";
+import { Container, useTranslate } from "../../../_shared";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectProductsBySlug } from "../../slice";
 import { ProductDetail } from "../../components";
 import { HalfSectionList } from "../../../_shared";
+import { useSelectProductBySlug } from "../../hooks";
 
 export const Detail = () => {
   const { id: productSlug } = useParams<string>();
-  const product = useSelector((state) =>
-    selectProductsBySlug(state, productSlug)
-  );
+  const product = useSelectProductBySlug(productSlug!);
+  const translate = useTranslate();
 
   return (
     <>
-      <Container maxWidth={"lg"}>
-        <ProductDetail productData={product} />
+      <Container maxWidth="lg">
+        <ProductDetail productData={product!} />
         <HalfSectionList
-          title1={"features"}
-          title2={"in the box"}
-          text1={product.features}
-          list={product.includes}
+          title1={translate("detail.features")}
+          title2={translate("detail.contain")}
+          text1={product!.features}
+          list={product!.includes}
         />
       </Container>
     </>

@@ -16,14 +16,14 @@ export const ProductDetail: FC<Props> = ({ productData }) => {
   return (
     <ProductDetailStyled>
       <button onClick={handleClick}>Go back</button>
-      <Grid container={true} alignItems={"center"} justifyContent={"center"}>
-        <Grid item={true} xs={12} md={6}>
+      <Grid container alignItems="center" justifyContent="center">
+        <Grid item xs={12} md={6}>
           <ImageContainer
-            slug={productData.slug}
+            imgUrl={productData.image.desktop}
             name={productData.name}
           ></ImageContainer>
         </Grid>
-        <Grid item={true} xs={12} md={6}>
+        <Grid item xs={12} md={6}>
           <TextContainer product={productData}></TextContainer>
         </Grid>
       </Grid>

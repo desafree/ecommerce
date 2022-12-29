@@ -20,7 +20,7 @@ export const HalfSectionList: FC<Props> = ({ title1, text1, title2, list }) => {
           <Typography variant="h3">{title1}</Typography>
         </Box>
 
-        <Typography variant={"body1"}>{text1}</Typography>
+        <Typography variant="body1">{text1}</Typography>
       </div>
       <div>
         <Box mb={3}>
@@ -30,11 +30,11 @@ export const HalfSectionList: FC<Props> = ({ title1, text1, title2, list }) => {
           {list.map((item) => {
             return (
               <ListItem disableGutters={true} disablePadding={true}>
-                <Typography variant={"subtitle1"}>
+                <Typography variant="subtitle1">
                   {String(item.quantity) + "x"}
                 </Typography>
                 <Box ml={3}>
-                  <Typography variant={"body1"}>{item.item}</Typography>
+                  <Typography variant="body1">{item.item}</Typography>
                 </Box>
               </ListItem>
             );
