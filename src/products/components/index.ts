@@ -10,6 +10,7 @@ import { ProductDetail } from "./ProductDetail";
 import { ImageContainer } from "./ImageContainer";
 import { TextContainer } from "./TextContainer";
 import { ProductImages } from "./ProductImages";
+import { ProductsSuggestion } from "./ProductsSuggestion";
 
 export {
   Header,
@@ -24,4 +25,5 @@ export {
   ImageContainer,
   TextContainer,
   ProductImages,
+  ProductsSuggestion,
 };

@@ -1,5 +1,6 @@
 import { Image } from "./Image";
 import { Category } from "./Category";
+import { ProductSuggestion } from "./ProductSuggestion";
 
 export interface Product {
   id: number;
@@ -14,9 +15,5 @@ export interface Product {
   features: string;
   includes: { quantity: number; item: string }[];
   gallery: { first: Image; second: Image; third: Image };
-  others: {
-    slug: string;
-    name: string;
-    image: Image;
-  }[];
+  others: ProductSuggestion[];
 }

@@ -5,6 +5,7 @@ import { ProductDetail } from "../../components";
 import { HalfSectionList } from "../../../_shared";
 import { useSelectProductBySlug } from "../../hooks";
 import { ProductImages } from "../../components";
+import { ProductsSuggestion } from "../../components";
 
 export const Detail = () => {
   const { id: productSlug } = useParams<string>();
@@ -28,6 +29,7 @@ export const Detail = () => {
           list={product!.includes}
         />
         <ProductImages imageList={galleryList} />
+        <ProductsSuggestion suggestions={product!.others} />
       </Container>
     </>
   );

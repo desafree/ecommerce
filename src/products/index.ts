@@ -12,6 +12,7 @@ import {
   ImageContainer,
   TextContainer,
   ProductImages,
+  ProductsSuggestion,
 } from "./components";
 
 import {
@@ -26,7 +27,13 @@ import {
   actions,
 } from "./slice";
 
-import { Category, Product, Image, CartProduct } from "./types";
+import {
+  Category,
+  Product,
+  Image,
+  CartProduct,
+  ProductSuggestion,
+} from "./types";
 
 import { Checkout, Category as CategoryPage, Detail, Home } from "./views";
 
@@ -46,6 +53,7 @@ export {
   Thumbnail2,
   Thumbnail3,
   ProductImages,
+  ProductsSuggestion,
   CategoryHeader,
   ProductDetail,
   ImageContainer,
@@ -72,4 +80,5 @@ export {
   type Product,
   type Image,
   type CartProduct,
+  type ProductSuggestion,
 };
