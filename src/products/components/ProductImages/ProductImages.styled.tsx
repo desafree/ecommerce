@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react";
 
 interface Props {
-  imageList: string[];
+  imageList: [string, string, string];
 }
 
 export const ProductImagesStyled = styled.section<Props>`

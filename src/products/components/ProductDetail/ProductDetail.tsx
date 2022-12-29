@@ -4,18 +4,16 @@ import { TextContainer } from "../TextContainer";
 import { Grid } from "../../../_shared";
 import { Product } from "../../types";
 import { ImageContainer } from "../ImageContainer";
-import { useGoBack } from "../../hooks";
+import { GoBack } from "../GoBack";
 
 interface Props {
   productData: Product;
 }
 
 export const ProductDetail: FC<Props> = ({ productData }) => {
-  const handleClick = useGoBack();
-
   return (
     <ProductDetailStyled>
-      <button onClick={handleClick}>Go back</button>
+      <GoBack />
       <Grid container alignItems="center" justifyContent="center">
         <Grid item xs={12} md={6}>
           <ImageContainer

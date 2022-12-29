@@ -14,7 +14,7 @@ export const Detail = () => {
   const product = useSelectProductBySlug(productSlug!);
   const translate = useTranslate();
 
-  const galleryList = [
+  const galleryList: [string, string, string] = [
     product!.gallery.first.desktop,
     product!.gallery.second.desktop,
     product!.gallery.third.desktop,
@@ -25,9 +25,9 @@ export const Detail = () => {
       <Container maxWidth="lg">
         <ProductDetail productData={product!} />
         <HalfSectionList
-          title1={translate("detail.features")}
-          title2={translate("detail.contain")}
-          text1={product!.features}
+          descriptionTitle={translate("detail.features")}
+          listTitle={translate("detail.contain")}
+          description={product!.features}
           list={product!.includes}
         />
         <ProductImages imageList={galleryList} />

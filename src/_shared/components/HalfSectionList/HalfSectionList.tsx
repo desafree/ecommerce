@@ -6,34 +6,35 @@ import { Box } from "../Box";
 import { HalfSectionListStyled } from "./HalfSectionList.styled";
 
 interface Props {
-  title1: string;
-  text1: string;
-  title2: string;
+  descriptionTitle: string;
+  description: string;
+  listTitle: string;
   list: { quantity: number; item: string }[];
 }
 
-export const HalfSectionList: FC<Props> = ({ title1, text1, title2, list }) => {
+export const HalfSectionList: FC<Props> = ({
+  descriptionTitle,
+  description,
+  listTitle,
+  list,
+}) => {
   return (
     <HalfSectionListStyled>
       <div>
         <Box mb={3}>
-          <Typography variant="h3">{title1}</Typography>
+          <Typography variant="h3">{descriptionTitle}</Typography>
         </Box>
 
-        <Typography variant="body1">{text1}</Typography>
+        <Typography variant="body1">{description}</Typography>
       </div>
       <div>
         <Box mb={3}>
-          <Typography variant="h3">{title2}</Typography>
+          <Typography variant="h3">{listTitle}</Typography>
         </Box>
         <List>
           {list.map((item) => {
             return (
-              <ListItem
-                disableGutters={true}
-                disablePadding={true}
-                key={item.item}
-              >
+              <ListItem disableGutters disablePadding key={item.item}>
                 <Typography variant="subtitle1">
                   {String(item.quantity) + "x"}
                 </Typography>

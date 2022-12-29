@@ -13,7 +13,8 @@ interface Props {
     | "h5"
     | "h6"
     | "overline"
-    | "subtitle1";
+    | "subtitle1"
+    | "smallBold";
   align?: "center" | "inherit" | "justify" | "left" | "right";
   children: string;
 }

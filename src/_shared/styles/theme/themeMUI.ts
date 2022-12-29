@@ -1,5 +1,23 @@
 import { createTheme } from "@mui/material";
 
+declare module "@mui/material/styles" {
+  interface TypographyVariants {
+    smallBold: React.CSSProperties;
+  }
+
+  // allow configuration using `createTheme`
+  interface TypographyVariantsOptions {
+    smallBold?: React.CSSProperties;
+  }
+}
+
+// Update the Typography's variant prop options
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    smallBold: true;
+  }
+}
+
 export const theme = createTheme({
   typography: {
     fontFamily: ["Manrope", "sans-serif"].join(","),
@@ -81,6 +99,15 @@ export const theme = createTheme({
       letterSpacing: "0.93px",
       color: "#D87D4A",
       textTransform: "uppercase",
+    },
+    smallBold: {
+      fontFamily: "Manrope",
+      color: "black",
+      fontSize: "13px",
+      fontWeight: 700,
+      lineHeight: "18px",
+      letterSpacing: "1px",
+      textAlign: "center",
     },
   },
 });

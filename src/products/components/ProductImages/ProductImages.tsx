@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { ProductImagesStyled } from "./ProductImages.styled";
 
 interface Props {
-  imageList: string[];
+  imageList: [string, string, string];
 }
 
 export const ProductImages: FC<Props> = ({ imageList }) => {

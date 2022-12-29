@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Box, Typography, useTranslate } from "../../../_shared";
 import { Product } from "../../types";
-import { ButtonProduct } from "../ButtonProduct";
+import { CartActions } from "../CartActions";
 
 interface Props {
   product: Product;
@@ -28,7 +28,7 @@ export const TextContainer: FC<Props> = ({ product }) => {
       <Box mb={3}>
         <Typography variant="h5">{"$ " + String(product.price)}</Typography>
       </Box>
-      <ButtonProduct></ButtonProduct>
+      <CartActions></CartActions>
     </div>
   );
 };
