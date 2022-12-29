@@ -7,6 +7,7 @@ import { useSelectProductBySlug } from "../../hooks";
 import { ProductImages } from "../../components";
 import { ProductsSuggestion } from "../../components";
 import { Categories } from "../../components";
+import { HalfSectionImage } from "../../../_shared";
 
 export const Detail = () => {
   const { id: productSlug } = useParams<string>();
@@ -32,6 +33,11 @@ export const Detail = () => {
         <ProductImages imageList={galleryList} />
         <ProductsSuggestion suggestions={product!.others} />
         <Categories></Categories>
+        <HalfSectionImage
+          title={translate("info.title")}
+          text={translate("info.description")}
+          imgUrl="/assets/shared/desktop/image-best-gear.jpg"
+        ></HalfSectionImage>
       </Container>
     </>
   );
