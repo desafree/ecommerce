@@ -5,7 +5,4 @@ export const CartInfoStyled = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
-  button {
-    padding: 0;
-  }
 `;

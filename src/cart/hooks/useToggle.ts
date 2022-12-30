@@ -4,15 +4,14 @@ export function useToggle() {
   const [on, setOn] = useState(false);
   const toggle = () => setOn(!on);
 
+  const onClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    e.stopPropagation();
+    toggle();
+  };
+
   return {
     on,
+    onClick,
     toggle,
-    togglerProps: {
-      "aria-pressed": on,
-      onClick: (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-        e.stopPropagation();
-        toggle();
-      },
-    },
   };
 }

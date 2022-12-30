@@ -2,12 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { NavbarDesktopStyled } from "./NavbarDesktop.styled";
 import { NavbarLinks } from "../NavbarLinks";
-import { Container, PopUpWrapper } from "../../../_shared";
+import { Container, PopUpWrapper, Button } from "../../../_shared";
 import { useToggle, CartPopup } from "../../../cart";
-import { Button } from "../../../_shared";
 
 export const NavbarDesktop = () => {
-  const { on, togglerProps, toggle } = useToggle();
+  const { on, onClick, toggle } = useToggle();
 
   return (
     <NavbarDesktopStyled>
@@ -16,7 +15,7 @@ export const NavbarDesktop = () => {
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
         </Link>
         <NavbarLinks />
-        <Button variant="text" {...togglerProps}>
+        <Button variant="text" onClick={onClick}>
           <img src="/assets/shared/desktop/icon-cart.svg" alt="" />
         </Button>
       </Container>

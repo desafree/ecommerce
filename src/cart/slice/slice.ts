@@ -1,7 +1,6 @@
 import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { CartProduct } from "../../products/types";
 import { RootState } from "../../_shared/store";
-import { stat } from "fs";
 
 const initialState: CartProduct[] = [
   { id: 1, qty: 10 },

@@ -4,6 +4,8 @@ export const defineStyleForButton = (variant: ButtonTypes) => {
   if (variant === "text") {
     return {
       color: "rgba(0, 0, 0, 0.5)",
+      minWidth: "0",
+      padding: "0",
     };
   }
 

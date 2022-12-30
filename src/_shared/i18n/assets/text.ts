@@ -10,6 +10,7 @@ export const text = {
       see: "see product",
       add: "add to cart",
       back: "Go back",
+      removeAll: "remove all",
     },
     navigation: {
       home: "home",
