@@ -51,7 +51,7 @@ const slice = createSlice({
 
 export const selectCartSlice = (state: RootState) => state.cart;
 
-export const selectProductsByIds = createSelector(
+export const selectProductsFromCart = createSelector(
   [selectCartSlice, selectIProductsSlice],
   (items, products) => {
     const ids = items.map((item) => item.id);

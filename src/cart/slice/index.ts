@@ -1,8 +1,8 @@
 import {
   selectCartSlice,
-  selectProductsByIds,
+  selectProductsFromCart,
   reducer,
   actions,
 } from "./slice";
 
-export { selectCartSlice, selectProductsByIds, reducer, actions };
+export { selectCartSlice, selectProductsFromCart, reducer, actions };

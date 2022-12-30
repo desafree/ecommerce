@@ -2,9 +2,9 @@ import {
   reducer,
   actions,
   selectCartSlice,
-  selectProductsByIds,
+  selectProductsFromCart,
 } from "./slice";
-import { useToggle, useSelectProductsFromCart, useCartActions } from "./hooks";
+import { useToggle, useCartActions } from "./hooks";
 import {
   CartPopup,
   CartInfo,
@@ -22,10 +22,9 @@ export {
   reducer as cartReducer,
   actions as cartActions,
   selectCartSlice,
-  selectProductsByIds,
+  selectProductsFromCart,
   useToggle,
   useCartActions,
-  useSelectProductsFromCart,
   CartPopup,
   CartInfo,
   CartItem,
