@@ -16,12 +16,14 @@ export function useClickOutsideListener(
         referenceElement.current &&
         !referenceElement.current.contains(e.target as Node)
       ) {
-        callbackRef.current?.();
+        callbackRef.current();
       }
     }
 
-    document.addEventListener("click", clickHandler);
+    document.addEventListener("click", clickHandler, true);
 
-    return () => document.removeEventListener("click", clickHandler);
+    return () => {
+      document.removeEventListener("click", clickHandler, true);
+    };
   }, [referenceElement]);
 }
