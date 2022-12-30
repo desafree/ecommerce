@@ -11,15 +11,17 @@ interface Props {
   items: ItemType[];
 }
 
-export const PopupContainer: FC<Props> = ({ items }) => {
-  const translate = useTranslate();
+export const PopupContainer = React.forwardRef<HTMLDivElement, Props>(
+  (props, ref) => {
+    const translate = useTranslate();
 
-  return (
-    <PopupContainerStyled>
-      <CartInfo itemsNumber={items.length} />
-      <Items items={items}></Items>
-      <Total total={calculateTotalFromItems(items)} />
-      <Button variant="orange">{translate("cart.checkout")}</Button>
-    </PopupContainerStyled>
-  );
-};
+    return (
+      <PopupContainerStyled ref={ref}>
+        <CartInfo itemsNumber={props.items.length} />
+        <Items items={props.items}></Items>
+        <Total total={calculateTotalFromItems(props.items)} />
+        <Button variant="orange">{translate("cart.checkout")}</Button>
+      </PopupContainerStyled>
+    );
+  }
+);

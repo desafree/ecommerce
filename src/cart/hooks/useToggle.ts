@@ -9,7 +9,10 @@ export function useToggle() {
     toggle,
     togglerProps: {
       "aria-pressed": on,
-      onClick: toggle,
+      onClick: (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+        e.stopPropagation();
+        toggle();
+      },
     },
   };
 }
