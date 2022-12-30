@@ -20,7 +20,9 @@ export const PopupContainer = React.forwardRef<HTMLDivElement, Props>(
         <CartInfo itemsNumber={props.items.length} />
         <Items items={props.items}></Items>
         <Total total={calculateTotalFromItems(props.items)} />
-        <Button variant="orange">{translate("cart.checkout")}</Button>
+        <Button variant="orange" disabled={props.items.length === 0}>
+          {translate("cart.checkout")}
+        </Button>
       </PopupContainerStyled>
     );
   }
