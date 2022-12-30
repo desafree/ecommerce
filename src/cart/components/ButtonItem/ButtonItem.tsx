@@ -15,6 +15,7 @@ export const ButtonItem: FC<Props> = ({ qty, id }) => {
   return (
     <ButtonItemStyled>
       <Button
+        variant="text"
         onClick={() => {
           removeFromCart(id);
         }}
@@ -23,6 +24,7 @@ export const ButtonItem: FC<Props> = ({ qty, id }) => {
       </Button>
       <Typography variant="body1">{String(qty)}</Typography>
       <Button
+        variant="text"
         onClick={() => {
           addToCart(id);
         }}

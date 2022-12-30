@@ -4,6 +4,7 @@ import { NavbarDesktopStyled } from "./NavbarDesktop.styled";
 import { NavbarLinks } from "../NavbarLinks";
 import { Container, PopUpWrapper } from "../../../_shared";
 import { useToggle, CartPopup } from "../../../cart";
+import { Button } from "../../../_shared";
 
 export const NavbarDesktop = () => {
   const { on, togglerProps, toggle } = useToggle();
@@ -15,9 +16,9 @@ export const NavbarDesktop = () => {
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
         </Link>
         <NavbarLinks />
-        <button {...togglerProps}>
+        <Button variant="text" {...togglerProps}>
           <img src="/assets/shared/desktop/icon-cart.svg" alt="" />
-        </button>
+        </Button>
       </Container>
       {on && (
         <PopUpWrapper>

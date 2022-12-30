@@ -69,7 +69,7 @@ export const selectProductById = createSelector(
   }
 );
 
-export const selectProductsById = createSelector(
+export const selectProductsByIds = createSelector(
   [selectIProductsSlice, (state, ids) => ids],
   (products, ids) => {
     return products.products.filter((product) => ids.includes(product.id));

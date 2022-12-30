@@ -6,14 +6,8 @@ export const ButtonItemStyled = styled.div`
   justify-content: center;
   background: #f1f1f1;
   margin-left: auto;
-  & > button {
-    background: #f1f1f1;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    &:hover {
-      background: #c3c3c3;
-      border: none;
-    }
+  button {
+    padding: 7px 14px;
+    min-width: 0;
   }
 `;

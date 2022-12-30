@@ -16,24 +16,24 @@ const slice = createSlice({
       return action.payload;
     },
     addToCart(state, action: PayloadAction<CartProduct>) {
-      const index = state.findIndex(
+      const item = state.find(
         (cartProduct) => cartProduct.id === action.payload.id
       );
-      if (index !== -1) {
-        state[index].qty++;
+      if (item) {
+        item.qty++;
       } else {
         state.push(action.payload);
       }
     },
     removeFromCart(state, action: PayloadAction<{ id: number }>) {
-      const index = state.findIndex(
+      const item = state.find(
         (cartProduct) => cartProduct.id === action.payload.id
       );
-      if (index !== -1 && state[index].qty > 1) {
-        state[index].qty--;
-      } else if (state[index].qty === 1) {
-        return state.filter((product) => {
-          return product.id !== action.payload.id;
+      if (item && item.qty > 1) {
+        item.qty--;
+      } else if (item && item.qty === 1) {
+        return state.filter((item) => {
+          return item.id !== action.payload.id;
         });
         return;
       }

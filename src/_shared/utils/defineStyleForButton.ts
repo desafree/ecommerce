@@ -1,6 +1,12 @@
 import { ButtonTypes } from "../types/types/ButtonTypes";
 
 export const defineStyleForButton = (variant: ButtonTypes) => {
+  if (variant === "text") {
+    return {
+      color: "rgba(0, 0, 0, 0.5)",
+    };
+  }
+
   return {
     display: "flex",
     alignItems: "center",
