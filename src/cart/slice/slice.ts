@@ -1,6 +1,7 @@
 import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { CartProduct } from "../../products/types";
 import { RootState } from "../../_shared/store";
+import { selectIProductsSlice } from "../../products";
 
 const initialState: CartProduct[] = [
   { id: 1, qty: 10 },
@@ -49,6 +50,25 @@ const slice = createSlice({
 });
 
 export const selectCartSlice = (state: RootState) => state.cart;
+
+export const selectProductsByIds = createSelector(
+  [selectCartSlice, selectIProductsSlice],
+  (items, products) => {
+    const ids = items.map((item) => item.id);
+    const itemsProducts = products.products.filter((product) =>
+      ids.includes(product.id)
+    );
+    return itemsProducts.map((product, index) => {
+      return {
+        name: product.name,
+        price: product.price,
+        image: product.image.desktop,
+        qty: items[index].qty,
+        id: product.id,
+      };
+    });
+  }
+);
 
 export const reducer = slice.reducer;
 export const actions = slice.actions;
