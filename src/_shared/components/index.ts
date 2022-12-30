@@ -7,11 +7,8 @@ import { HalfSectionList } from "./HalfSectionList";
 import { ProductPreview } from "./ProductPreview/index";
 import { Box } from "./Box";
 import { Container } from "./Container";
-<<<<<<< HEAD
 import { Link } from "./Link";
-=======
 import { PopUpWrapper } from "./PopupWrapper";
->>>>>>> ff37edd (feat: create popup cart)
 
 export {
   Grid,
@@ -23,9 +20,6 @@ export {
   ProductPreview,
   Box,
   Container,
-<<<<<<< HEAD
   Link,
-=======
   PopUpWrapper,
->>>>>>> ff37edd (feat: create popup cart)
 };

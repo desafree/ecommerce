@@ -8,11 +8,7 @@ interface Props {
   disabled?: boolean;
   variant?: ButtonTypes;
   href?: string;
-<<<<<<< HEAD
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-=======
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
->>>>>>> ff37edd (feat: create popup cart)
 }
 
 const Button: FC<Props> = ({
