@@ -28,7 +28,7 @@ export const TextContainer: FC<Props> = ({ product }) => {
       <Box mb={3}>
         <Typography variant="h5">{"$ " + String(product.price)}</Typography>
       </Box>
-      <CartActions></CartActions>
+      <CartActions id={product.id}></CartActions>
     </div>
   );
 };

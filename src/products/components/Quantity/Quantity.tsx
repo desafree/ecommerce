@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { QuantityStyled } from "./Quantity.styled";
 import { Button, Typography } from "../../../_shared";
 
-export const Quantity = () => {
-  const [qty, setQty] = useState(1);
+interface Props {
+  qty: number;
+  handleCLickMinus: () => void;
+  handleClickPlus: () => void;
+}
 
-  const handleCLickMinus = () => {
-    if (qty === 1) return;
-    setQty((prevState) => --prevState);
-  };
-
-  const handleClickPlus = () => {
-    setQty((prevState) => ++prevState);
-  };
-
+export const Quantity: FC<Props> = ({
+  qty,
+  handleClickPlus,
+  handleCLickMinus,
+}) => {
   return (
     <QuantityStyled>
       <Button onClick={handleCLickMinus}>
