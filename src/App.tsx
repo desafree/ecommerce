@@ -1,9 +1,8 @@
 import React from "react";
 import { initialization as initializeLanguages } from "./_shared";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, CategoryPage } from "./products";
+import { Home, CategoryPage, Detail, useInitFetchProducts } from "./products";
 import { Layout } from "./_layout";
-import { useInitFetchProducts } from "./products";
 
 initializeLanguages();
 
@@ -29,6 +28,16 @@ function App() {
             status === "succeeded" ? (
               <Layout>
                 <CategoryPage />
+              </Layout>
+            ) : null
+          }
+        />
+        <Route
+          path="/:category/:id"
+          element={
+            status === "succeeded" ? (
+              <Layout>
+                <Detail />
               </Layout>
             ) : null
           }

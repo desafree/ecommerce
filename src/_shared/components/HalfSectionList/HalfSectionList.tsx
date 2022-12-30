@@ -1,47 +1,51 @@
 import React, { FC } from "react";
-import { Grid } from "../Grid";
 import { Typography } from "../Typography";
 import { List } from "@mui/material";
 import { ListItem } from "@mui/material";
 import { Box } from "../Box";
+import { HalfSectionListStyled } from "./HalfSectionList.styled";
 
 interface Props {
-  title1: string;
-  text1: string;
-  title2: string;
+  descriptionTitle: string;
+  description: string;
+  listTitle: string;
   list: { quantity: number; item: string }[];
 }
 
-export const HalfSectionList: FC<Props> = ({ title1, text1, title2, list }) => {
+export const HalfSectionList: FC<Props> = ({
+  descriptionTitle,
+  description,
+  listTitle,
+  list,
+}) => {
   return (
-    <Grid container alignItems="flex-start" columnSpacing="125px">
-      <Grid item xs={12} md={8}>
+    <HalfSectionListStyled>
+      <div>
         <Box mb={3}>
-          <Typography variant="h3">{title1}</Typography>
+          <Typography variant="h3">{descriptionTitle}</Typography>
         </Box>
 
-        <Typography variant="body1">{text1}</Typography>
-      </Grid>
-      <Grid item xs={12} md={4}>
+        <Typography variant="body1">{description}</Typography>
+      </div>
+      <div>
         <Box mb={3}>
-          <Typography variant="h3">{title2}</Typography>
+          <Typography variant="h3">{listTitle}</Typography>
         </Box>
-
         <List>
           {list.map((item) => {
             return (
-              <ListItem disableGutters={true} disablePadding={true}>
-                <Box mr={2}>
-                  <Typography variant="subtitle1">
-                    {String(item.quantity) + "x"}
-                  </Typography>
-                </Box>{" "}
-                <Typography variant="body1">{item.item}</Typography>
+              <ListItem disableGutters disablePadding key={item.item}>
+                <Typography variant="subtitle1">
+                  {String(item.quantity) + "x"}
+                </Typography>
+                <Box ml={3}>
+                  <Typography variant="body1">{item.item}</Typography>
+                </Box>
               </ListItem>
             );
           })}
         </List>
-      </Grid>
-    </Grid>
+      </div>
+    </HalfSectionListStyled>
   );
 };

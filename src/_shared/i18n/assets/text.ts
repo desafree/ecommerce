@@ -3,6 +3,8 @@ export const text = {
     productAction: {
       new: "new product",
       see: "see product",
+      add: "add to cart",
+      back: "Go back",
     },
     navigation: {
       home: "home",
@@ -27,6 +29,11 @@ export const text = {
       headphones: "headphones",
       speakers: "speakers",
       earphones: "earphones",
+    },
+
+    detail: {
+      features: "features",
+      contain: "in the box",
     },
 
     footer: {

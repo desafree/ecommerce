@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, MouseEventHandler, ReactNode } from "react";
 import { Button as ButtonMUI } from "@mui/material";
 import { ButtonTypes } from "../../types";
 import { defineStyleForButton } from "../../utils";
@@ -8,6 +8,7 @@ interface Props {
   disabled?: boolean;
   variant?: ButtonTypes;
   href?: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 const Button: FC<Props> = ({
@@ -15,11 +16,12 @@ const Button: FC<Props> = ({
   disabled = false,
   variant = "orange",
   href,
+  onClick,
 }) => {
   const style = defineStyleForButton(variant);
 
   return (
-    <ButtonMUI disabled={disabled} sx={style} href={href}>
+    <ButtonMUI disabled={disabled} sx={style} href={href} onClick={onClick}>
       {children}
       {variant === "transparent" ? (
         <span>

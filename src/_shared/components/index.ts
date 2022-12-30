@@ -7,6 +7,7 @@ import { HalfSectionList } from "./HalfSectionList";
 import { ProductPreview } from "./ProductPreview/index";
 import { Box } from "./Box";
 import { Container } from "./Container";
+import { Link } from "./Link";
 
 export {
   Grid,
@@ -18,4 +19,5 @@ export {
   ProductPreview,
   Box,
   Container,
+  Link,
 };
