@@ -17,7 +17,11 @@ export const text = {
       },
       payment: {
         title: "payment details",
-        "payment-method": "payment-method",
+        "payment-method": {
+          title: "payment-method",
+          "e-money": "e-money",
+          "cash-on-delivery": "cash-on-delivery",
+        },
         "e-money-number": "e-money-number",
         "e-money-pin": "e-money-pin",
       },

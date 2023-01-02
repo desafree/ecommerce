@@ -12,8 +12,11 @@ export const PaymentsDetails = () => {
       </Grid>
       <Grid item xs={12}>
         <Radio
-          name={translate("checkout.payment.payment-method")}
-          list={["e-money", "cash on delivery"]}
+          name={translate("checkout.payment.payment-method.title")}
+          list={[
+            translate("checkout.payment.payment-method.e-money"),
+            translate("checkout.payment.payment-method.cash-on-delivery"),
+          ]}
         />
       </Grid>
       <Grid item xs={6}>
