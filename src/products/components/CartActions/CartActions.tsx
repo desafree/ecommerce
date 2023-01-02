@@ -30,7 +30,7 @@ export const CartActions: FC<Props> = ({ id }) => {
         handleClickPlus={handleClickPlus}
       />
       <Button
-        variant="orange"
+        variant="primary"
         onClick={() => {
           addToCart(id, qty);
         }}

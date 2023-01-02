@@ -44,7 +44,7 @@ export const HalfSectionProduct: FC<Props> = ({ product, direction }) => {
           <Box mb={3}>
             <Typography variant="body1">{productData.description}</Typography>
           </Box>
-          <Button variant="orange">see product</Button>
+          <Button variant="primary">see product</Button>
         </Grid>
       </Grid>
     </HalfSectionProductStyled>

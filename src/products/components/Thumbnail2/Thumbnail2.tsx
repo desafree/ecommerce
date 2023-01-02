@@ -6,7 +6,7 @@ export const Thumbnail2 = () => {
   return (
     <Thumbnail2Styled>
       <Typography variant="h3">zx7 speaker</Typography>
-      <Button variant="black">See product</Button>
+      <Button variant="secondary">See product</Button>
     </Thumbnail2Styled>
   );
 };

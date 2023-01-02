@@ -1,7 +1,6 @@
-import React, { FC, MouseEventHandler, ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 import { Button as ButtonMUI } from "@mui/material";
 import { ButtonTypes } from "../../types";
-import { defineStyleForButton } from "../../utils";
 
 interface Props {
   children: ReactNode;
@@ -14,14 +13,17 @@ interface Props {
 const Button: FC<Props> = ({
   children,
   disabled = false,
-  variant = "orange",
+  variant = "primary",
   href,
   onClick,
 }) => {
-  const style = defineStyleForButton(variant);
-
   return (
-    <ButtonMUI disabled={disabled} sx={style} href={href} onClick={onClick}>
+    <ButtonMUI
+      disabled={disabled}
+      variant={variant}
+      href={href}
+      onClick={onClick}
+    >
       {children}
       {variant === "transparent" ? (
         <span>

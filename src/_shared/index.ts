@@ -23,8 +23,7 @@ import {
 } from "./i18n";
 import { store, reducers, RootState, AppDispatch } from "./store";
 import { GlobalStyle, theme } from "./styles";
-import { Status, ButtonTypes, LinkTypes } from "./types";
-import { defineStyleForButton } from "./utils";
+import { Status, ButtonTypes } from "./types";
 import { useClickOutsideListener } from "./hooks";
 
 export {
@@ -58,7 +57,6 @@ export {
   theme,
   type Status,
   type ButtonTypes,
-  defineStyleForButton,
   Link,
   useClickOutsideListener,
 };
