@@ -11,16 +11,19 @@ declare module "@mui/material/Button" {
 declare module "@mui/material/styles" {
   interface TypographyVariants {
     smallBold: React.CSSProperties;
+    goBack: React.CSSProperties;
   }
 
   interface TypographyVariantsOptions {
     smallBold?: React.CSSProperties;
+    goBack?: React.CSSProperties;
   }
 }
 
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     smallBold: true;
+    goBack: true;
   }
 }
 
@@ -193,6 +196,18 @@ export const theme = createTheme({
       lineHeight: "18px",
       letterSpacing: "1px",
       textAlign: "center",
+    },
+    goBack: {
+      display: "inline-block",
+      fontFamily: "Manrope",
+      fontSize: "15px",
+      fontWeight: 500,
+      lineHeight: "25px",
+      letterSpacing: "0px",
+      textAlign: "left",
+      color: "rgba(0, 0, 0, 0.5) !important",
+      textDecoration: "none !important",
+      marginBottom: "30px",
     },
   },
 });

@@ -15,7 +15,7 @@ export const ProductDetail: FC<Props> = ({ productData }) => {
 
   return (
     <ProductDetailStyled>
-      <Link variant="goback" to={"/"}>
+      <Link variant="goBack" to="/">
         {translate("productAction.back")}
       </Link>
       <Grid container alignItems="center" justifyContent="center">
