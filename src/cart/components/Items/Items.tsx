@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { ItemsStyled } from "./Items.styled";
 import { ItemType } from "../../types";
 import { CartItem } from "../CartItem";
+import { Stack } from "../../../_shared";
 
 interface Props {
   items: ItemType[];
@@ -9,10 +9,10 @@ interface Props {
 
 export const Items: FC<Props> = ({ items }) => {
   return (
-    <ItemsStyled>
+    <Stack direction="column" spacing="16px" style={{ marginBottom: "32px" }}>
       {items.map((item) => {
         return <CartItem data={item} key={item.name} />;
       })}
-    </ItemsStyled>
+    </Stack>
   );
 };

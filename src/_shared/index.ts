@@ -10,6 +10,7 @@ import {
   Container,
   Link,
   PopUpWrapper,
+  Stack,
 } from "./components";
 import { Input, Select, Form, useForm, UseFormReturn } from "./form";
 import {
@@ -59,4 +60,5 @@ export {
   type ButtonTypes,
   Link,
   useClickOutsideListener,
+  Stack,
 };

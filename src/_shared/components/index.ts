@@ -9,6 +9,7 @@ import { Box } from "./Box";
 import { Container } from "./Container";
 import { Link } from "./Link";
 import { PopUpWrapper } from "./PopupWrapper";
+import { Stack } from "./Stack";
 
 export {
   Grid,
@@ -22,4 +23,5 @@ export {
   Container,
   Link,
   PopUpWrapper,
+  Stack,
 };

@@ -1,7 +1,5 @@
 import React, { FC } from "react";
-import { CartInfoStyled } from "./CartInfo.styled";
-import { Typography, useTranslate } from "../../../_shared";
-import { Button } from "../../../_shared";
+import { Typography, useTranslate, Button, Stack } from "../../../_shared";
 import { useCartActions } from "../../hooks";
 
 interface Props {
@@ -13,11 +11,15 @@ export const CartInfo: FC<Props> = ({ itemsNumber }) => {
   const translate = useTranslate();
 
   return (
-    <CartInfoStyled>
+    <Stack
+      justifyContent="space-between"
+      alignItems="center"
+      style={{ marginBottom: "32px" }}
+    >
       <Typography variant="h6">{`cart (${itemsNumber})`}</Typography>
       <Button variant="text" onClick={removeAllFromCart}>
         {translate("productAction.removeAll")}
       </Button>
-    </CartInfoStyled>
+    </Stack>
   );
 };
