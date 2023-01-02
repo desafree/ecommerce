@@ -6,7 +6,7 @@ interface Props {
   values: (string | number)[];
 }
 
-const Select: FC<Props> = ({ name, values }) => {
+export const Select: FC<Props> = ({ name, values }) => {
   const {
     field,
     fieldState: { error, invalid },
@@ -30,5 +30,3 @@ const Select: FC<Props> = ({ name, values }) => {
     </div>
   );
 };
-
-export default Select;

@@ -12,7 +12,7 @@ import {
   PopUpWrapper,
   Stack,
 } from "./components";
-import { Input, Select, Form, useForm, UseFormReturn } from "./form";
+import { Input, Select, Form, Radio, useForm, UseFormReturn } from "./form";
 import {
   text,
   useTranslate,
@@ -40,6 +40,7 @@ export {
   Input,
   Select,
   PopUpWrapper,
+  Radio,
   Form,
   useForm,
   type UseFormReturn,

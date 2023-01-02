@@ -1,5 +1,28 @@
 export const text = {
   en: {
+    checkout: {
+      title: "checkout",
+      billing: {
+        title: "billing details",
+        name: "name",
+        email: "email",
+        phone: "phone",
+      },
+      shipping: {
+        title: "shipping details",
+        address: "address",
+        zip: "zip",
+        city: "city",
+        country: "country",
+      },
+      payment: {
+        title: "payment details",
+        "payment-method": "payment-method",
+        "e-money-number": "e-money-number",
+        "e-money-pin": "e-money-pin",
+      },
+    },
+
     cart: {
       total: "total",
       checkout: "checkout",

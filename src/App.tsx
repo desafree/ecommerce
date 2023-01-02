@@ -2,6 +2,7 @@ import React from "react";
 import { initialization as initializeLanguages } from "./_shared";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, CategoryPage, Detail, useInitFetchProducts } from "./products";
+import { Checkout } from "./checkout";
 import { Layout } from "./_layout";
 
 initializeLanguages();
@@ -38,6 +39,16 @@ function App() {
             status === "succeeded" ? (
               <Layout>
                 <Detail />
+              </Layout>
+            ) : null
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            status === "succeeded" ? (
+              <Layout>
+                <Checkout />
               </Layout>
             ) : null
           }

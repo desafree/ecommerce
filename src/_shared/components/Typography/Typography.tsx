@@ -17,12 +17,18 @@ interface Props {
     | "smallBold";
   align?: "center" | "inherit" | "justify" | "left" | "right";
   children: string;
+  style?: React.CSSProperties;
 }
 
 export const Typography: FC<Props> = ({
   variant = "h1",
   align = "inherit",
   children,
+  style,
 }) => {
-  return <TypographyMUI variant={variant}>{children}</TypographyMUI>;
+  return (
+    <TypographyMUI variant={variant} sx={style}>
+      {children}
+    </TypographyMUI>
+  );
 };
