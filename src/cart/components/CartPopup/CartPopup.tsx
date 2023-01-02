@@ -1,17 +1,15 @@
 import React, { FC, useRef } from "react";
 import { CartPopupStyled } from "./CartPopup.styled";
-import { Container } from "../../../_shared";
+import { Container, useClickOutsideListener } from "../../../_shared";
 import { PopupContainer } from "../PopupContainer";
-import { selectProductsFromCart } from "../../slice";
-import { useSelector } from "react-redux";
-import { useClickOutsideListener } from "../../../_shared";
+import { useSelectProductsFromCart } from "../../hooks";
 
 interface Props {
   toggle: () => void;
 }
 
 export const CartPopup: FC<Props> = ({ toggle }) => {
-  const items = useSelector(selectProductsFromCart);
+  const items = useSelectProductsFromCart();
   const ref = useRef<HTMLDivElement>(null);
   useClickOutsideListener(ref, toggle);
 

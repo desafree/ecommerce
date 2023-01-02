@@ -18,7 +18,7 @@ import {
 
 import {
   fetchProducts,
-  selectIProductsSlice,
+  selectProductsSlice,
   selectProducts,
   selectProductsStatus,
   selectProductsByCategory,
@@ -67,7 +67,7 @@ export {
   CategoryPage,
   Detail,
   Home,
-  selectIProductsSlice,
+  selectProductsSlice,
   selectProducts,
   selectProductsStatus,
   selectProductsByCategory,

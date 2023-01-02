@@ -4,21 +4,17 @@ import { cartActions } from "../index";
 export const useCartActions = () => {
   const dispatch = useDispatch();
 
-  const addToCart = (id: number, qty = 1) => {
-    dispatch(cartActions.addToCart({ id, qty }));
-  };
-
-  const removeFromCart = (id: number) => {
-    dispatch(cartActions.removeFromCart({ id }));
+  const updateItemFromCart = (id: number, qty: number) => {
+    dispatch(cartActions.itemUpdate({ id, qty }));
   };
 
   const removeItemFromCart = (id: number) => {
-    dispatch(cartActions.removeItemFromCart({ id }));
+    dispatch(cartActions.itemRemove(id));
   };
 
   const removeAllFromCart = () => {
-    dispatch(cartActions.removeAllFromCart());
+    dispatch(cartActions.itemsRemoveAll());
   };
 
-  return { addToCart, removeAllFromCart, removeFromCart, removeItemFromCart };
+  return { updateItemFromCart, removeAllFromCart, removeItemFromCart };
 };

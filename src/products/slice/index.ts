@@ -1,6 +1,6 @@
 import {
   fetchProducts,
-  selectIProductsSlice,
+  selectProductsSlice,
   selectProducts,
   selectProductsStatus,
   selectProductsByCategory,
@@ -13,7 +13,7 @@ import {
 
 export {
   fetchProducts,
-  selectIProductsSlice,
+  selectProductsSlice,
   selectProducts,
   selectProductsStatus,
   selectProductsByCategory,

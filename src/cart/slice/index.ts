@@ -1,8 +1,3 @@
-import {
-  selectCartSlice,
-  selectProductsFromCart,
-  reducer,
-  actions,
-} from "./slice";
+import { selectProductsFromCart, reducer, actions } from "./slice";
 
-export { selectCartSlice, selectProductsFromCart, reducer, actions };
+export { selectProductsFromCart, reducer, actions };

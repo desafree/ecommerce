@@ -1,10 +1,5 @@
-import {
-  reducer,
-  actions,
-  selectCartSlice,
-  selectProductsFromCart,
-} from "./slice";
-import { useToggle, useCartActions } from "./hooks";
+import { reducer, actions, selectProductsFromCart } from "./slice";
+import { useToggle, useCartActions, useSelectProductsFromCart } from "./hooks";
 import {
   CartPopup,
   CartInfo,
@@ -21,10 +16,10 @@ import { ItemType } from "./types";
 export {
   reducer as cartReducer,
   actions as cartActions,
-  selectCartSlice,
   selectProductsFromCart,
   useToggle,
   useCartActions,
+  useSelectProductsFromCart,
   CartPopup,
   CartInfo,
   CartItem,

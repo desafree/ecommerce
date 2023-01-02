@@ -11,7 +11,7 @@ interface Props {
 export const CartActions: FC<Props> = ({ id }) => {
   const translate = useTranslate();
   const [qty, setQty] = useState(1);
-  const { addToCart } = useCartActions();
+  const { updateItemFromCart } = useCartActions();
 
   const handleCLickMinus = () => {
     if (qty === 1) return;
@@ -32,7 +32,7 @@ export const CartActions: FC<Props> = ({ id }) => {
       <Button
         variant="primary"
         onClick={() => {
-          addToCart(id, qty);
+          updateItemFromCart(id, qty);
         }}
       >
         {translate("productAction.add")}
