@@ -1,15 +1,13 @@
 import * as yup from "yup";
 import { FormData } from "../types";
-
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+import { phoneRegex } from "./phoneRegex";
 
 export const schemaCheckoutForm: yup.SchemaOf<FormData> = yup.object().shape({
   name: yup.string().required(),
   email: yup.string().email().required(),
   phone: yup
     .string()
-    .matches(phoneRegExp, "Phone number is not valid")
+    .matches(phoneRegex, "Phone number is not valid")
     .required(),
   address: yup.string().required(),
   zip: yup

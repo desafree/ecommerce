@@ -1,6 +1,11 @@
 import { Checkout } from "./views";
 import { FormData } from "./types";
-import { schemaCheckoutForm } from "./utils";
-import { defaultValuesForm } from "./utils";
+import { schemaCheckoutForm, defaultValuesForm, phoneRegex } from "./utils";
 
-export { Checkout, type FormData, schemaCheckoutForm, defaultValuesForm };
+export {
+  Checkout,
+  type FormData,
+  schemaCheckoutForm,
+  defaultValuesForm,
+  phoneRegex,
+};

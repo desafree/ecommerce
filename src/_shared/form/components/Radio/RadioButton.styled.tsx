@@ -10,7 +10,7 @@ export const RadioButtonStyled = styled.div`
   width: 50%;
   margin-left: auto;
 
-  input[type="radio"] {
+  input {
     accent-color: #d87d4a;
   }
 

@@ -27,7 +27,7 @@ export const Typography: FC<Props> = ({
   style,
 }) => {
   return (
-    <TypographyMUI variant={variant} sx={style}>
+    <TypographyMUI variant={variant} sx={style} align={align}>
       {children}
     </TypographyMUI>
   );

@@ -32,7 +32,7 @@ export const Checkout = () => {
             <FormOptions />
           </Grid>
           <Grid item xs={3}>
-            <button type="submit">Pay</button>
+            {/*TODO summary cart and checkout functionality*/}
           </Grid>
         </Grid>
       </Form>
