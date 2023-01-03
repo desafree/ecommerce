@@ -1,6 +1,7 @@
-import React, { FC, MouseEventHandler, ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 import { Button as ButtonMUI } from "@mui/material";
 import { ButtonTypes } from "../../types";
+import { Link } from "react-router-dom";
 
 interface Props {
   children: ReactNode;
@@ -8,6 +9,8 @@ interface Props {
   variant?: ButtonTypes;
   href?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  type?: "submit" | "button" | "reset" | undefined;
+  internalLink?: string;
 }
 
 const Button: FC<Props> = ({
@@ -16,13 +19,39 @@ const Button: FC<Props> = ({
   variant = "primary",
   href,
   onClick,
+  type,
+  internalLink,
 }) => {
+  if (internalLink) {
+    return (
+      <ButtonMUI
+        disabled={disabled}
+        variant={variant}
+        component={Link}
+        to={internalLink}
+      >
+        {children}
+        {variant === "transparent" ? (
+          <span>
+            <img
+              src="/assets/shared/desktop/icon-arrow-right.svg"
+              alt="arrow right"
+            />
+          </span>
+        ) : (
+          ""
+        )}
+      </ButtonMUI>
+    );
+  }
+
   return (
     <ButtonMUI
       disabled={disabled}
       variant={variant}
       href={href}
       onClick={onClick}
+      type={type}
     >
       {children}
       {variant === "transparent" ? (

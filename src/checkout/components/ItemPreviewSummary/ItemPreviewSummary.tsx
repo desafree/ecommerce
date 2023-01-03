@@ -1,21 +1,24 @@
 import React, { FC } from "react";
-import { ItemPreviewSummaryStyled } from "./ItemPreviewSummary.styled";
-import { Box, Typography } from "../../../_shared";
+import { Typography, Stack } from "../../../_shared";
+import { ItemType } from "../../../cart";
 
-/*TODO after rebase*/
 interface Props {
-  data: { name: string; price: number; image: string; qty: number; id: number };
+  data: ItemType;
 }
 
 export const ItemPreviewSummary: FC<Props> = ({ data }) => {
   return (
-    <ItemPreviewSummaryStyled>
-      <img src={data.image} alt="" />
-      <Box>
+    <Stack alignItems="center" spacing="16px">
+      <img src={data.image} alt="" style={{ width: "64px" }} />
+      <Stack
+        direction="column"
+        alignItems="flex-start"
+        style={{ marginRight: "auto !important" }}
+      >
         <Typography variant="smallBold">{data.name}</Typography>
         <Typography variant="smallBold">{String(data.price)}</Typography>
-      </Box>
+      </Stack>
       <Typography variant="body1">{"x" + data.qty}</Typography>
-    </ItemPreviewSummaryStyled>
+    </Stack>
   );
 };

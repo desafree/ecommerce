@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { TotalRowStyled } from "./TotalRow.styled";
+import { Stack } from "../../../_shared";
 import { Typography } from "../../../_shared";
 
 interface Props {
@@ -9,9 +9,9 @@ interface Props {
 
 export const TotalRow: FC<Props> = ({ title, value }) => {
   return (
-    <TotalRowStyled>
+    <Stack justifyContent="space-between">
       <Typography variant="h6">{title}</Typography>
       <Typography variant="h6">{"$" + value}</Typography>
-    </TotalRowStyled>
+    </Stack>
   );
 };

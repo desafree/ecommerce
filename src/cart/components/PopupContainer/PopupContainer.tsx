@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import { PopupContainerStyled } from "./PopupContainer.styled";
 import { CartInfo } from "../CartInfo";
 import { Total } from "../Total";
@@ -20,7 +20,11 @@ export const PopupContainer = React.forwardRef<HTMLDivElement, Props>(
         <CartInfo itemsNumber={props.items.length} />
         <Items items={props.items}></Items>
         <Total total={calculateTotalFromItems(props.items)} />
-        <Button variant="primary" disabled={props.items.length === 0}>
+        <Button
+          variant="primary"
+          disabled={props.items.length === 0}
+          internalLink="/checkout"
+        >
           {translate("cart.checkout")}
         </Button>
       </PopupContainerStyled>
