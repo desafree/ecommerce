@@ -10,6 +10,14 @@ export const RadioButtonStyled = styled.div`
   width: 50%;
   margin-left: auto;
 
+  label {
+    font-family: "Manrope";
+    color: black;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
   input {
     accent-color: #d87d4a;
   }

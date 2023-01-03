@@ -12,9 +12,7 @@ export const RadioButton: FC<Props> = ({ item, field }) => {
   return (
     <RadioButtonStyled>
       <input {...field} type="radio" id={item} value={item} />
-      <label htmlFor={item}>
-        <Typography variant="smallBold">{item}</Typography>{" "}
-      </label>
+      <label htmlFor={item}>{item}</label>
     </RadioButtonStyled>
   );
 };
