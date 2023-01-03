@@ -1,6 +1,7 @@
-import React, { FC, MouseEventHandler, ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 import { Button as ButtonMUI } from "@mui/material";
 import { ButtonTypes } from "../../types";
+import { Link } from "react-router-dom";
 
 interface Props {
   children: ReactNode;
