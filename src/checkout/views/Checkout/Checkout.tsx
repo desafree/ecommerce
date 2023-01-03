@@ -22,7 +22,7 @@ export const Checkout = () => {
       maxWidth="lg"
       style={{ marginBottom: "140px", marginTop: "80px" }}
     >
-      <Link variant="goback" to="/">
+      <Link variant="goBack" to="/">
         {translate("productAction.back")}
       </Link>
 

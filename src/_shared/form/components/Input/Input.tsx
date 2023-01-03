@@ -18,9 +18,7 @@ const Input: FC<Props> = ({ name, type = "text" }) => {
 
   return (
     <InputStyled>
-      <label htmlFor={name}>
-        <Typography variant="smallBold">{name}</Typography>
-      </label>
+      <label htmlFor={name}>{name}</label>
       <input {...field} type={type} />
       {invalid && (
         <Typography variant="body1">{error?.message || ""}</Typography>
