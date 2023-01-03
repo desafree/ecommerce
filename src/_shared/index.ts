@@ -69,4 +69,5 @@ export {
   TextField,
   RadioGroup,
   persistor,
+  formatNumber,
 };
