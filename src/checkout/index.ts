@@ -1,7 +1,24 @@
 import { Checkout } from "./views";
+import {
+  schemaCheckoutForm,
+  defaultValuesForm,
+  phoneRegex,
+  calculateShipping,
+  calculateVat,
+  calculateGrandTotal,
+} from "./utils";
+import {
+  FormOptions,
+  BillingDetails,
+  ShippingDetails,
+  PaymentsDetails,
+  Summary,
+  ItemsSummary,
+  ItemPreviewSummary,
+  Totals,
+  TotalRow,
+} from "./components";
 import { CheckOutData, CheckoutItemRadio } from "./types";
-import { schemaCheckoutForm, defaultValuesForm, phoneRegex } from "./utils";
-
 export {
   Checkout,
   type CheckOutData,
@@ -9,4 +26,16 @@ export {
   schemaCheckoutForm,
   defaultValuesForm,
   phoneRegex,
+  FormOptions,
+  BillingDetails,
+  ShippingDetails,
+  PaymentsDetails,
+  Summary,
+  ItemsSummary,
+  ItemPreviewSummary,
+  Totals,
+  calculateShipping,
+  calculateVat,
+  calculateGrandTotal,
+  TotalRow,
 };
