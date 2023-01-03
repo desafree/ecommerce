@@ -1,10 +1,16 @@
 export const text = {
   en: {
+    cart: {
+      total: "total",
+      checkout: "checkout",
+    },
+
     productAction: {
       new: "new product",
       see: "see product",
       add: "add to cart",
       back: "Go back",
+      removeAll: "remove all",
     },
     navigation: {
       home: "home",

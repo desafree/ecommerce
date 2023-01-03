@@ -1,1 +1,1 @@
-export type LinkTypes = "goback" | "default";
+export type LinkTypes = "primary" | "transparent";

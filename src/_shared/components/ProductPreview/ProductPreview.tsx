@@ -18,7 +18,7 @@ export const ProductPreview: FC<Props> = ({ product }) => {
         <img src={product.image.desktop} alt={product.name} />
       </div>
       <Typography variant="h6">{product.name}</Typography>
-      <Button variant="orange" href={`/${product.slug}`}>
+      <Button variant="primary" href={`/${product.slug}`}>
         {translate("productAction.see")}
       </Button>
     </ProductPreviewStyled>

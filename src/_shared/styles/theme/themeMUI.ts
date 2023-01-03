@@ -1,24 +1,112 @@
 import { createTheme } from "@mui/material";
 
-declare module "@mui/material/styles" {
-  interface TypographyVariants {
-    smallBold: React.CSSProperties;
-  }
-
-  // allow configuration using `createTheme`
-  interface TypographyVariantsOptions {
-    smallBold?: React.CSSProperties;
+declare module "@mui/material/Button" {
+  interface ButtonPropsVariantOverrides {
+    primary: true;
+    secondary: true;
+    transparent: true;
   }
 }
 
-// Update the Typography's variant prop options
+declare module "@mui/material/styles" {
+  interface TypographyVariants {
+    smallBold: React.CSSProperties;
+    goBack: React.CSSProperties;
+  }
+
+  interface TypographyVariantsOptions {
+    smallBold?: React.CSSProperties;
+    goBack?: React.CSSProperties;
+  }
+}
+
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     smallBold: true;
+    goBack: true;
   }
 }
 
 export const theme = createTheme({
+  components: {
+    MuiButton: {
+      variants: [
+        {
+          props: { variant: "text" },
+          style: {
+            color: "rgba(0, 0, 0, 0.5)",
+            minWidth: "0",
+            padding: "0",
+          },
+        },
+        {
+          props: { variant: "primary" },
+          style: {
+            display: "flex",
+            alignItems: "center",
+            gap: "13px",
+            padding: "15px 30px",
+            background: "#D87D4A",
+            borderRadius: 0,
+            fontWeight: 700,
+            fontSize: "13px",
+            lineHeight: "17.76px",
+            letterSpacing: "1px",
+            border: "1px solid #D87D4A",
+            color: "#FFF",
+            "&:hover": {
+              background: "#FBAF85",
+              color: "#FFF",
+              border: "1px solid #FBAF85",
+            },
+          },
+        },
+        {
+          props: { variant: "secondary" },
+          style: {
+            display: "flex",
+            alignItems: "center",
+            gap: "13px",
+            padding: "15px 30px",
+            background: "#FFF",
+            borderRadius: 0,
+            fontWeight: 700,
+            fontSize: "13px",
+            lineHeight: "17.76px",
+            letterSpacing: "1px",
+            border: "1px solid #000",
+            color: "#000",
+            "&:hover": {
+              background: "#000",
+              color: "#FFF",
+              border: "1px solid #000",
+            },
+          },
+        },
+        {
+          props: { variant: "transparent" },
+          style: {
+            display: "flex",
+            alignItems: "center",
+            gap: "13px",
+            padding: "15px 30px",
+            background: "transparent",
+            borderRadius: 0,
+            fontWeight: 700,
+            fontSize: "13px",
+            lineHeight: "17.76px",
+            letterSpacing: "1px",
+            border: "none",
+            color: "rgba(0, 0, 0, 0.5)",
+            "&:hover": {
+              background: "transparent",
+              color: "#D87D4A",
+            },
+          },
+        },
+      ],
+    },
+  },
   typography: {
     fontFamily: ["Manrope", "sans-serif"].join(","),
     h1: {
@@ -108,6 +196,18 @@ export const theme = createTheme({
       lineHeight: "18px",
       letterSpacing: "1px",
       textAlign: "center",
+    },
+    goBack: {
+      display: "inline-block",
+      fontFamily: "Manrope",
+      fontSize: "15px",
+      fontWeight: 500,
+      lineHeight: "25px",
+      letterSpacing: "0px",
+      textAlign: "left",
+      color: "rgba(0, 0, 0, 0.5) !important",
+      textDecoration: "none !important",
+      marginBottom: "30px",
     },
   },
 });

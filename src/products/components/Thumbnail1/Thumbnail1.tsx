@@ -14,7 +14,7 @@ export const Thumbnail1 = () => {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </Typography>
-        <Button variant="black">see product</Button>
+        <Button variant="secondary">see product</Button>
       </div>
     </Thumbnail1Styled>
   );

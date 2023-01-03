@@ -1,10 +1,11 @@
 import {
   fetchProducts,
-  selectIProductsSlice,
+  selectProductsSlice,
   selectProducts,
   selectProductsStatus,
   selectProductsByCategory,
-  selectProductsById,
+  selectProductById,
+  selectProductsByIds,
   selectProductsBySlug,
   reducer,
   actions,
@@ -12,11 +13,12 @@ import {
 
 export {
   fetchProducts,
-  selectIProductsSlice,
+  selectProductsSlice,
   selectProducts,
   selectProductsStatus,
   selectProductsByCategory,
-  selectProductsById,
+  selectProductById,
+  selectProductsByIds,
   selectProductsBySlug,
   reducer,
   actions,

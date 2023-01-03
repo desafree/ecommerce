@@ -2,9 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { NavbarDesktopStyled } from "./NavbarDesktop.styled";
 import { NavbarLinks } from "../NavbarLinks";
-import { Container } from "../../../_shared";
+import { Container, PopUpWrapper, Button } from "../../../_shared";
+import { useToggle, CartPopup } from "../../../cart";
 
 export const NavbarDesktop = () => {
+  const { on, toggle } = useToggle();
+
   return (
     <NavbarDesktopStyled>
       <Container maxWidth="lg">
@@ -12,10 +15,15 @@ export const NavbarDesktop = () => {
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
         </Link>
         <NavbarLinks />
-        <button>
+        <Button variant="text" onClick={toggle}>
           <img src="/assets/shared/desktop/icon-cart.svg" alt="" />
-        </button>
+        </Button>
       </Container>
+      {on && (
+        <PopUpWrapper>
+          <CartPopup toggle={toggle} />
+        </PopUpWrapper>
+      )}
     </NavbarDesktopStyled>
   );
 };

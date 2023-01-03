@@ -36,39 +36,45 @@ export const fetchProducts = createAsyncThunk(
   getProducts
 );
 
-export const selectIProductsSlice = (state: RootState) => state.products;
+export const selectProductsSlice = (state: RootState) => state.products;
 
 export const selectProducts = createSelector(
-  [selectIProductsSlice],
+  [selectProductsSlice],
   (state) => state.products
 );
 
 export const selectProductsStatus = createSelector(
-  [selectIProductsSlice],
+  [selectProductsSlice],
   (state) => state.status
 );
 
 export const selectProductsByCategory = createSelector(
-  [selectIProductsSlice, (state, category) => category],
+  [selectProductsSlice, (state, category) => category],
   (products, category) => {
     return products.products.filter((product) => product.category === category);
   }
 );
 
 export const selectProductsBySlug = createSelector(
-  [selectIProductsSlice, (state, slug) => slug],
+  [selectProductsSlice, (state, slug) => slug],
   (products, slug) => {
     return products.products.find((product) => product.slug === slug);
   }
 );
 
-export const selectProductsById = createSelector(
-  [selectIProductsSlice, (state, id) => id],
+export const selectProductById = createSelector(
+  [selectProductsSlice, (state, id) => id],
   (products, id) => {
     return products.products.find((product) => product.id === Number(id));
   }
 );
-/*const items = useSelector(state => selectProductsByCategory(state, 'headphones'));*/
+
+export const selectProductsByIds = createSelector(
+  [selectProductsSlice, (state, ids) => ids],
+  (products, ids) => {
+    return products.products.filter((product) => ids.includes(product.id));
+  }
+);
 
 export const reducer = slice.reducer;
 export const actions = slice.actions;

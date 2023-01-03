@@ -1,1 +1,6 @@
-export type ButtonTypes = "orange" | "black" | "transparent";
+export type ButtonTypes =
+  | "primary"
+  | "secondary"
+  | "transparent"
+  | "text"
+  | undefined;

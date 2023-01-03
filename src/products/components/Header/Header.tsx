@@ -16,7 +16,7 @@ export const Header = () => {
         <Typography variant="body1">
           {translate("header.description")}
         </Typography>
-        <Button variant="orange">{translate("header.button")}</Button>
+        <Button variant="primary">{translate("header.button")}</Button>
       </Container>
     </HeaderStyled>
   );
