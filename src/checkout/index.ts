@@ -17,6 +17,27 @@ import {
   TotalRow,
 } from "./components";
 import { CheckOutData, CheckoutItemRadio } from "./types";
+import { FormData } from "./types";
+import {
+  schemaCheckoutForm,
+  defaultValuesForm,
+  phoneRegex,
+  calculateShipping,
+  calculateVat,
+  calculateGrandTotal,
+} from "./utils";
+import {
+  FormOptions,
+  BillingDetails,
+  ShippingDetails,
+  PaymentsDetails,
+  Summary,
+  ItemsSummary,
+  ItemPreviewSummary,
+  Totals,
+  TotalRow,
+} from "./components";
+
 export {
   Checkout,
   type CheckOutData,
@@ -34,4 +55,16 @@ export {
   Totals,
   TotalRow,
   calculateTotals,
+  FormOptions,
+  BillingDetails,
+  ShippingDetails,
+  PaymentsDetails,
+  Summary,
+  ItemsSummary,
+  ItemPreviewSummary,
+  Totals,
+  calculateShipping,
+  calculateVat,
+  calculateGrandTotal,
+  TotalRow,
 };
