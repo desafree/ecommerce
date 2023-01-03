@@ -15,6 +15,7 @@ import {
   RadioGroup,
 } from "./components";
 import { Input, Select, Form, Radio, useForm, UseFormReturn } from "./form";
+import { formatNumber } from "./utils";
 import {
   text,
   useTranslate,
@@ -64,6 +65,7 @@ export {
   Link,
   useClickOutsideListener,
   Stack,
+  formatNumber,
   TextField,
   RadioGroup,
   persistor,
