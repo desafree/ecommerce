@@ -1,34 +1,36 @@
 import * as yup from "yup";
-import { FormData } from "../types";
+import { CheckOutData } from "../types";
 import { phoneRegex } from "./phoneRegex";
 
-export const schemaCheckoutForm: yup.SchemaOf<FormData> = yup.object().shape({
-  name: yup.string().required(),
-  email: yup.string().email().required(),
-  phone: yup
-    .string()
-    .matches(phoneRegex, "Phone number is not valid")
-    .required(),
-  address: yup.string().required(),
-  zip: yup
-    .string()
-    .required()
-    .matches(/^[0-9]+$/, "Must be only digits")
-    .min(5, "Must be exactly 5 digits")
-    .max(5, "Must be exactly 5 digits"),
-  city: yup.string().required(),
-  country: yup.string().required(),
-  "payment-method": yup.string().required(),
-  "e-money-number": yup
-    .string()
-    .required()
-    .matches(/^[0-9]+$/, "Must be only digits")
-    .min(5, "Must be exactly 5 digits")
-    .max(5, "Must be exactly 5 digits"),
-  "e-money-pin": yup
-    .string()
-    .required()
-    .matches(/^[0-9]+$/, "Must be only digits")
-    .min(5, "Must be exactly 5 digits")
-    .max(5, "Must be exactly 5 digits"),
-});
+export const schemaCheckoutForm: yup.SchemaOf<CheckOutData> = yup
+  .object()
+  .shape({
+    name: yup.string().required("errors.required"),
+    email: yup.string().email("errors.email").required("errors.required"),
+    phone: yup
+      .string()
+      .matches(phoneRegex, "errors.phone")
+      .required("errors.required"),
+    address: yup.string().required("errors.required"),
+    zip: yup
+      .string()
+      .required("errors.required")
+      .matches(/^[0-9]+$/, "errors.digit")
+      .min(5, "errors.length")
+      .max(5, "errors.length"),
+    city: yup.string().required("errors.required"),
+    country: yup.string().required("errors.required"),
+    "payment-method": yup.string().required("errors.required"),
+    "e-money-number": yup
+      .string()
+      .required("errors.required")
+      .matches(/^[0-9]+$/, "errors.digit")
+      .min(5, "errors.length")
+      .max(5, "errors.length"),
+    "e-money-pin": yup
+      .string()
+      .required("errors.required")
+      .matches(/^[0-9]+$/, "errors.digit")
+      .min(5, "errors.length")
+      .max(5, "errors.length"),
+  });

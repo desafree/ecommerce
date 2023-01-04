@@ -1,3 +1,4 @@
-import { FormData } from "./FormData";
+import { CheckOutData } from "./CheckOutData";
+import { CheckoutItemRadio } from "./CheckoutItemRadio";
 
-export { type FormData };
+export { type CheckOutData, type CheckoutItemRadio };

@@ -1,4 +1,4 @@
-export interface FormData {
+export interface CheckOutData {
   name: string;
   email: string;
   phone: string;

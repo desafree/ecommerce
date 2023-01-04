@@ -1,29 +1,40 @@
 import React, { FC } from "react";
-import { useController } from "react-hook-form";
-import { InputStyled } from "./Input.styled";
-import { Typography } from "../../../components";
+import { useController, Controller } from "react-hook-form";
+import { Typography, TextField } from "../../../components";
+import { Stack } from "../../../components";
+import { useTranslate } from "../../../i18n";
 
 interface Props {
   name: string;
-  type?: "text" | "date" | "number";
+  label: string;
 }
 
-const Input: FC<Props> = ({ name, type = "text" }) => {
+const Input: FC<Props> = ({ name, label }) => {
+  const translate = useTranslate();
+
   const {
-    field,
     fieldState: { error, invalid },
   } = useController({
     name,
   });
 
   return (
-    <InputStyled>
-      <label htmlFor={name}>{name}</label>
-      <input {...field} type={type} />
-      {invalid && (
-        <Typography variant="body1">{error?.message || ""}</Typography>
+    <Stack direction="column">
+      <Controller
+        name={name}
+        render={({ field: { onChange, onBlur, value } }) => (
+          <TextField
+            onChange={onChange}
+            onBlur={onBlur}
+            value={value}
+            label={label}
+          />
+        )}
+      ></Controller>
+      {invalid && error && error.message && (
+        <Typography variant="body1">{translate(error.message)}</Typography>
       )}
-    </InputStyled>
+    </Stack>
   );
 };
 

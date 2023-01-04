@@ -12,18 +12,33 @@ export const PaymentsDetails = () => {
       </Grid>
       <Grid item xs={12}>
         <Radio
-          name={translate("checkout.payment.payment-method.title")}
-          list={[
-            translate("checkout.payment.payment-method.e-money"),
-            translate("checkout.payment.payment-method.cash-on-delivery"),
+          label={translate("checkout.payment.payment-method.title")}
+          name="payment-method"
+          items={[
+            {
+              value: "e-money",
+              label: translate("checkout.payment.payment-method.e-money"),
+            },
+            {
+              value: "cash-on-delivery",
+              label: translate(
+                "checkout.payment.payment-method.cash-on-delivery"
+              ),
+            },
           ]}
         />
       </Grid>
       <Grid item xs={6}>
-        <Input name={translate("checkout.payment.e-money-number")} />
+        <Input
+          label={translate("checkout.payment.e-money-number")}
+          name="e-money-number"
+        />
       </Grid>
       <Grid item xs={6}>
-        <Input name={translate("checkout.payment.e-money-pin")} />
+        <Input
+          label={translate("checkout.payment.e-money-pin")}
+          name="e-money-pin"
+        />
       </Grid>
     </Grid>
   );

@@ -29,6 +29,27 @@ declare module "@mui/material/Typography" {
 
 export const theme = createTheme({
   components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          ".css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
+            padding: "24px 18px;",
+          },
+          "& fieldset": {
+            borderRadius: "8px",
+          },
+          "& .MuiInputBase-input:focus + fieldset": {
+            border: `2px solid orange`,
+            color: "orange",
+          },
+          "& label": {
+            "&.Mui-focused": {
+              color: "orange",
+            },
+          },
+        },
+      },
+    },
     MuiButton: {
       variants: [
         {

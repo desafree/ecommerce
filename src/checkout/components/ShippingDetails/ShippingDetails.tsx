@@ -12,16 +12,16 @@ export const ShippingDetails = () => {
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        <Input name={translate("checkout.shipping.address")} />
+        <Input label={translate("checkout.shipping.address")} name="address" />
       </Grid>
       <Grid item xs={6}>
-        <Input name={translate("checkout.shipping.zip")} />
+        <Input label={translate("checkout.shipping.zip")} name="zip" />
       </Grid>
       <Grid item xs={6}>
-        <Input name={translate("checkout.shipping.city")} />
+        <Input label={translate("checkout.shipping.city")} name="city" />
       </Grid>
       <Grid item xs={6}>
-        <Input name={translate("checkout.shipping.country")} />
+        <Input label={translate("checkout.shipping.country")} name="country" />
       </Grid>
     </Grid>
   );

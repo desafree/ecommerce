@@ -1,5 +1,12 @@
 export const text = {
   en: {
+    errors: {
+      length: "Must be exactly 5 digits",
+      required: "Is required",
+      email: "Must be an email format",
+      phone: "Must be a phone number",
+      digit: "Must be a digits",
+    },
     checkout: {
       title: "checkout",
       billing: {
