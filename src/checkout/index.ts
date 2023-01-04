@@ -36,6 +36,12 @@ import {
   ItemPreviewSummary,
   Totals,
   TotalRow,
+  OrderRecap,
+  OrderRecapContainer,
+  ItemsRecap,
+  OrderDetailRecap,
+  OrderTotalRecap,
+  OrderDetailItem,
 } from "./components";
 
 export {
@@ -67,4 +73,10 @@ export {
   calculateVat,
   calculateGrandTotal,
   TotalRow,
+  OrderRecap,
+  OrderRecapContainer,
+  ItemsRecap,
+  OrderDetailRecap,
+  OrderTotalRecap,
+  OrderDetailItem,
 };

@@ -16,6 +16,7 @@ interface Props {
   md?: number;
   lg?: number;
   xl?: number;
+  style?: React.CSSProperties;
   className?: string;
   wrap?: "nowrap" | "wrap-reverse" | "wrap";
   alignItems?:
@@ -54,6 +55,7 @@ export const Grid: FC<Props> = ({
   justifyContent = "flex-start",
   alignItems = "stretch",
   className,
+  style,
 }) => {
   if (container) {
     return (
@@ -67,6 +69,7 @@ export const Grid: FC<Props> = ({
         alignItems={alignItems}
         justifyContent={justifyContent}
         className={className}
+        sx={style}
       >
         {children}
       </GridMUI>
