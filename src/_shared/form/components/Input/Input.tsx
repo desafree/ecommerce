@@ -28,12 +28,13 @@ const Input: FC<Props> = ({ name, label }) => {
             onBlur={onBlur}
             value={value}
             label={label}
+            error={invalid}
+            errorMessage={
+              invalid && error && error.message ? translate(error.message) : ""
+            }
           />
         )}
       ></Controller>
-      {invalid && error && error.message && (
-        <Typography variant="body1">{translate(error.message)}</Typography>
-      )}
     </Stack>
   );
 };
