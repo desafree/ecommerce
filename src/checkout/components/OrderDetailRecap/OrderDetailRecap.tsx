@@ -14,7 +14,7 @@ export const OrderDetailRecap: FC<Props> = ({ items }) => {
 
   return (
     <OrderDetailRecapStyled>
-      {on ? (
+      {!on ? (
         <OrderDetailItem item={items[0]} />
       ) : (
         items.map((item) => {

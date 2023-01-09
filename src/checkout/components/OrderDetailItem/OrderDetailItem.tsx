@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-import { Stack } from "../../../_shared";
-import { Typography } from "../../../_shared";
+import { Stack, Typography } from "../../../_shared";
 import { ItemType, removeLastWord } from "../../../cart";
 
 interface Props {
