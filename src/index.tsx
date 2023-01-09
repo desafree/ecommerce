@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { Provider } from "react-redux";
-import store from "./_shared/store/store";
+import store, { persistor } from "./_shared/store/store";
+import { PersistGate } from "redux-persist/integration/react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./_shared/styles/theme/themeMUI";
 import { GlobalStyle } from "./_shared/styles";
@@ -15,7 +16,9 @@ root.render(
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <App />
+        <PersistGate persistor={persistor} loading={null}>
+          <App />
+        </PersistGate>
       </ThemeProvider>
     </Provider>
   </React.StrictMode>

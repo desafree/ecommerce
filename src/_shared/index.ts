@@ -24,7 +24,7 @@ import {
   initialization,
   CurrentLocale,
 } from "./i18n";
-import { store, reducers, RootState, AppDispatch } from "./store";
+import { store, reducers, RootState, AppDispatch, persistor } from "./store";
 import { GlobalStyle, theme } from "./styles";
 import { Status, ButtonTypes } from "./types";
 import { useClickOutsideListener } from "./hooks";
@@ -66,4 +66,5 @@ export {
   Stack,
   TextField,
   RadioGroup,
+  persistor,
 };
