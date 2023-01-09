@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Stack } from "../../../_shared";
-import { Box, Typography } from "../../../_shared";
+import { Typography } from "../../../_shared";
 import { ItemType, removeLastWord } from "../../../cart";
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 
 export const OrderDetailItem: FC<Props> = ({ item }) => {
   return (
-    <Stack spacing={"16px"} style={{ marginBottom: "16px" }}>
+    <Stack spacing={2} style={{ marginBottom: "16px" }}>
       <img
         src={item.image}
         alt={item.name}
@@ -19,7 +19,7 @@ export const OrderDetailItem: FC<Props> = ({ item }) => {
         <Typography variant="smallBold">{removeLastWord(item.name)}</Typography>
         <Typography variant="smallBold">{"$" + item.price}</Typography>
       </Stack>
-      <Typography variant="smallBold" style={{ marginLeft: "auto" }}>
+      <Typography variant="smallBold" style={{ marginLeft: "auto !important" }}>
         {"x" + item.qty}
       </Typography>
     </Stack>

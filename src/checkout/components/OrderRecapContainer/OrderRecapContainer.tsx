@@ -2,18 +2,18 @@ import React from "react";
 import { OrderRecapContainerStyled } from "./OrderRecapContainer.styled";
 import { Typography, Button, useTranslate } from "../../../_shared";
 import { ItemsRecap } from "../ItemsRecap";
-import { useNavigate } from "react-router-dom";
 import { useCartActions } from "../../../cart";
+import { useGoHome } from "../../hooks";
 
 export const OrderRecapContainer = React.forwardRef<HTMLDivElement>(
   (props, ref) => {
     const translate = useTranslate();
     const { removeAllFromCart } = useCartActions();
-    const navigate = useNavigate();
+    const goHome = useGoHome();
 
     const handleCLick = () => {
       removeAllFromCart();
-      navigate("/");
+      goHome();
     };
 
     return (

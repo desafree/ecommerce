@@ -1,31 +1,12 @@
 import { Checkout } from "./views";
+import { CheckOutData, CheckoutItemRadio } from "./types";
 import {
   schemaCheckoutForm,
   defaultValuesForm,
   phoneRegex,
   calculateTotals,
 } from "./utils";
-import {
-  FormOptions,
-  BillingDetails,
-  ShippingDetails,
-  PaymentsDetails,
-  Summary,
-  ItemsSummary,
-  ItemPreviewSummary,
-  Totals,
-  TotalRow,
-} from "./components";
-import { CheckOutData, CheckoutItemRadio } from "./types";
-import { FormData } from "./types";
-import {
-  schemaCheckoutForm,
-  defaultValuesForm,
-  phoneRegex,
-  calculateShipping,
-  calculateVat,
-  calculateGrandTotal,
-} from "./utils";
+import { useGoHome } from "./hooks";
 import {
   FormOptions,
   BillingDetails,
@@ -59,19 +40,7 @@ export {
   ItemsSummary,
   ItemPreviewSummary,
   Totals,
-  TotalRow,
   calculateTotals,
-  FormOptions,
-  BillingDetails,
-  ShippingDetails,
-  PaymentsDetails,
-  Summary,
-  ItemsSummary,
-  ItemPreviewSummary,
-  Totals,
-  calculateShipping,
-  calculateVat,
-  calculateGrandTotal,
   TotalRow,
   OrderRecap,
   OrderRecapContainer,
@@ -79,4 +48,5 @@ export {
   OrderDetailRecap,
   OrderTotalRecap,
   OrderDetailItem,
+  useGoHome,
 };

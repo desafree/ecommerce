@@ -12,7 +12,7 @@ export const ItemsRecap = () => {
   const total = calculateTotalFromItems(items);
 
   return (
-    <Grid container alignItems={"stretch"} style={{ margin: "33px 0 48px" }}>
+    <Grid container style={{ marginTop: "33px", marginBottom: "48px" }}>
       <Grid item xs={6}>
         <OrderDetailRecap items={items} />
       </Grid>

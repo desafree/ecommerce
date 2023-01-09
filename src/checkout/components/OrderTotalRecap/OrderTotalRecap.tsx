@@ -11,7 +11,7 @@ export const OrderTotalRecap: FC<Props> = ({ total }) => {
     <Stack
       direction="column"
       justifyContent="center"
-      spacing="8px"
+      spacing={1}
       style={{ background: "black", padding: "41px 33px", height: "100%" }}
     >
       <Typography

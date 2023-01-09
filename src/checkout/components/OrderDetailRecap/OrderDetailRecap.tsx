@@ -14,13 +14,13 @@ export const OrderDetailRecap: FC<Props> = ({ items }) => {
 
   return (
     <OrderDetailRecapStyled>
-      <OrderDetailItem item={items[0]} />
-      {on &&
-        items.map((item, index) => {
-          if (index !== 0) {
-            return <OrderDetailItem item={item} key={item.id} />;
-          }
-        })}
+      {on ? (
+        <OrderDetailItem item={items[0]} />
+      ) : (
+        items.map((item) => {
+          return <OrderDetailItem item={item} key={item.id} />;
+        })
+      )}
       <Button variant="text" onClick={toggle}>
         {on
           ? translate("checkout.detail.view-less")

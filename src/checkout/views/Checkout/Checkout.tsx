@@ -27,13 +27,14 @@ export const Checkout = () => {
   };
 
   return (
-    <Container
-      maxWidth="lg"
-      style={{ marginBottom: "140px", marginTop: "80px" }}
-    >
-      <Link variant="goBack" to="/">
-        {translate("productAction.back")}
-      </Link>
+    <>
+      <Container
+        maxWidth="lg"
+        style={{ marginBottom: "140px", marginTop: "80px" }}
+      >
+        <Link variant="goBack" to="/">
+          {translate("productAction.back")}
+        </Link>
 
         <Form formContextValue={formContextValue} onSubmit={onSubmit}>
           <Grid container columnSpacing={4}>

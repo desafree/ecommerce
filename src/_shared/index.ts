@@ -65,7 +65,6 @@ export {
   Link,
   useClickOutsideListener,
   Stack,
-  formatNumber,
   TextField,
   RadioGroup,
   persistor,
