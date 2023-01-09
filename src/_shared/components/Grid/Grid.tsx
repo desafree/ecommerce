@@ -4,7 +4,7 @@ import { Grid as GridMUI } from "@mui/material";
 export type GridDirection = "row" | "row-reverse" | "column" | "column-reverse";
 
 interface Props {
-  children: ReactNode;
+  children?: ReactNode;
   spacing?: number | string;
   columnSpacing?: number | string;
   rowSpacing?: number | string;

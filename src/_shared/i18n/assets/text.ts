@@ -1,5 +1,39 @@
 export const text = {
   en: {
+    errors: {
+      length: "Must be exactly 5 digits",
+      required: "Is required",
+      email: "Must be an email format",
+      phone: "Must be a phone number",
+      digit: "Must be a digits",
+    },
+    checkout: {
+      title: "checkout",
+      billing: {
+        title: "billing details",
+        name: "name",
+        email: "email",
+        phone: "phone",
+      },
+      shipping: {
+        title: "shipping details",
+        address: "address",
+        zip: "zip",
+        city: "city",
+        country: "country",
+      },
+      payment: {
+        title: "payment details",
+        "payment-method": {
+          title: "payment-method",
+          "e-money": "e-money",
+          "cash-on-delivery": "cash-on-delivery",
+        },
+        "e-money-number": "e-money-number",
+        "e-money-pin": "e-money-pin",
+      },
+    },
+
     cart: {
       total: "total",
       checkout: "checkout",
