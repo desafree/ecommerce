@@ -9,7 +9,7 @@ interface Props {
   variant?: ButtonTypes;
   href?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  type?: "submit" | "button" | "reset" | undefined;
+  type?: "submit" | "button" | "reset";
   internalLink?: string;
 }
 
