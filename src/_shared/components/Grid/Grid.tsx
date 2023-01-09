@@ -5,9 +5,9 @@ export type GridDirection = "row" | "row-reverse" | "column" | "column-reverse";
 
 interface Props {
   children?: ReactNode;
-  spacing?: number | string;
-  columnSpacing?: number | string;
-  rowSpacing?: number | string;
+  spacing?: 1 | 2 | 3 | 4 | 5;
+  columnSpacing?: 1 | 2 | 3 | 4 | 5;
+  rowSpacing?: 1 | 2 | 3 | 4 | 5;
   container?: boolean;
   item?: boolean;
   direction?: GridDirection | undefined;

@@ -22,7 +22,7 @@ interface Props {
     | "initial"
     | "inherit";
   direction?: "column-reverse" | "column" | "row-reverse" | "row";
-  spacing?: string;
+  spacing?: 1 | 2 | 3 | 4 | 5;
   style?: React.CSSProperties;
 }
 

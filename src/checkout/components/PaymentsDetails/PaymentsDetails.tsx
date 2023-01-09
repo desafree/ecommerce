@@ -4,7 +4,7 @@ export const PaymentsDetails = () => {
   const translate = useTranslate();
 
   return (
-    <Grid container columnSpacing="18px" rowSpacing="24px">
+    <Grid container columnSpacing={2} rowSpacing={3}>
       <Grid item xs={12}>
         <Typography variant="subtitle1">
           {translate("checkout.payment.title")}

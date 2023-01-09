@@ -8,6 +8,7 @@ interface Props {
   variant?: ButtonTypes;
   href?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  type?: "submit" | "button" | "reset";
 }
 
 const Button: FC<Props> = ({
@@ -16,6 +17,7 @@ const Button: FC<Props> = ({
   variant = "primary",
   href,
   onClick,
+  type,
 }) => {
   return (
     <ButtonMUI
@@ -23,6 +25,7 @@ const Button: FC<Props> = ({
       variant={variant}
       href={href}
       onClick={onClick}
+      type={type}
     >
       {children}
       {variant === "transparent" ? (

@@ -8,6 +8,14 @@ export const text = {
       digit: "Must be a digits",
     },
     checkout: {
+      summary: {
+        title: "summary",
+        total: "total",
+        shipping: "shipping",
+        vat: "vat (included)",
+        "grand-total": "grand total",
+        continue: "continue & pay",
+      },
       title: "checkout",
       billing: {
         title: "billing details",

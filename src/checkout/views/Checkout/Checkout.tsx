@@ -1,9 +1,15 @@
 import React from "react";
-import { Container, useForm, Form, Link, useTranslate } from "../../../_shared";
+import {
+  Container,
+  useForm,
+  Form,
+  Link,
+  useTranslate,
+  Grid,
+} from "../../../_shared";
 import { CheckOutData } from "../../types";
 import { schemaCheckoutForm, defaultValuesForm } from "../../utils";
-import { FormOptions } from "../../components";
-import { Grid } from "../../../_shared";
+import { FormOptions, Summary } from "../../components";
 
 export const Checkout = () => {
   const translate = useTranslate();
@@ -27,13 +33,12 @@ export const Checkout = () => {
       </Link>
 
       <Form formContextValue={formContextValue} onSubmit={onSubmit}>
-        <Grid container>
-          <Grid item xs={9}>
+        <Grid container columnSpacing={4}>
+          <Grid item xs={8}>
             <FormOptions />
           </Grid>
-          <Grid item xs={3}>
-            {/*TODO summary cart and checkout functionality*/}
-            <button type="submit">click</button>
+          <Grid item xs={4}>
+            <Summary />
           </Grid>
         </Grid>
       </Form>

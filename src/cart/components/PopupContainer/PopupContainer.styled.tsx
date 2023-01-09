@@ -7,4 +7,5 @@ export const PopupContainerStyled = styled.div`
   border-radius: 8px;
   padding: 30px;
   width: 377px;
+  text-align: center;
 `;

@@ -8,7 +8,7 @@ import { Stack } from "../../../_shared";
 export const ProductsThumbnail = () => {
   return (
     <Section>
-      <Stack direction="column" spacing="48px">
+      <Stack direction="column" spacing={5}>
         <Thumbnail1 />
         <Thumbnail2 />
         <Thumbnail3 />
