@@ -12,11 +12,17 @@ declare module "@mui/material/styles" {
   interface TypographyVariants {
     smallBold: React.CSSProperties;
     goBack: React.CSSProperties;
+    primary: React.CSSProperties;
+    secondary: React.CSSProperties;
+    transparent: React.CSSProperties;
   }
 
   interface TypographyVariantsOptions {
     smallBold?: React.CSSProperties;
     goBack?: React.CSSProperties;
+    primary?: React.CSSProperties;
+    secondary?: React.CSSProperties;
+    transparent?: React.CSSProperties;
   }
 }
 
@@ -24,6 +30,9 @@ declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     smallBold: true;
     goBack: true;
+    primary: true;
+    secondary: true;
+    transparent: true;
   }
 }
 
@@ -229,6 +238,51 @@ export const theme = createTheme({
       color: "rgba(0, 0, 0, 0.5) !important",
       textDecoration: "none !important",
       marginBottom: "30px",
+    },
+    primary: {
+      fontFamily: "Manrope",
+      padding: "15px 30px",
+      background: "#D87D4A",
+      borderRadius: 0,
+      fontWeight: 700,
+      fontSize: "13px",
+      lineHeight: "17.76px",
+      letterSpacing: "1px",
+      color: "#FFF !important",
+      textTransform: "uppercase",
+      textDecoration: "none !important",
+    },
+    secondary: {
+      fontFamily: "Manrope",
+      padding: "15px 30px",
+      background: "#FFF",
+      borderRadius: 0,
+      fontWeight: 700,
+      fontSize: "13px",
+      lineHeight: "17.76px",
+      letterSpacing: "1px",
+      color: "#000 !important",
+      textDecoration: "none !important",
+      border: "1px solid #000",
+      textTransform: "uppercase",
+    },
+    transparent: {
+      fontFamily: "Manrope",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "13px",
+      padding: "15px 30px",
+      background: "transparent",
+      borderRadius: 0,
+      fontWeight: 700,
+      fontSize: "13px",
+      lineHeight: "17.76px",
+      letterSpacing: "1px",
+      border: "none",
+      color: "rgba(0, 0, 0, 0.5) !important",
+      textDecoration: "none !important",
+      textTransform: "uppercase",
     },
   },
 });

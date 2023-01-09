@@ -9,7 +9,7 @@ interface Props {
 
 export const ItemsSummary: FC<Props> = ({ items }) => {
   return (
-    <Stack direction="column" spacing="24px">
+    <Stack direction="column" spacing={3}>
       {items.map((item) => {
         return <ItemPreviewSummary data={item} key={item.id} />;
       })}

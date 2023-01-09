@@ -1,5 +1,12 @@
 import React from "react";
-import { Container, useForm, Form, Link, useTranslate, Grid } from "../../../_shared";
+import {
+  Container,
+  useForm,
+  Form,
+  Link,
+  useTranslate,
+  Grid,
+} from "../../../_shared";
 import { CheckOutData } from "../../types";
 import { schemaCheckoutForm, defaultValuesForm } from "../../utils";
 import { FormOptions, Summary } from "../../components";
@@ -26,7 +33,7 @@ export const Checkout = () => {
       </Link>
 
       <Form formContextValue={formContextValue} onSubmit={onSubmit}>
-        <Grid container columnSpacing="30px">
+        <Grid container columnSpacing={4}>
           <Grid item xs={8}>
             <FormOptions />
           </Grid>

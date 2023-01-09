@@ -8,7 +8,7 @@ interface Props {
 
 export const ItemPreviewSummary: FC<Props> = ({ data }) => {
   return (
-    <Stack alignItems="center" spacing="16px">
+    <Stack alignItems="center" spacing={2}>
       <img src={data.image} alt={data.name} style={{ width: "64px" }} />
       <Stack
         direction="column"

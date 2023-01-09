@@ -2,7 +2,7 @@ import React from "react";
 import { PopupContainerStyled } from "./PopupContainer.styled";
 import { CartInfo } from "../CartInfo";
 import { Total } from "../Total";
-import { Button, useTranslate } from "../../../_shared";
+import { Link, useTranslate } from "../../../_shared";
 import { ItemType } from "../../types";
 import { Items } from "../Items";
 import { calculateTotalFromItems } from "../../utils";
@@ -20,13 +20,11 @@ export const PopupContainer = React.forwardRef<HTMLDivElement, Props>(
         <CartInfo itemsNumber={props.items.length} />
         <Items items={props.items}></Items>
         <Total total={calculateTotalFromItems(props.items)} />
-        <Button
-          variant="primary"
-          disabled={props.items.length === 0}
-          internalLink="/checkout"
-        >
-          {translate("cart.checkout")}
-        </Button>
+        {props.items.length > 0 && (
+          <Link variant="primary" to="/checkout">
+            {translate("cart.checkout")}
+          </Link>
+        )}
       </PopupContainerStyled>
     );
   }

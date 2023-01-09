@@ -9,7 +9,7 @@ interface Props {
 
 export const Items: FC<Props> = ({ items }) => {
   return (
-    <Stack direction="column" spacing="16px" style={{ marginBottom: "32px" }}>
+    <Stack direction="column" spacing={2} style={{ marginBottom: "32px" }}>
       {items.map((item) => {
         return <CartItem data={item} key={item.name} />;
       })}

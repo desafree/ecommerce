@@ -6,6 +6,7 @@ import {
   calculateShipping,
   calculateVat,
   calculateGrandTotal,
+  calculateTotals,
 } from "./utils";
 import {
   FormOptions,
@@ -38,4 +39,5 @@ export {
   calculateVat,
   calculateGrandTotal,
   TotalRow,
+  calculateTotals,
 };

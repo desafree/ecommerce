@@ -9,28 +9,31 @@ import {
 
 interface Props {
   total: number;
+  shipping: number;
+  vat: number;
+  grandTotal: number;
 }
 
-export const Totals: FC<Props> = ({ total }) => {
+export const Totals: FC<Props> = ({ total, shipping, vat, grandTotal }) => {
   const translate = useTranslate();
 
   return (
-    <Stack direction="column" spacing="8px">
+    <Stack direction="column" spacing={1}>
       <TotalRow
         title={translate("checkout.summary.total")}
         value={total}
       ></TotalRow>
       <TotalRow
         title={translate("checkout.summary.shipping")}
-        value={calculateShipping(total)}
+        value={shipping}
       ></TotalRow>
       <TotalRow
         title={translate("checkout.summary.vat")}
-        value={calculateVat(total)}
+        value={vat}
       ></TotalRow>
       <TotalRow
         title={translate("checkout.summary.grand-total")}
-        value={calculateGrandTotal(total)}
+        value={grandTotal}
       ></TotalRow>
     </Stack>
   );

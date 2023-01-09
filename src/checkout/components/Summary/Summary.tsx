@@ -6,23 +6,29 @@ import {
   calculateTotalFromItems,
   useSelectProductsFromCart,
 } from "../../../cart";
+import { calculateShipping, calculateTotals, calculateVat } from "../../utils";
 
 export const Summary = () => {
   const translate = useTranslate();
   const items = useSelectProductsFromCart();
-  const total = calculateTotalFromItems(items);
+  const { total, shipping, vat, grandTotal } = calculateTotals(items);
 
   return (
     <Stack
       direction="column"
-      spacing="32px"
+      spacing={4}
       style={{ padding: "32px", background: "white", borderRadius: "8px" }}
     >
       <Typography variant="h6">
         {translate("checkout.summary.title")}
       </Typography>
       <ItemsSummary items={items} />
-      <Totals total={total} />
+      <Totals
+        total={total}
+        shipping={shipping}
+        vat={vat}
+        grandTotal={grandTotal}
+      />
       <Button type="submit">{translate("checkout.summary.continue")}</Button>
     </Stack>
   );

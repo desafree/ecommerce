@@ -4,6 +4,7 @@ import { phoneRegex } from "./phoneRegex";
 import { calculateGrandTotal } from "./calculateGrandTotal";
 import { calculateVat } from "./calculateVat";
 import { calculateShipping } from "./calculateShipping";
+import { calculateTotals } from "./calculateTotals";
 
 export {
   schemaCheckoutForm,
@@ -12,4 +13,5 @@ export {
   calculateShipping,
   calculateVat,
   calculateGrandTotal,
+  calculateTotals,
 };
