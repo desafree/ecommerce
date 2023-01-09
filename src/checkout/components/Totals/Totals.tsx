@@ -1,7 +1,6 @@
 import React, { FC } from "react";
-import { TotalsStyled } from "./Totals.styled";
 import { TotalRow } from "../TotalRow";
-import { useTranslate } from "../../../_shared";
+import { useTranslate, Stack } from "../../../_shared";
 import {
   calculateVat,
   calculateShipping,
@@ -16,7 +15,7 @@ export const Totals: FC<Props> = ({ total }) => {
   const translate = useTranslate();
 
   return (
-    <TotalsStyled>
+    <Stack direction="column" spacing="8px">
       <TotalRow
         title={translate("checkout.summary.total")}
         value={total}
@@ -33,6 +32,6 @@ export const Totals: FC<Props> = ({ total }) => {
         title={translate("checkout.summary.grand-total")}
         value={calculateGrandTotal(total)}
       ></TotalRow>
-    </TotalsStyled>
+    </Stack>
   );
 };
