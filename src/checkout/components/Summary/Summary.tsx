@@ -2,11 +2,8 @@ import React from "react";
 import { Button, Typography, useTranslate, Stack } from "../../../_shared";
 import { ItemsSummary } from "../ItemsSummary";
 import { Totals } from "../Totals";
-import {
-  calculateTotalFromItems,
-  useSelectProductsFromCart,
-} from "../../../cart";
-import { calculateShipping, calculateTotals, calculateVat } from "../../utils";
+import { useSelectProductsFromCart } from "../../../cart";
+import { calculateTotals } from "../../utils";
 
 export const Summary = () => {
   const translate = useTranslate();

@@ -1,11 +1,6 @@
 import React, { FC } from "react";
 import { TotalRow } from "../TotalRow";
 import { useTranslate, Stack } from "../../../_shared";
-import {
-  calculateVat,
-  calculateShipping,
-  calculateGrandTotal,
-} from "../../utils";
 
 interface Props {
   total: number;

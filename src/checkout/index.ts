@@ -3,9 +3,6 @@ import {
   schemaCheckoutForm,
   defaultValuesForm,
   phoneRegex,
-  calculateShipping,
-  calculateVat,
-  calculateGrandTotal,
   calculateTotals,
 } from "./utils";
 import {
@@ -35,9 +32,6 @@ export {
   ItemsSummary,
   ItemPreviewSummary,
   Totals,
-  calculateShipping,
-  calculateVat,
-  calculateGrandTotal,
   TotalRow,
   calculateTotals,
 };
