@@ -1,5 +1,4 @@
-import React, { FC, useRef } from "react";
-import { useClickOutsideListener } from "../../../_shared";
+import React, { FC } from "react";
 import { OrderRecapContainer } from "../OrderRecapContainer";
 import { Popup } from "../../../_shared";
 
