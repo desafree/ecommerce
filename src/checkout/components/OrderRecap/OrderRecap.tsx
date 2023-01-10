@@ -8,9 +8,6 @@ interface Props {
 }
 
 export const OrderRecap: FC<Props> = ({ toggle }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  useClickOutsideListener(ref, toggle);
-
   return (
     <Popup toggle={toggle}>
       <OrderRecapContainer />
