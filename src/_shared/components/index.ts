@@ -12,6 +12,7 @@ import { PopUpWrapper } from "./PopupWrapper";
 import { Stack } from "./Stack";
 import { TextField } from "./TextField";
 import { RadioGroup } from "./RadioGroup";
+import { Popup } from "./Popup";
 import { ImageContainer } from "./ImageContainer";
 import { Popup } from "./Popup";
 
