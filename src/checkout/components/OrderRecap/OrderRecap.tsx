@@ -1,7 +1,7 @@
 import React, { FC, useRef } from "react";
 import { useClickOutsideListener } from "../../../_shared";
-import { OrderRecapStyled } from "./OrderRecap.styled";
 import { OrderRecapContainer } from "../OrderRecapContainer";
+import { Popup } from "../../../_shared";
 
 interface Props {
   toggle: () => void;
@@ -12,8 +12,8 @@ export const OrderRecap: FC<Props> = ({ toggle }) => {
   useClickOutsideListener(ref, toggle);
 
   return (
-    <OrderRecapStyled>
-      <OrderRecapContainer ref={ref} />
-    </OrderRecapStyled>
+    <Popup toggle={toggle}>
+      <OrderRecapContainer />
+    </Popup>
   );
 };
