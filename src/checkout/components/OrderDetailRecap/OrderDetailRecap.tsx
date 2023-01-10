@@ -9,12 +9,12 @@ interface Props {
 }
 
 export const OrderDetailRecap: FC<Props> = ({ items }) => {
-  const { on, toggle } = useToggle();
+  const { on: viewMore, toggle } = useToggle();
   const translate = useTranslate();
 
   return (
     <OrderDetailRecapStyled>
-      {!on ? (
+      {!viewMore ? (
         <OrderDetailItem item={items[0]} />
       ) : (
         items.map((item) => {
@@ -22,7 +22,7 @@ export const OrderDetailRecap: FC<Props> = ({ items }) => {
         })
       )}
       <Button variant="text" onClick={toggle}>
-        {on
+        {viewMore
           ? translate("checkout.detail.view-less")
           : translate("checkout.detail.view-more")}
       </Button>

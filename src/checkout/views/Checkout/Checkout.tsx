@@ -15,7 +15,7 @@ import { useToggle } from "../../../cart";
 
 export const Checkout = () => {
   const translate = useTranslate();
-  const { toggle, on } = useToggle();
+  const { on: showRecap, toggle } = useToggle();
 
   const formContextValue = useForm<CheckOutData>({
     initialValues: defaultValuesForm,
@@ -47,7 +47,7 @@ export const Checkout = () => {
           </Grid>
         </Form>
       </Container>
-      {on && (
+      {showRecap && (
         <PopUpWrapper>
           <OrderRecap toggle={toggle} />
         </PopUpWrapper>

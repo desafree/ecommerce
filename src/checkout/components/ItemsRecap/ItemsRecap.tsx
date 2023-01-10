@@ -1,14 +1,11 @@
 import React from "react";
 import { Grid } from "../../../_shared";
-import {
-  calculateTotalFromItems,
-  useSelectProductsFromCart,
-} from "../../../cart";
+import { calculateTotalFromItems, useCartProducts } from "../../../cart";
 import { OrderDetailRecap } from "../OrderDetailRecap";
 import { OrderTotalRecap } from "../OrderTotalRecap";
 
 export const ItemsRecap = () => {
-  const items = useSelectProductsFromCart();
+  const items = useCartProducts();
   const total = calculateTotalFromItems(items);
 
   return (
