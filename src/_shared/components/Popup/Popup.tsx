@@ -15,11 +15,7 @@ export const Popup: FC<Props> = ({ toggle, children }) => {
   return (
     <PopUpWrapper>
       <PopupStyled>
-        {React.Children.map(children, (child) => {
-          return React.cloneElement(child as React.ReactElement<any>, {
-            ref,
-          });
-        })}
+        <div ref={ref}>{children}</div>
       </PopupStyled>
     </PopUpWrapper>
   );
