@@ -48,7 +48,7 @@ export const HalfSectionProduct: FC<Props> = ({ product, direction }) => {
             variant="primary"
             to={`/${productData.category}/${productData.slug}`}
           >
-            see product
+            {translate("productAction.see")}
           </Link>
         </Grid>
       </Grid>
