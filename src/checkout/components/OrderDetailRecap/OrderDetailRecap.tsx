@@ -21,11 +21,13 @@ export const OrderDetailRecap: FC<Props> = ({ items }) => {
           return <OrderDetailItem item={item} key={item.id} />;
         })
       )}
-      <Button variant="text" onClick={toggle}>
-        {viewMore
-          ? translate("checkout.detail.view-less")
-          : translate("checkout.detail.view-more")}
-      </Button>
+      {items.length > 1 && (
+        <Button variant="text" onClick={toggle}>
+          {viewMore
+            ? translate("checkout.detail.view-less")
+            : translate("checkout.detail.view-more")}
+        </Button>
+      )}
     </OrderDetailRecapStyled>
   );
 };

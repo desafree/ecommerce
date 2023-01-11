@@ -2,11 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { NavbarDesktopStyled } from "./NavbarDesktop.styled";
 import { NavbarLinks } from "../NavbarLinks";
-import { Container, PopUpWrapper, Button } from "../../../_shared";
+import {
+  Container,
+  PopUpWrapper,
+  Button,
+  usePreventScroll,
+} from "../../../_shared";
 import { useToggle, CartPopup } from "../../../cart";
 
 export const NavbarDesktop = () => {
   const { on, toggle } = useToggle();
+  usePreventScroll(on);
 
   return (
     <NavbarDesktopStyled>
