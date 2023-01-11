@@ -1,7 +1,6 @@
 import React from "react";
 import { HeaderStyled } from "./Header.styled";
-import { Typography } from "../../../_shared/components";
-import { useTranslate, Button, Container } from "../../../_shared";
+import { useTranslate, Container, Typography, Link } from "../../../_shared";
 
 export const Header = () => {
   const translate = useTranslate();
@@ -16,7 +15,9 @@ export const Header = () => {
         <Typography variant="body1">
           {translate("header.description")}
         </Typography>
-        <Button variant="primary">{translate("header.button")}</Button>
+        <Link variant="primary" to="/speakers/xx99-mark-two-headphones">
+          {translate("header.button")}
+        </Link>
       </Container>
     </HeaderStyled>
   );

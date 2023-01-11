@@ -61,6 +61,7 @@ export const text = {
       add: "add to cart",
       back: "Go back",
       removeAll: "remove all",
+      shop: "shop",
     },
     navigation: {
       home: "home",

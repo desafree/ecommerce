@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, CategoryPage, Detail, useInitFetchProducts } from "./products";
 import { Checkout } from "./checkout";
 import { Layout } from "./_layout";
+import { useScrollToTop } from "./_shared";
 
 initializeLanguages();
 

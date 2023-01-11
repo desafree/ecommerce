@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { HalfSectionProductStyled } from "./HalfSectionProduct.styled";
-import { Grid, Typography, Button, Box, useTranslate } from "../../../_shared";
+import { Grid, Typography, Link, Box, useTranslate } from "../../../_shared";
 import { useSelectProductBySlug } from "../../hooks";
 
 interface Props {
@@ -44,7 +44,12 @@ export const HalfSectionProduct: FC<Props> = ({ product, direction }) => {
           <Box mb={3}>
             <Typography variant="body1">{productData.description}</Typography>
           </Box>
-          <Button variant="primary">see product</Button>
+          <Link
+            variant="primary"
+            to={`/${productData.category}/${productData.slug}`}
+          >
+            see product
+          </Link>
         </Grid>
       </Grid>
     </HalfSectionProductStyled>

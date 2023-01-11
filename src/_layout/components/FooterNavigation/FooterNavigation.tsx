@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterNavigationStyled } from "./FooterNavigation.styled";
-import { Link } from "react-router-dom";
+import { Link } from "../../../_shared";
 
 export const FooterNavigation = () => {
   return (
@@ -10,16 +10,24 @@ export const FooterNavigation = () => {
       </Link>
       <ul>
         <li>
-          <Link to="/">home</Link>
+          <Link to="/" variant="h6">
+            home
+          </Link>
         </li>
         <li>
-          <Link to="/">headphones</Link>
+          <Link to="/headphones" variant="h6">
+            headphones
+          </Link>
         </li>
         <li>
-          <Link to="/">speakers</Link>
+          <Link to="/speakers" variant="h6">
+            speakers
+          </Link>
         </li>
         <li>
-          <Link to="/">earphones</Link>
+          <Link to="/earphones" variant="h6">
+            earphones
+          </Link>
         </li>
       </ul>
     </FooterNavigationStyled>

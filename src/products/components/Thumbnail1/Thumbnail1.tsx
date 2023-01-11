@@ -1,6 +1,6 @@
 import React from "react";
 import { Thumbnail1Styled } from "./Thumbnail1.styled";
-import { Typography, Button } from "../../../_shared";
+import { Typography, Link } from "../../../_shared";
 
 export const Thumbnail1 = () => {
   return (
@@ -14,7 +14,9 @@ export const Thumbnail1 = () => {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </Typography>
-        <Button variant="secondary">see product</Button>
+        <Link variant="secondary" to="/speakers/zx9-speaker">
+          see product
+        </Link>
       </div>
     </Thumbnail1Styled>
   );

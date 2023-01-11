@@ -1,6 +1,6 @@
 import React from "react";
 import { Thumbnail3Styled } from "./Thumbnail3.styled";
-import { Typography, Button } from "../../../_shared";
+import { Typography, Link } from "../../../_shared";
 
 export const Thumbnail3 = () => {
   return (
@@ -8,7 +8,9 @@ export const Thumbnail3 = () => {
       <div className="img-container"></div>
       <div className="text">
         <Typography variant="h3">YX1 EARPHONES</Typography>
-        <Button variant="secondary">SEE PRODUCT</Button>
+        <Link variant="secondary" to="/earphones/yx1-earphones">
+          SEE PRODUCT
+        </Link>
       </div>
     </Thumbnail3Styled>
   );

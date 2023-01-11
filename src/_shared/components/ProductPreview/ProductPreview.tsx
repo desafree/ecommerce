@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { ProductPreviewStyled } from "./ProductPreview.styled";
 import { Typography } from "../Typography";
-import { Button } from "../Button";
+import { Link } from "../Link";
 import { ProductSuggestion } from "../../../products";
 import { useTranslate } from "../../i18n";
 
@@ -18,9 +18,9 @@ export const ProductPreview: FC<Props> = ({ product }) => {
         <img src={product.image.desktop} alt={product.name} />
       </div>
       <Typography variant="h6">{product.name}</Typography>
-      <Button variant="primary" href={`/${product.slug}`}>
+      <Link variant="primary" to={`/suggestion/${product.slug}`}>
         {translate("productAction.see")}
-      </Button>
+      </Link>
     </ProductPreviewStyled>
   );
 };
