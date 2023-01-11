@@ -5,8 +5,10 @@ import { Categories } from "../../components";
 import { ProductsThumbnail } from "../../components";
 import { HalfSectionImage } from "../../../_shared/components";
 import { useTranslate } from "../../../_shared/i18n";
+import { useScrollToTop } from "../../../_shared";
 
 export const Home = () => {
+  useScrollToTop();
   const translate = useTranslate();
 
   return (

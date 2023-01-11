@@ -1,7 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Category as CategoryType } from "../../types";
-import { Container, useTranslate, HalfSectionImage } from "../../../_shared";
+import {
+  Container,
+  useTranslate,
+  HalfSectionImage,
+  useScrollToTop,
+} from "../../../_shared";
 import {
   CategoryHeader,
   HalfSectionProduct,
@@ -14,6 +19,7 @@ type CategoryParams = {
 };
 
 export const Category = () => {
+  useScrollToTop();
   const { category } = useParams<CategoryParams>();
   const translate = useTranslate();
   const products = useSelectProductByCategory(category!);
