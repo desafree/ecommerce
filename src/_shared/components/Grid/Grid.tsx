@@ -16,6 +16,7 @@ interface Props {
   md?: number;
   lg?: number;
   xl?: number;
+  style?: React.CSSProperties;
   className?: string;
   wrap?: "nowrap" | "wrap-reverse" | "wrap";
   alignItems?:
@@ -69,7 +70,7 @@ export const Grid: FC<Props> = ({
         alignItems={alignItems}
         justifyContent={justifyContent}
         className={className}
-        style={style}
+        sx={style}
       >
         {children}
       </GridMUI>
@@ -85,7 +86,7 @@ export const Grid: FC<Props> = ({
       lg={lg}
       xl={xl}
       className={className}
-      style={style}
+      sx={style}
     >
       {children}
     </GridMUI>

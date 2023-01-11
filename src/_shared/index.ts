@@ -14,6 +14,7 @@ import {
   TextField,
   RadioGroup,
   ImageContainer,
+  Popup,
 } from "./components";
 import { Input, Select, Form, Radio, useForm, UseFormReturn } from "./form";
 import { formatNumber } from "./utils";
@@ -66,9 +67,10 @@ export {
   Link,
   useClickOutsideListener,
   Stack,
-  formatNumber,
   TextField,
   RadioGroup,
   persistor,
   ImageContainer,
+  formatNumber,
+  Popup,
 };

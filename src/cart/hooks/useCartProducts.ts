@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectProductsFromCart } from "../slice";
 
-export const useSelectProductsFromCart = () => {
+export const useCartProducts = () => {
   return useSelector(selectProductsFromCart);
 };

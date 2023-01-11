@@ -13,6 +13,8 @@ import { Stack } from "./Stack";
 import { TextField } from "./TextField";
 import { RadioGroup } from "./RadioGroup";
 import { ImageContainer } from "./ImageContainer";
+import { Popup } from "./Popup";
+
 
 export {
   Grid,
@@ -30,4 +32,5 @@ export {
   TextField,
   RadioGroup,
   ImageContainer,
+  Popup,
 };

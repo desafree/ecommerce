@@ -1,5 +1,5 @@
 import { useToggle } from "./useToggle";
 import { useCartActions } from "./useCartActions";
-import { useSelectProductsFromCart } from "./useSelectProductsFromCart";
+import { useCartProducts } from "./useCartProducts";
 
-export { useToggle, useCartActions, useSelectProductsFromCart };
+export { useToggle, useCartActions, useCartProducts };

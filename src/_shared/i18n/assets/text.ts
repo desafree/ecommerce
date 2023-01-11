@@ -17,6 +17,14 @@ export const text = {
       digit: "Must be a digits",
     },
     checkout: {
+      detail: {
+        thanks: "thank you for your order",
+        notification: "You will receive an email confirmation shortly",
+        "view-more": "view more",
+        "view-less": "view less",
+        total: "GRAND TOTAL",
+        back: "back to home",
+      },
       summary: {
         title: "summary",
         total: "total",
