@@ -1,5 +1,14 @@
 export const text = {
   en: {
+    "product-previews": {
+      zx9: {
+        title: "ZX9 SPEAKER",
+        description:
+          "Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.",
+      },
+      zx7: "ZX7 SPEAKER",
+      yx1: "YX1 EARPHONES",
+    },
     errors: {
       length: "Must be exactly 5 digits",
       required: "Is required",

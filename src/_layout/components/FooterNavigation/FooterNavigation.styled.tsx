@@ -1,33 +1,28 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 
-export const FooterNavigationStyled = styled.nav`
-  display: flex;
-  align-items: center;
-  a:first-child {
-    margin-right: auto;
-  }
+export const FooterNavigationStyled = styled("nav")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  ["a:first-child"]: {
+    marginRight: "auto",
+  },
 
-  ul {
-    display: flex;
-    list-style: none;
-    gap: 34px;
-    li {
-      a {
-        font-family: "Manrope";
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 25px;
-        letter-spacing: 2px;
-        text-align: left;
-        color: white;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: all 0.5s;
+  ul: {
+    display: "flex",
+    listStyle: "none",
+    gap: "34px",
+  },
 
-        &:hover {
-          color: #d87d4a;
-        }
-      }
-    }
-  }
-`;
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column",
+    gap: "30px",
+    ["a:first-child"]: {
+      marginRight: 0,
+    },
+
+    ul: {
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  },
+}));

@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterStyled } from "./Footer.styled";
-import { Container, useTranslate } from "../../../_shared";
+import { Container, useTranslate, Typography } from "../../../_shared";
 import { FooterNavigation } from "../FooterNavigation";
 import { FooterAbout } from "../FooterAbout";
 
@@ -12,7 +12,12 @@ export const Footer = () => {
       <Container maxWidth="lg">
         <FooterNavigation></FooterNavigation>
         <FooterAbout></FooterAbout>
-        <p>{translate("footer.copyright")}</p>
+        <Typography
+          variant="body1"
+          style={{ color: "rgba(255,255,255,0.5)", marginTop: "50px" }}
+        >
+          {translate("footer.copyright")}
+        </Typography>
       </Container>
     </FooterStyled>
   );

@@ -1,7 +1,6 @@
 import React, { FC } from "react";
-import { Grid } from "../Grid/Grid";
+import { Grid } from "../Grid";
 import { Typography } from "../Typography";
-import { Box } from "../Box";
 import { Section } from "../../../_layout";
 
 interface Props {
@@ -13,19 +12,19 @@ interface Props {
 export const HalfSectionImage: FC<Props> = ({ title, text, imgUrl }) => {
   return (
     <Section>
-      <Grid container alignItems="center">
+      <Grid container alignItems="center" justifyContent="center" spacing={5}>
         <Grid item xs={12} md={6}>
-          <Box mr={5}>
-            <Box mb={3}>
-              <Typography variant="h3">{title}</Typography>
-            </Box>{" "}
-            <Typography variant="body1">{text}</Typography>
-          </Box>
+          <Typography variant="h3" style={{ marginBottom: "16px" }}>
+            {title}
+          </Typography>
+          <Typography variant="body1">{text}</Typography>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <div className="container">
-            <img src={imgUrl} alt="" />
-          </div>
+        <Grid item xs={12} md={6} style={{ textAlign: "center" }}>
+          <img
+            src={imgUrl}
+            alt=""
+            style={{ width: "100%", maxWidth: "500px", margin: "0 auto" }}
+          />
         </Grid>
       </Grid>
     </Section>

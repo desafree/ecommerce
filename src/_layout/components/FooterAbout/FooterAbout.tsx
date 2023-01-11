@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterAboutStyled } from "./FooterAbout.styled";
-import { useTranslate } from "../../../_shared";
+import { useTranslate, Typography } from "../../../_shared";
 import { ReactComponent as Facebook } from "./icon-facebook.svg";
 import { ReactComponent as Twitter } from "./icon-twitter.svg";
 import { ReactComponent as Instagram } from "./icon-instagram.svg";
@@ -10,20 +10,22 @@ export const FooterAbout = () => {
 
   return (
     <FooterAboutStyled>
-      <p>{translate("footer.text")}</p>
+      <Typography variant="body1" style={{ color: "rgba(255,255,255,0.5)" }}>
+        {translate("footer.text")}
+      </Typography>
       <ul>
         <li>
-          <a href="/">
+          <a href="https://www.facebook.com/" target="_blank">
             <Facebook fill="white" className="icon" />
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="https://www.facebook.com/" target="_blank">
             <Twitter fill="white" className="icon" />
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="https://www.facebook.com/" target="_blank">
             <Instagram fill="white" className="icon" />
           </a>
         </li>

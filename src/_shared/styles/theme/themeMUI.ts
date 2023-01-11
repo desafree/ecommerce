@@ -36,7 +36,9 @@ declare module "@mui/material/Typography" {
   }
 }
 
-export const theme = createTheme({
+export let theme = createTheme();
+
+theme = createTheme(theme, {
   components: {
     MuiTextField: {
       styleOverrides: {
@@ -147,6 +149,11 @@ export const theme = createTheme({
       textAlign: "left",
       color: "#000000",
       textTransform: "uppercase",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "40px",
+        lineHeight: "46px",
+        textAlign: "center",
+      },
     },
     h2: {
       fontSize: "40px",

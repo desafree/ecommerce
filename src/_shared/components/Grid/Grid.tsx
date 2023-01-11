@@ -36,6 +36,7 @@ interface Props {
     | "space-evenly"
     | "initial"
     | "inherit";
+  style?: React.CSSProperties;
 }
 
 export const Grid: FC<Props> = ({
@@ -85,6 +86,7 @@ export const Grid: FC<Props> = ({
       lg={lg}
       xl={xl}
       className={className}
+      sx={style}
     >
       {children}
     </GridMUI>
