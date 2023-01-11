@@ -33,4 +33,23 @@ export const ProductImagesStyled = styled.section<Props>`
     background-size: cover;
     background-position: center;
   }
+
+  @media only screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-gap: 20px;
+
+    .container1 {
+      grid-area: 1 / 1 / 4 / 2;
+    }
+    .container2 {
+      grid-area: 4 / 1 / 6 / 2;
+    }
+    .container3 {
+      grid-area: 6 / 1 / 8 / 2;
+    }
+  }
 `;
