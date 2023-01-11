@@ -1,21 +1,34 @@
 import React from "react";
 import { Thumbnail1Styled } from "./Thumbnail1.styled";
-import { Typography, Button } from "../../../_shared";
+import { Typography, Button, Stack, useTranslate } from "../../../_shared";
 
 export const Thumbnail1 = () => {
+  const translate = useTranslate();
+
   return (
     <Thumbnail1Styled>
-      <div className="img-container">
-        <img src="/assets/home/desktop/image-speaker-zx9.png" alt="" />
-      </div>
-      <div className="text">
-        <Typography variant="h2">ZX9 SPEAKER</Typography>
-        <Typography variant="body1">
-          Upgrade to premium speakers that are phenomenally built to deliver
-          truly remarkable sound.
+      <img
+        src="/assets/home/desktop/image-speaker-zx9.png"
+        alt=""
+        style={{ width: "100%" }}
+      />
+
+      <Stack spacing={3} direction="column">
+        <Typography variant="h2" style={{ color: "white" }}>
+          {translate("product-previews.zx9.title")}
         </Typography>
-        <Button variant="secondary">see product</Button>
-      </div>
+        <Typography
+          variant="body1"
+          style={{
+            marginTop: "24px",
+            marginBottom: "40px",
+            color: "rgba(255, 255, 255, 0.75)",
+          }}
+        >
+          {translate("product-previews.zx9.description")}
+        </Typography>
+        <Button variant="secondary">{translate("productAction.see")}</Button>
+      </Stack>
     </Thumbnail1Styled>
   );
 };

@@ -7,20 +7,10 @@ export const Thumbnail3Styled = styled.div`
   div {
     flex-basis: 50%;
     border-radius: 8px;
+    padding: 100px;
+  }
 
-    &.img-container {
-      background-image: url("/assets/home/desktop/image-earphones-yx1.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    &.text {
-      background: #f1f1f1;
-      padding: 101px 95px;
-
-      h3 {
-        margin-bottom: 32px;
-      }
-    }
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
   }
 `;

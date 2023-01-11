@@ -5,7 +5,9 @@ import { Typography, Button } from "../../../_shared";
 export const Thumbnail2 = () => {
   return (
     <Thumbnail2Styled>
-      <Typography variant="h3">zx7 speaker</Typography>
+      <Typography variant="h3" style={{ marginBottom: "32px" }}>
+        zx7 speaker
+      </Typography>
       <Button variant="secondary">See product</Button>
     </Thumbnail2Styled>
   );

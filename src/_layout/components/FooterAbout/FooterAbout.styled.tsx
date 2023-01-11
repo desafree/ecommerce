@@ -5,18 +5,6 @@ export const FooterAboutStyled = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 36px;
-  p {
-    max-width: 540px;
-    font-family: "Manrope";
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 25px;
-    letter-spacing: 0px;
-    text-align: left;
-    color: #ffffff;
-    mix-blend-mode: normal;
-    opacity: 0.5;
-  }
 
   ul {
     display: flex;
@@ -30,6 +18,15 @@ export const FooterAboutStyled = styled.div`
 
     .icon:hover {
       fill: #d87d4a;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 50px;
+    ul {
+      align-self: center;
     }
   }
 `;

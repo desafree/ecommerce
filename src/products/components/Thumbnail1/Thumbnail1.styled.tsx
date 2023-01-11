@@ -5,29 +5,39 @@ import React from "react";
 export const Thumbnail1Styled = styled.div`
   background: #d87d4a;
   display: flex;
-  gap: 140px;
+  gap: 100px;
   align-items: center;
   padding: 133px 95px;
   overflow: hidden;
 
-  h2 {
-    color: white;
-    margin-bottom: 24px;
-    font-size: 56px;
+  button {
+    align-self: flex-start;
   }
 
-  p {
-    max-width: 350px;
-    color: rgba(255, 255, 255, 0.75);
-    margin-bottom: 40px;
-  }
-
-  .img-container {
+  img {
     max-width: 400px;
+    margin-bottom: -200px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    padding: 100px 0;
 
     img {
-      width: 100%;
-      margin-bottom: -200px;
+      margin-bottom: 0;
     }
+
+    div {
+      align-items: center;
+    }
+
+    button {
+      align-self: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 100px 50px;
   }
 `;

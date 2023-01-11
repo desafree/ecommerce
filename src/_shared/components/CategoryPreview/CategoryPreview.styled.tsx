@@ -8,16 +8,13 @@ export const CategoryPreviewStyled = styled.div`
   background: #f1f1f1;
   position: relative;
 
-  h6 {
-    padding-top: 116px;
-  }
-
   .img-container {
     top: -100px;
     width: 250px;
     position: absolute;
-    img {
-      width: 100%;
-    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 300px;
   }
 `;

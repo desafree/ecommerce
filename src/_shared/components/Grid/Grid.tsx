@@ -35,6 +35,7 @@ interface Props {
     | "space-evenly"
     | "initial"
     | "inherit";
+  style?: React.CSSProperties;
 }
 
 export const Grid: FC<Props> = ({
@@ -54,6 +55,7 @@ export const Grid: FC<Props> = ({
   justifyContent = "flex-start",
   alignItems = "stretch",
   className,
+  style,
 }) => {
   if (container) {
     return (
@@ -67,6 +69,7 @@ export const Grid: FC<Props> = ({
         alignItems={alignItems}
         justifyContent={justifyContent}
         className={className}
+        style={style}
       >
         {children}
       </GridMUI>
@@ -82,6 +85,7 @@ export const Grid: FC<Props> = ({
       lg={lg}
       xl={xl}
       className={className}
+      style={style}
     >
       {children}
     </GridMUI>

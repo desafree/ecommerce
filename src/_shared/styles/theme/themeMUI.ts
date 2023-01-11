@@ -147,6 +147,11 @@ export const theme = createTheme({
       textAlign: "left",
       color: "#000000",
       textTransform: "uppercase",
+      "@media (max-width:768px)": {
+        fontSize: "40px",
+        lineHeight: "46px",
+        textAlign: "center",
+      },
     },
     h2: {
       fontSize: "40px",
