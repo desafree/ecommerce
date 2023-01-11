@@ -7,7 +7,6 @@ import {
   useTranslate,
   Grid,
   PopUpWrapper,
-  useScrollToTop,
   usePreventScroll,
 } from "../../../_shared";
 import { CheckOutData } from "../../types";
@@ -16,7 +15,6 @@ import { FormOptions, Summary, OrderRecap } from "../../components";
 import { useToggle } from "../../../cart";
 
 export const Checkout = () => {
-  useScrollToTop();
   const translate = useTranslate();
   const { on: showRecap, toggle } = useToggle();
   usePreventScroll(showRecap);
