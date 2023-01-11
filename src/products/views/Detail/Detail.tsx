@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, useTranslate } from "../../../_shared";
+import { Container, useScrollToTop, useTranslate } from "../../../_shared";
 import { useParams } from "react-router-dom";
 import { ProductDetail } from "../../components";
 import { HalfSectionList } from "../../../_shared";
@@ -10,6 +10,7 @@ import { Categories } from "../../components";
 import { HalfSectionImage } from "../../../_shared";
 
 export const Detail = () => {
+  useScrollToTop();
   const { id: productSlug } = useParams<string>();
   const product = useSelectProductBySlug(productSlug!);
   const translate = useTranslate();
