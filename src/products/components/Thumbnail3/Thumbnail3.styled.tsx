@@ -1,16 +1,15 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 import React from "react";
 
-export const Thumbnail3Styled = styled.div`
-  display: flex;
-  gap: 30px;
-  div {
-    flex-basis: 50%;
-    border-radius: 8px;
-    padding: 100px;
-  }
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column-reverse;
-  }
-`;
+export const Thumbnail3Styled = styled("div")(({ theme }) => ({
+  display: "flex",
+  gap: "30px",
+  div: {
+    flexBasis: "50%",
+    borderRadius: "8px",
+    padding: "100px",
+  },
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column-reverse",
+  },
+}));

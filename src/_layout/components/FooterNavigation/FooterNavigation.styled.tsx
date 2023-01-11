@@ -1,28 +1,28 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 
-export const FooterNavigationStyled = styled.nav`
-  display: flex;
-  align-items: center;
-  a:first-child {
-    margin-right: auto;
-  }
+export const FooterNavigationStyled = styled("nav")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  ["a:first-child"]: {
+    marginRight: "auto",
+  },
 
-  ul {
-    display: flex;
-    list-style: none;
-    gap: 34px;
-  }
+  ul: {
+    display: "flex",
+    listStyle: "none",
+    gap: "34px",
+  },
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    gap: 30px;
-    a:first-child {
-      margin-right: 0;
-    }
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column",
+    gap: "30px",
+    ["a:first-child"]: {
+      marginRight: 0,
+    },
 
-    ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-`;
+    ul: {
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  },
+}));

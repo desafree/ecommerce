@@ -1,43 +1,41 @@
-import styled from "styled-components";
-import { Button, Typography } from "../../../_shared/components";
+import { styled } from "@mui/material";
 import React from "react";
 
-export const Thumbnail1Styled = styled.div`
-  background: #d87d4a;
-  display: flex;
-  gap: 100px;
-  align-items: center;
-  padding: 133px 95px;
-  overflow: hidden;
+export const Thumbnail1Styled = styled("div")(({ theme }) => ({
+  background: "#d87d4a",
+  display: "flex",
+  gap: "100px",
+  alignItems: "center",
+  padding: "133px 95px",
+  overflow: "hidden",
 
-  button {
-    align-self: flex-start;
-  }
+  button: {
+    alignSelf: "flex-start",
+  },
 
-  img {
-    max-width: 400px;
-    margin-bottom: -200px;
-  }
+  img: {
+    maxWidth: "400px",
+    marginBottom: "-200px",
+  },
 
-  @media screen and (max-width: 1000px) {
-    flex-direction: column;
-    padding: 100px 0;
+  [theme.breakpoints.down("lg")]: {
+    flexDirection: "column",
+    padding: "100px 0",
 
-    img {
-      margin-bottom: 0;
-    }
+    img: {
+      marginBottom: "0",
+    },
 
-    div {
-      align-items: center;
-    }
+    div: {
+      alignItems: "center",
+    },
 
-    button {
-      align-self: center;
-    }
-  }
+    button: {
+      alignSelf: "center",
+    },
+  },
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    padding: 100px 50px;
-  }
-`;
+  [theme.breakpoints.down("md")]: {
+    padding: "100px 50px",
+  },
+}));

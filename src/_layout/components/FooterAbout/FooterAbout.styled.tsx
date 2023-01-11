@@ -1,32 +1,31 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 import React from "react";
 
-export const FooterAboutStyled = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 36px;
+export const FooterAboutStyled = styled("div")(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  marginTop: "36px",
 
-  ul {
-    display: flex;
-    gap: 16px;
-    align-self: flex-end;
-    list-style: none;
+  ul: {
+    display: "flex",
+    gap: "16px",
+    alignSelf: "flexend",
+    listStyle: "none",
+  },
 
-    .icon {
-      transition: all 0.5s;
-    }
+  ".icon": {
+    transition: "all 0.5s",
+    "&:hover": {
+      fill: "#d87d4a",
+    },
+  },
 
-    .icon:hover {
-      fill: #d87d4a;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    margin-top: 50px;
-    flex-direction: column;
-    gap: 50px;
-    ul {
-      align-self: center;
-    }
-  }
-`;
+  [theme.breakpoints.down("md")]: {
+    marginTop: "50px",
+    flexDirection: "column",
+    gap: "50px",
+    ul: {
+      alignSelf: "center",
+    },
+  },
+}));
