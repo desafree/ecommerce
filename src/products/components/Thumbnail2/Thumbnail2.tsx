@@ -1,13 +1,15 @@
 import React from "react";
 import { Thumbnail2Styled } from "./Thumbnail2.styled";
-import { Typography, Link } from "../../../_shared";
+import { Typography, Link, useTranslate } from "../../../_shared";
 
 export const Thumbnail2 = () => {
+  const translate = useTranslate();
+
   return (
     <Thumbnail2Styled>
-      <Typography variant="h3">zx7 speaker</Typography>
+      <Typography variant="h3">{translate("product-previews.zx7")}</Typography>
       <Link variant="secondary" to="/speakers/zx7-speaker">
-        See product
+        {translate("productAction.see")}
       </Link>
     </Thumbnail2Styled>
   );

@@ -1,8 +1,10 @@
 import React from "react";
 import { FooterNavigationStyled } from "./FooterNavigation.styled";
-import { Link } from "../../../_shared";
+import { Link, useTranslate } from "../../../_shared";
 
 export const FooterNavigation = () => {
+  const translate = useTranslate();
+
   return (
     <FooterNavigationStyled>
       <Link to="/">
@@ -11,22 +13,22 @@ export const FooterNavigation = () => {
       <ul>
         <li>
           <Link to="/" variant="h6">
-            home
+            {translate("navigation.home")}
           </Link>
         </li>
         <li>
           <Link to="/headphones" variant="h6">
-            headphones
+            {translate("navigation.headphones")}
           </Link>
         </li>
         <li>
           <Link to="/speakers" variant="h6">
-            speakers
+            {translate("navigation.speakers")}
           </Link>
         </li>
         <li>
           <Link to="/earphones" variant="h6">
-            earphones
+            {translate("navigation.earphones")}
           </Link>
         </li>
       </ul>
