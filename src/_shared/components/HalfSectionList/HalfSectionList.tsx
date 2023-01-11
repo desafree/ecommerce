@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import { Typography } from "../Typography";
 import { List } from "@mui/material";
 import { ListItem } from "@mui/material";
-import { Box } from "../Box";
 import { HalfSectionListStyled } from "./HalfSectionList.styled";
+import { Stack } from "../Stack";
 
 interface Props {
   descriptionTitle: string;
@@ -20,17 +20,12 @@ export const HalfSectionList: FC<Props> = ({
 }) => {
   return (
     <HalfSectionListStyled>
-      <div>
-        <Box mb={3}>
-          <Typography variant="h3">{descriptionTitle}</Typography>
-        </Box>
-
+      <Stack direction="column" spacing={3}>
+        <Typography variant="h3">{descriptionTitle}</Typography>
         <Typography variant="body1">{description}</Typography>
-      </div>
-      <div>
-        <Box mb={3}>
-          <Typography variant="h3">{listTitle}</Typography>
-        </Box>
+      </Stack>
+      <Stack direction="column" spacing={3}>
+        <Typography variant="h3">{listTitle}</Typography>
         <List>
           {list.map((item) => {
             return (
@@ -38,14 +33,14 @@ export const HalfSectionList: FC<Props> = ({
                 <Typography variant="subtitle1">
                   {String(item.quantity) + "x"}
                 </Typography>
-                <Box ml={3}>
-                  <Typography variant="body1">{item.item}</Typography>
-                </Box>
+                <Typography variant="body1" style={{ marginLeft: "20px" }}>
+                  {item.item}
+                </Typography>
               </ListItem>
             );
           })}
         </List>
-      </div>
+      </Stack>
     </HalfSectionListStyled>
   );
 };
