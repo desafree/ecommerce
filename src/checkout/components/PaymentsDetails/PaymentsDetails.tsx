@@ -28,13 +28,13 @@ export const PaymentsDetails = () => {
           ]}
         />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} lg={6}>
         <Input
           label={translate("checkout.payment.e-money-number")}
           name="e-money-number"
         />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} lg={6}>
         <Input
           label={translate("checkout.payment.e-money-pin")}
           name="e-money-pin"
