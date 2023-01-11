@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Grid, Typography, Button, useTranslate } from "../../../_shared";
+import { Grid, Typography, Link, useTranslate } from "../../../_shared";
 import { useSelectProductBySlug } from "../../hooks";
 
 interface Props {
@@ -43,8 +43,12 @@ export const HalfSectionProduct: FC<Props> = ({ product, direction }) => {
         <Typography variant="body1" style={{ marginBottom: "30px" }}>
           {productData.description}
         </Typography>
-        <Button variant="primary">see product</Button>
-      </Grid>
+        <Link
+            variant="primary"
+            to={`/${productData.category}/${productData.slug}`}
+        >
+          {translate("productAction.see")}
+        </Link>      </Grid>
     </Grid>
   );
 };
