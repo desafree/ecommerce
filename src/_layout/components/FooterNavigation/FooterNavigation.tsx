@@ -1,8 +1,10 @@
 import React from "react";
 import { FooterNavigationStyled } from "./FooterNavigation.styled";
-import { Link, Typography } from "../../../_shared";
+import { Link, useTranslate } from "../../../_shared";
 
 export const FooterNavigation = () => {
+  const translate = useTranslate();
+
   return (
     <FooterNavigationStyled>
       <Link to="/">
@@ -10,56 +12,23 @@ export const FooterNavigation = () => {
       </Link>
       <ul>
         <li>
-          <Link to="/">
-            {" "}
-            <Typography
-              variant="smallBold"
-              style={{
-                color: "white",
-                textTransform: "uppercase",
-              }}
-            >
-              home
-            </Typography>
+          <Link to="/" variant="h6">
+            {translate("navigation.home")}
           </Link>
         </li>
         <li>
-          <Link to="/headphones">
-            <Typography
-              variant="smallBold"
-              style={{
-                color: "white",
-                textTransform: "uppercase",
-              }}
-            >
-              headphones
-            </Typography>
+          <Link to="/headphones" variant="h6">
+            {translate("navigation.headphones")}
           </Link>
         </li>
         <li>
-          <Link to="/speakers">
-            <Typography
-              variant="smallBold"
-              style={{
-                color: "white",
-                textTransform: "uppercase",
-              }}
-            >
-              speakers
-            </Typography>
+          <Link to="/speakers" variant="h6">
+            {translate("navigation.speakers")}
           </Link>
         </li>
         <li>
-          <Link to="/earphones">
-            <Typography
-              variant="smallBold"
-              style={{
-                color: "white",
-                textTransform: "uppercase",
-              }}
-            >
-              earphones
-            </Typography>
+          <Link to="/earphones" variant="h6">
+            {translate("navigation.earphones")}
           </Link>
         </li>
       </ul>
