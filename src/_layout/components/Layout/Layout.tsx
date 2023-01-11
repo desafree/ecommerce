@@ -1,7 +1,8 @@
 import React, { FC, ReactNode } from "react";
 import { Footer } from "../Footer";
 import { NavbarDesktop } from "../NavbarDesktop";
-import { useScrollToTop } from "../../../_shared";
+import { useScrollToTop,useWindowSize } from "../../../_shared";
+import { NavBarMobile } from "../NavBarMobile";
 
 interface Props {
   children: ReactNode;
@@ -10,9 +11,11 @@ interface Props {
 export const Layout: FC<Props> = ({ children }) => {
   useScrollToTop();
 
+  const { width } = useWindowSize();
+
   return (
     <>
-      <NavbarDesktop />
+      {width > 768 ? <NavbarDesktop /> : <NavBarMobile />}
       {children}
       <Footer />
     </>

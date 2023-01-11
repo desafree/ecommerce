@@ -8,4 +8,10 @@ export const CartPopupStyled = styled.div`
   right: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 10;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;

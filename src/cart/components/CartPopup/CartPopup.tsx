@@ -1,6 +1,6 @@
 import React, { FC, useRef } from "react";
 import { CartPopupStyled } from "./CartPopup.styled";
-import { Container, useClickOutsideListener } from "../../../_shared";
+import { useClickOutsideListener } from "../../../_shared";
 import { PopupContainer } from "../PopupContainer";
 import { useCartProducts } from "../../hooks";
 
@@ -15,9 +15,7 @@ export const CartPopup: FC<Props> = ({ toggle }) => {
 
   return (
     <CartPopupStyled>
-      <Container maxWidth="lg">
-        <PopupContainer items={items} ref={ref}></PopupContainer>
-      </Container>
+      <PopupContainer items={items} ref={ref}></PopupContainer>
     </CartPopupStyled>
   );
 };

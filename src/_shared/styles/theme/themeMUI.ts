@@ -201,7 +201,8 @@ theme = createTheme(theme, {
       lineHeight: "24.59px",
       letterSpacing: "1.29px",
       textAlign: "left",
-      color: "#000000",
+      color: "#000000 !important",
+      textDecoration: "none !important",
       textTransform: "uppercase",
     },
     body1: {

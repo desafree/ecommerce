@@ -35,6 +35,7 @@ import {
   useScrollToTop,
   usePreventScroll,
   useGoTo,
+  useWindowSize
 } from "./hooks";
 
 export {
@@ -72,11 +73,12 @@ export {
   Link,
   useClickOutsideListener,
   Stack,
+  formatNumber,
   TextField,
   RadioGroup,
   persistor,
   ImageContainer,
-  formatNumber,
+  useWindowSize,
   Popup,
   useScrollToTop,
   usePreventScroll,

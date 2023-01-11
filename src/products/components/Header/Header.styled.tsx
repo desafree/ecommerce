@@ -13,4 +13,8 @@ export const HeaderStyled = styled("header")(({ theme }) => ({
       alignItems: "center",
     },
   },
+
+[theme.breakpoints.down('md')]:{
+      padding:'200px 0 165px'
+}
 }));

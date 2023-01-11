@@ -6,6 +6,9 @@ import {
   NavbarLinks,
   Layout,
   Section,
+  NavBarMobile,
+  NavBarLinksMobile,
+  NavPopupContainer,
 } from "./components";
 
 export {
@@ -16,4 +19,7 @@ export {
   NavbarLinks,
   Layout,
   Section,
+  NavBarMobile,
+  NavBarLinksMobile,
+  NavPopupContainer,
 };
