@@ -7,4 +7,12 @@ export const HalfSectionListStyled = styled.section`
   div:first-child {
     flex-basis: 70%;
   }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 30px;
+    div:first-child {
+      flex-basis: 100%;
+    }
+  }
 `;
