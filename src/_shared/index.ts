@@ -13,6 +13,7 @@ import {
   Stack,
   TextField,
   RadioGroup,
+  Popup,
 } from "./components";
 import { Input, Select, Form, Radio, useForm, UseFormReturn } from "./form";
 import { formatNumber } from "./utils";
@@ -65,8 +66,9 @@ export {
   Link,
   useClickOutsideListener,
   Stack,
-  formatNumber,
   TextField,
   RadioGroup,
   persistor,
+  formatNumber,
+  Popup,
 };

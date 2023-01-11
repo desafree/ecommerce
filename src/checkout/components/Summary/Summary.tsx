@@ -2,12 +2,12 @@ import React from "react";
 import { Button, Typography, useTranslate, Stack } from "../../../_shared";
 import { ItemsSummary } from "../ItemsSummary";
 import { Totals } from "../Totals";
-import { useSelectProductsFromCart } from "../../../cart";
+import { useCartProducts } from "../../../cart";
 import { calculateTotals } from "../../utils";
 
 export const Summary = () => {
   const translate = useTranslate();
-  const items = useSelectProductsFromCart();
+  const items = useCartProducts();
   const { total, shipping, vat, grandTotal } = calculateTotals(items);
 
   return (
