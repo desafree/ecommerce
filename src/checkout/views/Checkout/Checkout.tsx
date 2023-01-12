@@ -7,6 +7,7 @@ import {
   useTranslate,
   Grid,
   PopUpWrapper,
+  usePreventScroll,
 } from "../../../_shared";
 import { CheckOutData } from "../../types";
 import { schemaCheckoutForm, defaultValuesForm } from "../../utils";
@@ -16,6 +17,7 @@ import { useToggle } from "../../../cart";
 export const Checkout = () => {
   const translate = useTranslate();
   const { on: showRecap, toggle } = useToggle();
+  usePreventScroll(showRecap);
 
   const formContextValue = useForm<CheckOutData>({
     initialValues: defaultValuesForm,

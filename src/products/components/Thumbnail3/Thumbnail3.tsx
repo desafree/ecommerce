@@ -1,12 +1,7 @@
 import React from "react";
 import { Thumbnail3Styled } from "./Thumbnail3.styled";
-import {
-  Typography,
-  Button,
-  Stack,
-  ImageContainer,
-  useTranslate,
-} from "../../../_shared";
+
+import { Typography, Link,Stack,ImageContainer, useTranslate } from "../../../_shared";
 
 export const Thumbnail3 = () => {
   const translate = useTranslate();
@@ -30,7 +25,9 @@ export const Thumbnail3 = () => {
         <Typography variant="h3">
           {translate("product-previews.yx1")}
         </Typography>
-        <Button variant="secondary">{translate("productAction.see")}</Button>
+        <Link variant="secondary" to="/earphones/yx1-earphones">
+          {translate("productAction.see")}
+        </Link>
       </Stack>
     </Thumbnail3Styled>
   );

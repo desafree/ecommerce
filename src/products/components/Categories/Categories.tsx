@@ -7,15 +7,15 @@ export const Categories = () => {
     <CategoriesStyled>
       <CategoryPreview
         category="headphones"
-        url="/assets/shared/desktop/image-category-thumbnail-headphones.png"
+        imageUrl="/assets/shared/desktop/image-category-thumbnail-headphones.png"
       />
       <CategoryPreview
         category="speakers"
-        url="/assets/shared/desktop/image-category-thumbnail-speakers.png"
+        imageUrl="/assets/shared/desktop/image-category-thumbnail-speakers.png"
       />
       <CategoryPreview
         category="earphones"
-        url="/assets/shared/desktop/image-category-thumbnail-earphones.png"
+        imageUrl="/assets/shared/desktop/image-category-thumbnail-earphones.png"
       />
     </CategoriesStyled>
   );
