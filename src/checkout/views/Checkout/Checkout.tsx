@@ -49,11 +49,7 @@ export const Checkout = () => {
           </Grid>
         </Form>
       </Container>
-      {showRecap && (
-        <PopUpWrapper>
-          <OrderRecap toggle={toggle} />
-        </PopUpWrapper>
-      )}
+      {showRecap && <OrderRecap toggle={toggle} />}
     </>
   );
 };

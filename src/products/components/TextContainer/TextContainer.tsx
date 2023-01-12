@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Box, Typography, useTranslate } from "../../../_shared";
+import { Stack, Typography, useTranslate } from "../../../_shared";
 import { Product } from "../../types";
 import { CartActions } from "../CartActions";
 
@@ -11,24 +11,16 @@ export const TextContainer: FC<Props> = ({ product }) => {
   const translate = useTranslate();
 
   return (
-    <div>
+    <Stack direction="column" spacing={4}>
       {product.new && (
-        <Box mb={3}>
-          <Typography variant="overline">
-            {translate("productAction.new")}
-          </Typography>
-        </Box>
+        <Typography variant="overline">
+          {translate("productAction.new")}
+        </Typography>
       )}
-      <Box mb={3}>
-        <Typography variant="h2">{product.name}</Typography>
-      </Box>
-      <Box mb={3}>
-        <Typography variant="body1">{product.description}</Typography>
-      </Box>
-      <Box mb={3}>
-        <Typography variant="h5">{"$ " + String(product.price)}</Typography>
-      </Box>
+      <Typography variant="h2">{product.name}</Typography>
+      <Typography variant="body1">{product.description}</Typography>
+      <Typography variant="h5">{"$ " + String(product.price)}</Typography>
       <CartActions id={product.id}></CartActions>
-    </div>
+    </Stack>
   );
 };

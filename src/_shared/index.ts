@@ -34,6 +34,7 @@ import {
   useClickOutsideListener,
   useScrollToTop,
   usePreventScroll,
+  useGoTo,
 } from "./hooks";
 
 export {
@@ -79,4 +80,5 @@ export {
   Popup,
   useScrollToTop,
   usePreventScroll,
+  useGoTo,
 };
