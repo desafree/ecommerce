@@ -9,7 +9,7 @@ export const Thumbnail1Styled = styled("div")(({ theme }) => ({
   padding: "133px 95px",
   overflow: "hidden",
 
-  button: {
+  a: {
     alignSelf: "flex-start",
   },
 
@@ -30,7 +30,7 @@ export const Thumbnail1Styled = styled("div")(({ theme }) => ({
       alignItems: "center",
     },
 
-    button: {
+    a: {
       alignSelf: "center",
     },
   },

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Button } from "../../../_shared";
 
 export const CartPopupStyled = styled.div`
   position: fixed;

@@ -7,11 +7,17 @@ interface Props {
   children: ReactNode;
   to: string;
   variant?: TypographyProps["variant"];
+  style?: React.CSSProperties;
 }
 
-export const Link: FC<Props> = ({ children, to, variant = "smallBold" }) => {
+export const Link: FC<Props> = ({
+  children,
+  to,
+  variant = "smallBold",
+  style,
+}) => {
   return (
-    <LinkMUI component={RouterLink} to={to} variant={variant}>
+    <LinkMUI component={RouterLink} to={to} variant={variant} sx={style}>
       {children}
       {variant === "transparent" ? (
         <span>

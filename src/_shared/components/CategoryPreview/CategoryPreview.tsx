@@ -12,7 +12,6 @@ interface Props {
 const CategoryPreview: FC<Props> = ({ category, url }) => {
   const translate = useTranslate();
 
-const CategoryPreview: FC<Props> = ({ category, url }) => {
   return (
     <CategoryPreviewStyled>
       <div className="img-container">
