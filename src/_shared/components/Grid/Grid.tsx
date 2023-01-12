@@ -36,7 +36,6 @@ interface Props {
     | "space-evenly"
     | "initial"
     | "inherit";
-  style?: React.CSSProperties;
 }
 
 export const Grid: FC<Props> = ({

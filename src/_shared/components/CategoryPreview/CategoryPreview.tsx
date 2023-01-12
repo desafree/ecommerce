@@ -9,18 +9,18 @@ interface Props {
   imageUrl: string;
 }
 
+const CategoryPreview: FC<Props> = ({ category, imageUrl }) => {
+  const translate = useTranslate();
 
-const CategoryPreview: FC<Props> = ({ category, url }) => {
   return (
     <CategoryPreviewStyled>
       <div className="img-container">
-        <img src={url} alt={category} style={{ width: "100%" }} />
+        <img src={imageUrl} alt={category} style={{ width: "100%" }} />
       </div>
       <Typography variant="h6">{category}</Typography>
       <Link variant="transparent" to={`/${category}`}>
         {translate("productAction.shop")}
       </Link>
-
     </CategoryPreviewStyled>
   );
 };
