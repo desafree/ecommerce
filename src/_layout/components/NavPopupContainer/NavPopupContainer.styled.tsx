@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 
-export const NavPopupContainerStyled = styled.ul`
+export const NavPopupContainerStyled = styled("ul")`
   padding: 50px 0;
   margin-top: 97px;
   background: white;

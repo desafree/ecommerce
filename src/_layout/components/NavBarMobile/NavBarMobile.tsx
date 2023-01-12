@@ -1,13 +1,14 @@
 import React from "react";
 import { NavBarMobileStyled } from "./NavBarMobile.styled";
-import { Button, PopUpWrapper } from "../../../_shared";
-import { CartPopup, useToggle } from "../../../cart";
+import { Button, PopUpWrapper, Popup } from "../../../_shared";
+import { PopupContainer, useCartProducts, useToggle } from "../../../cart";
 import { NavBarLinksMobile } from "../NavBarLinksMobile";
 import { Link } from "react-router-dom";
 
 export const NavBarMobile = () => {
   const { on: activeMenu, toggle: openMenu } = useToggle();
   const { on: activeCart, toggle: openCart } = useToggle();
+  const items = useCartProducts();
 
   return (
     <NavBarMobileStyled>
@@ -29,13 +30,11 @@ export const NavBarMobile = () => {
         />
       </Button>
       {activeCart && (
-        /*          TODO: use popup component*/
-        <PopUpWrapper>
-          <CartPopup toggle={openCart} />
-        </PopUpWrapper>
+        <Popup toggle={openCart}>
+          <PopupContainer items={items} />
+        </Popup>
       )}
       {activeMenu && (
-        /*          TODO: use popup component*/
         <PopUpWrapper>
           <NavBarLinksMobile toggle={openMenu} />
         </PopUpWrapper>

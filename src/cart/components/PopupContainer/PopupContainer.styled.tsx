@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 
-export const PopupContainerStyled = styled.div`
-  margin-left: auto;
-  margin-right: 200px;
-  margin-top: 100px;
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 30px;
-  width: 377px;
-  text-align: center;
+export const PopupContainerStyled = styled("div")(({ theme }) => ({
+  marginLeft: "auto",
+  marginRight: "200px",
+  marginTop: "100px",
+  background: "#ffffff",
+  borderRadius: "8px",
+  padding: "30px",
+  width: "377px",
+  textAlign: "center",
 
-  @media only screen and (max-width: 768px) {
-    margin: 0;
-    width: 350px;
-  }
-`;
+  [theme.breakpoints.down("md")]: {
+    margin: 0,
+    width: "350px",
+  },
+}));

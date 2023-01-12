@@ -3,7 +3,7 @@ import { styled } from "@mui/material";
 export const FooterNavigationStyled = styled("nav")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-  ["a:first-child"]: {
+  ["a:first-of-type"]: {
     marginRight: "auto",
   },
 
@@ -16,7 +16,7 @@ export const FooterNavigationStyled = styled("nav")(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
     gap: "30px",
-    ["a:first-child"]: {
+    ["a:first-of-type"]: {
       marginRight: 0,
     },
 

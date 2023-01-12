@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 
-export const NavBarLinksMobileStyled = styled.nav`
+export const NavBarLinksMobileStyled = styled("nav")`
   background: white;
   position: fixed;
   top: 0;
