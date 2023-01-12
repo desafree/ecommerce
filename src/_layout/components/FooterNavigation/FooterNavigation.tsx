@@ -2,6 +2,7 @@ import React from "react";
 import { FooterNavigationStyled } from "./FooterNavigation.styled";
 import { Link, useTranslate } from "../../../_shared";
 
+
 export const FooterNavigation = () => {
   const translate = useTranslate();
 

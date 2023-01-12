@@ -13,6 +13,7 @@ import {
   Stack,
   TextField,
   RadioGroup,
+  ImageContainer,
   Popup,
 } from "./components";
 import { Input, Select, Form, Radio, useForm, UseFormReturn } from "./form";
@@ -73,6 +74,7 @@ export {
   TextField,
   RadioGroup,
   persistor,
+  ImageContainer,
   formatNumber,
   Popup,
   useScrollToTop,
