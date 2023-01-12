@@ -17,7 +17,9 @@ const CategoryPreview: FC<Props> = ({ category, url }) => {
       <div className="img-container">
         <img src={url} alt={category} style={{ width: "100%" }} />
       </div>
-      <Typography variant="h6">{category}</Typography>
+      <Typography variant="h6" style={{ paddingTop: "110px" }}>
+        {category}
+      </Typography>
       <Link variant="transparent" to={`/${category}`}>
         {translate("productAction.shop")}
       </Link>
