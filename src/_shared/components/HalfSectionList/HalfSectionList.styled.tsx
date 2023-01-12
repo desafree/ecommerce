@@ -1,18 +1,18 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 
-export const HalfSectionListStyled = styled.section`
-  display: flex;
-  gap: 125px;
-  margin-bottom: 160px;
-  div:first-child {
-    flex-basis: 70%;
-  }
+export const HalfSectionListStyled = styled("section")(({ theme }) => ({
+  display: "flex",
+  gap: "125px",
+  marginBottom: "160px",
+  ["div:first-child"]: {
+    flexBasis: "70%",
+  },
 
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
-    gap: 30px;
-    div:first-child {
-      flex-basis: 100%;
-    }
-  }
-`;
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column",
+    gap: "30px",
+    ["div:first-child"]: {
+      flexBasis: "100%",
+    },
+  },
+}));
