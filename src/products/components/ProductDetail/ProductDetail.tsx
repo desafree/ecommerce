@@ -23,7 +23,7 @@ export const ProductDetail: FC<Props> = ({ productData }) => {
             size="contain"
             url={productData.image.desktop}
             position="center"
-            style={{ minHeight: "500px" }}
+            minHeight={"500px"}
           />
         </Grid>
         <Grid item xs={12} md={6}>

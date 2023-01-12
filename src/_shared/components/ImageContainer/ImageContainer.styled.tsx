@@ -4,7 +4,7 @@ interface Props {
   url: string;
   size: "cover" | "contain";
   position: "center" | "left" | "right" | "bottom";
-  style?: React.CSSProperties;
+  minHeight?: string;
 }
 
 export const ImageContainerStyled = styled("div")<Props>`
@@ -12,5 +12,5 @@ export const ImageContainerStyled = styled("div")<Props>`
   background-size: ${(props) => props.size};
   background-position: ${(props) => props.position};
   background-repeat: no-repeat;
-  {...style}
+  min-height: ${(props) => props.minHeight};
 `;
