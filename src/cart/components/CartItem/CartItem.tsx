@@ -14,7 +14,9 @@ export const CartItem: FC<Props> = ({ data }) => {
     <CartItemStyled>
       <img src={data.image} alt={data.name} />
       <Box>
-        <Typography variant="body1">{removeLastWord(data.name)}</Typography>
+        <Typography variant="body1">
+          {removeLastWord(data.name, " ")}
+        </Typography>
         <Typography variant="body1">{data.price + "$"}</Typography>
       </Box>
       <ButtonItem qty={data.qty} id={data.id} />

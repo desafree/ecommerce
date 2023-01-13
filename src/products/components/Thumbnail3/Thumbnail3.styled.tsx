@@ -9,6 +9,7 @@ export const Thumbnail3Styled = styled("div")(({ theme }) => ({
     borderRadius: "8px",
     padding: "100px",
   },
+
   [theme.breakpoints.down("md")]: {
     flexDirection: "column-reverse",
   },

@@ -3,12 +3,12 @@ import { OrderRecapContainerStyled } from "./OrderRecapContainer.styled";
 import { Typography, Button, useTranslate } from "../../../_shared";
 import { ItemsRecap } from "../ItemsRecap";
 import { useCartActions } from "../../../cart";
-import { useGoHome } from "../../hooks";
+import { useGoTo } from "../../../_shared";
 
 export const OrderRecapContainer = () => {
   const translate = useTranslate();
   const { removeAllFromCart } = useCartActions();
-  const goHome = useGoHome();
+  const goHome = useGoTo("/");
 
   const handleCLick = () => {
     removeAllFromCart();

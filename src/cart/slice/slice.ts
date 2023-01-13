@@ -2,6 +2,7 @@ import {
   createSelector,
   createSlice,
   createEntityAdapter,
+  PayloadAction,
 } from "@reduxjs/toolkit";
 import { CartProduct } from "../../products/types";
 import { RootState } from "../../_shared/store";
@@ -18,8 +19,13 @@ const slice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    /*    itemUpdate: itemsAdapter.upsertOne,*/
-    itemUpdate: itemsAdapter.upsertOne,
+    itemUpdate: (state, action: PayloadAction<{ id: number; qty: number }>) => {
+      if (state.entities[action.payload.id]) {
+        state.entities[action.payload.id]!.qty += action.payload.qty;
+      } else {
+        itemsAdapter.addOne(state, action.payload);
+      }
+    },
     itemRemove: itemsAdapter.removeOne,
     itemsRemoveAll: itemsAdapter.removeAll,
   },

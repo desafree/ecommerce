@@ -6,7 +6,7 @@ import {
   phoneRegex,
   calculateTotals,
 } from "./utils";
-import { useGoHome } from "./hooks";
+
 import {
   FormOptions,
   BillingDetails,
@@ -40,13 +40,12 @@ export {
   ItemsSummary,
   ItemPreviewSummary,
   Totals,
-  calculateTotals,
   TotalRow,
+  calculateTotals,
   OrderRecap,
   OrderRecapContainer,
   ItemsRecap,
   OrderDetailRecap,
   OrderTotalRecap,
   OrderDetailItem,
-  useGoHome,
 };

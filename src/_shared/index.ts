@@ -30,7 +30,12 @@ import {
 import { store, reducers, RootState, AppDispatch, persistor } from "./store";
 import { GlobalStyle, theme } from "./styles";
 import { Status, ButtonTypes } from "./types";
-import { useClickOutsideListener } from "./hooks";
+import {
+  useClickOutsideListener,
+  useScrollToTop,
+  usePreventScroll,
+  useGoTo,
+} from "./hooks";
 
 export {
   Grid,
@@ -73,4 +78,7 @@ export {
   ImageContainer,
   formatNumber,
   Popup,
+  useScrollToTop,
+  usePreventScroll,
+  useGoTo,
 };

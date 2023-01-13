@@ -15,7 +15,9 @@ export const OrderDetailItem: FC<Props> = ({ item }) => {
         style={{ width: "50px", height: "50px" }}
       />
       <Stack direction="column" alignItems="flex-start">
-        <Typography variant="smallBold">{removeLastWord(item.name)}</Typography>
+        <Typography variant="smallBold">
+          {removeLastWord(item.name, " ")}
+        </Typography>
         <Typography variant="smallBold">{"$" + item.price}</Typography>
       </Stack>
       <Typography variant="smallBold" style={{ marginLeft: "auto !important" }}>
