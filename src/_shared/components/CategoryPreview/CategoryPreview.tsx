@@ -6,9 +6,8 @@ import { useTranslate } from "../../i18n";
 
 interface Props {
   category: Category;
-  imageUrl: string;
+  url: string;
 }
-
 
 const CategoryPreview: FC<Props> = ({ category, url }) => {
   const translate = useTranslate();
@@ -16,7 +15,7 @@ const CategoryPreview: FC<Props> = ({ category, url }) => {
   return (
     <CategoryPreviewStyled>
       <div className="img-container">
-        <img src={imageUrl} alt={category} style={{ width: "100%" }} />
+        <img src={url} alt={category} style={{ width: "100%" }} />
       </div>
       <Typography variant="h6" style={{ paddingTop: "100px" }}>
         {category}
