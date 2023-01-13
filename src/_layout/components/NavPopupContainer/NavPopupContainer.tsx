@@ -1,25 +1,27 @@
 import React from "react";
 import { NavPopupContainerStyled } from "./NavPopupContainer.styled";
-import { Link } from "../../../_shared";
+import { Link, useTranslate } from "../../../_shared";
 
 export const NavPopupContainer = React.forwardRef<HTMLUListElement>(
   (props, ref) => {
+    const translate = useTranslate();
+
     return (
       <NavPopupContainerStyled ref={ref}>
         <li>
           <Link to="/" variant="h6">
-            Headphones
-          </Link>{" "}
+            {translate("navigation.headphones")}
+          </Link>
         </li>
         <li>
           <Link to="/" variant="h6">
-            Speakers
-          </Link>{" "}
+            {translate("navigation.speakers")}
+          </Link>
         </li>
         <li>
           <Link to="/" variant="h6">
-            Earphones
-          </Link>{" "}
+            {translate("navigation.earphones")}
+          </Link>
         </li>
       </NavPopupContainerStyled>
     );

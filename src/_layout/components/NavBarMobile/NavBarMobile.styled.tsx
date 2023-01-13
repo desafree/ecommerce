@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 
-export const NavBarMobileStyled = styled.nav`
+export const NavBarMobileStyled = styled("nav")`
   background: black;
   display: flex;
   justify-content: space-between;
