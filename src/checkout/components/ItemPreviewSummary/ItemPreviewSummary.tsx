@@ -16,7 +16,7 @@ export const ItemPreviewSummary: FC<Props> = ({ data }) => {
         style={{ marginRight: "auto !important" }}
       >
         <Typography variant="smallBold">
-          {removeLastWord(data.name, "")}
+          {removeLastWord(data.name, " ")}
         </Typography>
         <Typography variant="smallBold">{"$" + data.price}</Typography>
       </Stack>
