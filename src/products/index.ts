@@ -43,7 +43,6 @@ import {
   useInitFetchProducts,
   useSelectProductBySlug,
   useSelectProductByCategory,
-  useGoBack,
 } from "./hooks";
 
 export {
@@ -77,7 +76,6 @@ export {
   useInitFetchProducts,
   useSelectProductBySlug,
   useSelectProductByCategory,
-  useGoBack,
   reducer as productsReducer,
   actions,
   type Category,

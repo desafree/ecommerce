@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 
-export const useGoBack = () => {
+export const useGoTo = (internalLink: string) => {
   const navigate = useNavigate();
 
   return () => {
-    navigate(-1);
+    navigate(internalLink);
   };
 };
