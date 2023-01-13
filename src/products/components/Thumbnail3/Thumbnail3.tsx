@@ -1,7 +1,12 @@
 import React from "react";
 import { Thumbnail3Styled } from "./Thumbnail3.styled";
-
-import { Typography, Link,Stack,ImageContainer, useTranslate } from "../../../_shared";
+import {
+  Typography,
+  Link,
+  Stack,
+  ImageContainer,
+  useTranslate,
+} from "../../../_shared";
 
 export const Thumbnail3 = () => {
   const translate = useTranslate();
