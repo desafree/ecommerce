@@ -7,10 +7,10 @@ export const Thumbnail2 = () => {
 
   return (
     <Thumbnail2Styled>
-      <Typography variant="h3" style={{ marginBottom: "32px" }}>
-        {translate("product-previews.zx7")}
-      </Typography>
-      <Link variant="secondary" to="/speakers/zx7-speaker">{translate("productAction.see")}</Link>
+      <Typography variant="h3">{translate("product-previews.zx7")}</Typography>
+      <Link variant="secondary" to="/speakers/zx7-speaker">
+        {translate("productAction.see")}
+      </Link>
     </Thumbnail2Styled>
   );
 };

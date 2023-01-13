@@ -30,7 +30,9 @@ export const Thumbnail3 = () => {
         <Typography variant="h3">
           {translate("product-previews.yx1")}
         </Typography>
-        <Link variant="secondary" to="/earphones/yx1-earphones">{translate("productAction.see")}</Link>
+        <Link variant="secondary" to="/earphones/yx1-earphones">
+          {translate("productAction.see")}
+        </Link>
       </Stack>
     </Thumbnail3Styled>
   );
