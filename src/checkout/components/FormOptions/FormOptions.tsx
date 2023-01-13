@@ -13,7 +13,7 @@ export const FormOptions = () => {
       <Typography variant="h2" style={{ marginBottom: "41px" }}>
         {translate("checkout.title")}
       </Typography>
-      <Stack direction="column" spacing={4}>
+      <Stack direction="column">
         <BillingDetails />
         <ShippingDetails />
         <PaymentsDetails />

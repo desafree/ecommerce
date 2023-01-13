@@ -6,7 +6,6 @@ export const ProductsSuggestionStyled = styled("section")(({ theme }) => ({
   justifyContent: "space-between",
   gap: "30px",
   marginBottom: "160px",
-
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
   },

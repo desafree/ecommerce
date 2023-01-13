@@ -7,6 +7,7 @@ export const HalfSectionListStyled = styled("section")(({ theme }) => ({
   ["div:first-child"]: {
     flexBasis: "70%",
   },
+
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
     gap: "30px",

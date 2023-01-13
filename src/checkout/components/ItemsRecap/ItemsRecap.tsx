@@ -10,10 +10,10 @@ export const ItemsRecap = () => {
 
   return (
     <Grid container style={{ marginTop: "33px", marginBottom: "48px" }}>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <OrderDetailRecap items={items} />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <OrderTotalRecap total={total} />
       </Grid>
     </Grid>

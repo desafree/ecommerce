@@ -172,6 +172,10 @@ theme = createTheme(theme, {
       textAlign: "left",
       color: "#000000",
       textTransform: "uppercase",
+      [theme.breakpoints.down("md")]: {
+        fontSize: "20px",
+        lineHeight: "24px",
+      },
     },
     h4: {
       fontSize: "28px",

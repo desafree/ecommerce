@@ -5,6 +5,7 @@ interface Props {
   size: "cover" | "contain";
   position: "center" | "left" | "right" | "bottom";
   minHeight?: string;
+
 }
 
 export const ImageContainerStyled = styled("div")<Props>`
