@@ -5,7 +5,6 @@ import { NavbarDesktop } from "./NavbarDesktop";
 import { NavbarLinks } from "./NavbarLinks";
 import { Layout } from "./Layout";
 import { Section } from "./Section";
-import { NavBarMobile } from "./NavBarMobile";
 import { NavBarLinksMobile } from "./NavBarLinksMobile";
 import { NavPopupContainer } from "./NavPopupContainer";
 
@@ -17,7 +16,6 @@ export {
   NavbarLinks,
   Layout,
   Section,
-  NavBarMobile,
   NavBarLinksMobile,
   NavPopupContainer,
 };

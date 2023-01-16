@@ -24,6 +24,7 @@ interface Props {
   direction?: "column-reverse" | "column" | "row-reverse" | "row";
   spacing?: 1 | 2 | 3 | 4 | 5;
   style?: React.CSSProperties;
+  component?: React.ElementType;
 }
 
 export const Stack: FC<Props> = ({
@@ -33,6 +34,7 @@ export const Stack: FC<Props> = ({
   style,
   justifyContent = "flex-start",
   alignItems = "stretch",
+  component = "div",
 }) => {
   return (
     <StackMUI
@@ -41,6 +43,7 @@ export const Stack: FC<Props> = ({
       sx={style}
       justifyContent={justifyContent}
       alignItems={alignItems}
+      component={component}
     >
       {children}
     </StackMUI>
