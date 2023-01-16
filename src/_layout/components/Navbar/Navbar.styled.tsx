@@ -1,6 +1,6 @@
 import { styled } from "@mui/material";
 
-export const NavbarDesktopStyled = styled("nav")(({ theme }) => ({
+export const NavbarStyled = styled("nav")(({ theme }) => ({
   background: "black",
   ".desktop, .mobile": {
     paddingTop: "36px",

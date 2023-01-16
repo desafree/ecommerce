@@ -1,5 +1,5 @@
 import React from "react";
-import { NavbarDesktopStyled } from "./NavbarDesktop.styled";
+import { NavbarStyled } from "./Navbar.styled";
 import { NavbarLinks } from "../NavbarLinks";
 import {
   Container,
@@ -11,13 +11,13 @@ import {
 import { useToggle, CartPopup } from "../../../cart";
 import { NavBarLinksMobile } from "../NavBarLinksMobile";
 
-export const NavbarDesktop = () => {
+export const Navbar = () => {
   const { on: showCart, toggle: toggleCart } = useToggle();
   const { on: showMenu, toggle: toggleMenu } = useToggle();
   usePreventScroll(showCart);
 
   return (
-    <NavbarDesktopStyled>
+    <NavbarStyled>
       <Container maxWidth="lg" className="desktop">
         <Link to="/">
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
@@ -27,6 +27,7 @@ export const NavbarDesktop = () => {
           <img src="/assets/shared/desktop/icon-cart.svg" alt="" />
         </Button>
       </Container>
+
       <Container maxWidth="lg" className="mobile">
         <Button variant="text" onClick={toggleMenu}>
           <img
@@ -46,6 +47,7 @@ export const NavbarDesktop = () => {
           />
         </Button>
       </Container>
+
       {showCart && (
         <PopUpWrapper>
           <CartPopup toggle={toggleCart} />
@@ -56,6 +58,6 @@ export const NavbarDesktop = () => {
           <NavBarLinksMobile toggle={toggleMenu} />
         </PopUpWrapper>
       )}
-    </NavbarDesktopStyled>
+    </NavbarStyled>
   );
 };
