@@ -34,6 +34,7 @@ export const CartActions: FC<Props> = ({ id }) => {
         onClick={() => {
           updateItemFromCart(id, qty);
         }}
+        dataTestId="add-to-cart"
       >
         {translate("productAction.add")}
       </Button>

@@ -8,6 +8,7 @@ interface Props {
   to: string;
   variant?: TypographyProps["variant"];
   style?: React.CSSProperties;
+  dataTestId?: string;
 }
 
 export const Link: FC<Props> = ({
@@ -15,9 +16,16 @@ export const Link: FC<Props> = ({
   to,
   variant = "smallBold",
   style,
+  dataTestId,
 }) => {
   return (
-    <LinkMUI component={RouterLink} to={to} variant={variant} sx={style}>
+    <LinkMUI
+      component={RouterLink}
+      to={to}
+      variant={variant}
+      sx={style}
+      data-test-id={"link-" + dataTestId}
+    >
       {children}
       {variant === "transparent" ? (
         <span>

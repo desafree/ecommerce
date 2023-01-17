@@ -8,7 +8,11 @@ export const Thumbnail2 = () => {
   return (
     <Thumbnail2Styled>
       <Typography variant="h3">{translate("product-previews.zx7")}</Typography>
-      <Link variant="secondary" to="/speakers/zx7-speaker">
+      <Link
+        variant="secondary"
+        to="/speakers/zx7-speaker"
+        dataTestId="thumbnail2"
+      >
         {translate("productAction.see")}
       </Link>
     </Thumbnail2Styled>

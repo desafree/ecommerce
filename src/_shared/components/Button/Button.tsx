@@ -9,6 +9,7 @@ interface Props {
   href?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   type?: "submit" | "button" | "reset";
+  dataTestId?: string;
 }
 
 const Button: FC<Props> = ({
@@ -18,6 +19,7 @@ const Button: FC<Props> = ({
   href,
   onClick,
   type,
+  dataTestId,
 }) => {
   return (
     <ButtonMUI
@@ -26,6 +28,7 @@ const Button: FC<Props> = ({
       href={href}
       onClick={onClick}
       type={type}
+      data-test-id={"btn-" + dataTestId}
     >
       {children}
       {variant === "transparent" ? (

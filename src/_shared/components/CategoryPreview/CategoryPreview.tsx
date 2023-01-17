@@ -20,7 +20,7 @@ const CategoryPreview: FC<Props> = ({ category, url }) => {
       <Typography variant="h6" style={{ paddingTop: "110px" }}>
         {category}
       </Typography>
-      <Link variant="transparent" to={`/${category}`}>
+      <Link variant="transparent" to={`/${category}`} dataTestId={category}>
         {translate("productAction.shop")}
       </Link>
     </CategoryPreviewStyled>
