@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import { Footer } from "../Footer";
-import { NavbarDesktop } from "../NavbarDesktop";
+import { Navbar } from "../Navbar";
 import { useScrollToTop } from "../../../_shared";
 
 interface Props {
@@ -12,7 +12,7 @@ export const Layout: FC<Props> = ({ children }) => {
 
   return (
     <>
-      <NavbarDesktop />
+      <Navbar />
       {children}
       <Footer />
     </>

@@ -2,18 +2,22 @@ import {
   Footer,
   FooterNavigation,
   FooterAbout,
-  NavbarDesktop,
+  Navbar,
   NavbarLinks,
   Layout,
   Section,
+  NavBarLinksMobile,
+  NavPopupContainer,
 } from "./components";
 
 export {
   Footer,
   FooterNavigation,
   FooterAbout,
-  NavbarDesktop,
+  Navbar,
   NavbarLinks,
   Layout,
   Section,
+  NavBarLinksMobile,
+  NavPopupContainer,
 };
