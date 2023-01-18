@@ -46,7 +46,7 @@ export const HalfSectionProduct: FC<Props> = ({ product, direction }) => {
         <Link
           variant="primary"
           to={`/${productData.category}/${productData.slug}`}
-          dataTestId={productData.slug}
+          dataTestId={`${productData.slug}-go-to`}
         >
           {translate("productAction.see")}
         </Link>{" "}

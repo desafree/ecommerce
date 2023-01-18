@@ -36,7 +36,7 @@ export const Header = () => {
         <Link
           variant="primary"
           to="/speakers/xx99-mark-two-headphones"
-          dataTestId="header"
+          dataTestId="xx99-mark-two-headphones-go-to"
         >
           {translate("header.button")}
         </Link>

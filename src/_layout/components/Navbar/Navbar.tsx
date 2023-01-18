@@ -23,7 +23,7 @@ export const Navbar = () => {
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
         </Link>
         <NavbarLinks />
-        <Button variant="text" onClick={toggleCart} dataTestId="cart">
+        <Button variant="text" onClick={toggleCart} dataTestId="cart-toggle">
           <img src="/assets/shared/desktop/icon-cart.svg" alt="" />
         </Button>
       </Container>
@@ -39,7 +39,7 @@ export const Navbar = () => {
         <Link to="/">
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
         </Link>
-        <Button variant="text" onClick={toggleCart} dataTestId="cart">
+        <Button variant="text" onClick={toggleCart} dataTestId="cart-toggle">
           <img
             src="/assets/shared/desktop/icon-cart.svg"
             alt=""

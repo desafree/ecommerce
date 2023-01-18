@@ -24,7 +24,7 @@ export const Link: FC<Props> = ({
       to={to}
       variant={variant}
       sx={style}
-      data-test-id={"link-" + dataTestId}
+      data-test-id={dataTestId}
     >
       {children}
       {variant === "transparent" ? (

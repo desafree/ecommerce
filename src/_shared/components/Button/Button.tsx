@@ -28,7 +28,7 @@ const Button: FC<Props> = ({
       href={href}
       onClick={onClick}
       type={type}
-      data-test-id={"btn-" + dataTestId}
+      data-test-id={dataTestId}
     >
       {children}
       {variant === "transparent" ? (

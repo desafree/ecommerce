@@ -18,7 +18,9 @@ export const Quantity: FC<Props> = ({
       <Button onClick={handleCLickMinus}>
         <Typography variant="smallBold">-</Typography>
       </Button>
-      <Typography variant="smallBold">{String(qty)}</Typography>
+      <Typography variant="smallBold" dataTestId="quantity-to-add">
+        {String(qty)}
+      </Typography>
       <Button onClick={handleClickPlus}>
         <Typography variant="smallBold">+</Typography>
       </Button>

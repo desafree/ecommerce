@@ -33,7 +33,7 @@ export const Thumbnail3 = () => {
         <Link
           variant="secondary"
           to="/earphones/yx1-earphones"
-          dataTestId="thumbnail3"
+          dataTestId="yx1-earphones-go-to"
         >
           {translate("productAction.see")}
         </Link>

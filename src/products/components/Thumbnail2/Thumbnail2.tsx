@@ -11,7 +11,7 @@ export const Thumbnail2 = () => {
       <Link
         variant="secondary"
         to="/speakers/zx7-speaker"
-        dataTestId="thumbnail2"
+        dataTestId="zx7-speaker-go-to"
       >
         {translate("productAction.see")}
       </Link>

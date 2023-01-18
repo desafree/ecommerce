@@ -18,6 +18,7 @@ interface Props {
   align?: "center" | "inherit" | "justify" | "left" | "right";
   children: string;
   style?: React.CSSProperties;
+  dataTestId?: string;
 }
 
 export const Typography: FC<Props> = ({
@@ -25,9 +26,15 @@ export const Typography: FC<Props> = ({
   align = "inherit",
   children,
   style,
+  dataTestId,
 }) => {
   return (
-    <TypographyMUI variant={variant} sx={style} align={align}>
+    <TypographyMUI
+      variant={variant}
+      sx={style}
+      align={align}
+      data-test-id={dataTestId}
+    >
       {children}
     </TypographyMUI>
   );
