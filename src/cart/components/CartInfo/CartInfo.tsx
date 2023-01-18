@@ -17,7 +17,11 @@ export const CartInfo: FC<Props> = ({ itemsNumber }) => {
       style={{ marginBottom: "32px" }}
     >
       <Typography variant="h6">{`cart (${itemsNumber})`}</Typography>
-      <Button variant="text" onClick={removeAllFromCart}>
+      <Button
+        variant="text"
+        onClick={removeAllFromCart}
+        dataTestId="remove-all-from-cart"
+      >
         {translate("productAction.removeAll")}
       </Button>
     </Stack>

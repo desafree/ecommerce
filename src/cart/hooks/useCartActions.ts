@@ -8,6 +8,14 @@ export const useCartActions = () => {
     dispatch(cartActions.itemUpdate({ id, qty }));
   };
 
+  const addOneQtyToItem = (id: number, qty: number) => {
+    dispatch(cartActions.itemAddOne({ id, qty }));
+  };
+
+  const removeOneQtyToItem = (id: number, qty: number) => {
+    dispatch(cartActions.itemRemoveOne({ id, qty }));
+  };
+
   const removeItemFromCart = (id: number) => {
     dispatch(cartActions.itemRemove(id));
   };
@@ -16,5 +24,11 @@ export const useCartActions = () => {
     dispatch(cartActions.itemsRemoveAll());
   };
 
-  return { updateItemFromCart, removeAllFromCart, removeItemFromCart };
+  return {
+    updateItemFromCart,
+    removeAllFromCart,
+    removeItemFromCart,
+    removeOneQtyToItem,
+    addOneQtyToItem,
+  };
 };

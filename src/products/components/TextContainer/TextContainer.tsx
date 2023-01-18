@@ -17,9 +17,13 @@ export const TextContainer: FC<Props> = ({ product }) => {
           {translate("productAction.new")}
         </Typography>
       )}
-      <Typography variant="h2">{product.name}</Typography>
+      <Typography variant="h2" dataTestId="product-detail-name">
+        {product.name}
+      </Typography>
       <Typography variant="body1">{product.description}</Typography>
-      <Typography variant="h5">{"$ " + String(product.price)}</Typography>
+      <Typography variant="h5" dataTestId="product-detail-price">
+        {"$ " + String(product.price)}
+      </Typography>
       <CartActions id={product.id}></CartActions>
     </Stack>
   );

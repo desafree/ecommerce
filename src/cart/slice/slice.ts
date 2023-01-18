@@ -26,6 +26,19 @@ const slice = createSlice({
         itemsAdapter.addOne(state, action.payload);
       }
     },
+    itemAddOne: (state, action: PayloadAction<{ id: number; qty: number }>) => {
+      state.entities[action.payload.id]!.qty += 1;
+    },
+    itemRemoveOne: (
+      state,
+      action: PayloadAction<{ id: number; qty: number }>
+    ) => {
+      if (action.payload.qty === 1) {
+        itemsAdapter.removeOne(state, action.payload.id);
+      } else {
+        state.entities[action.payload.id]!.qty -= 1;
+      }
+    },
     itemRemove: itemsAdapter.removeOne,
     itemsRemoveAll: itemsAdapter.removeAll,
   },
