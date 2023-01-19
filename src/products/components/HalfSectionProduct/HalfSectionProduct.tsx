@@ -44,11 +44,13 @@ export const HalfSectionProduct: FC<Props> = ({ product, direction }) => {
           {productData.description}
         </Typography>
         <Link
-            variant="primary"
-            to={`/${productData.category}/${productData.slug}`}
+          variant="primary"
+          to={`/${productData.category}/${productData.slug}`}
+          dataTestId={`${productData.slug}-go-to`}
         >
           {translate("productAction.see")}
-        </Link>      </Grid>
+        </Link>{" "}
+      </Grid>
     </Grid>
   );
 };

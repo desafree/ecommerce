@@ -27,7 +27,11 @@ export const Thumbnail1 = () => {
         >
           {translate("product-previews.zx9.description")}
         </Typography>
-        <Link variant="secondary" to="/speakers/zx9-speaker">
+        <Link
+          variant="secondary"
+          to="/speakers/zx9-speaker"
+          dataTestId="zx9-speaker-go-to"
+        >
           {translate("productAction.see")}
         </Link>
       </Stack>

@@ -26,7 +26,9 @@ export const ButtonItem: FC<Props> = ({ qty, id }) => {
       >
         <Typography variant="body1">-</Typography>
       </Button>
-      <Typography variant="body1">{String(qty)}</Typography>
+      <Typography variant="body1" dataTestId="cart-item-qty">
+        {String(qty)}
+      </Typography>
       <Button
         variant="text"
         onClick={() => {
