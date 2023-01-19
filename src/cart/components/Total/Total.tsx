@@ -13,7 +13,9 @@ export const Total: FC<Props> = ({ total }) => {
   return (
     <TotalStyled>
       <Typography variant="h6">{translate("cart.total")}</Typography>
-      <Typography variant="h6">{"$ " + String(total)}</Typography>
+      <Typography variant="h6" dataTestId="cart-items-total">
+        {"$ " + String(total)}
+      </Typography>
     </TotalStyled>
   );
 };

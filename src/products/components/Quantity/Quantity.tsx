@@ -15,11 +15,13 @@ export const Quantity: FC<Props> = ({
 }) => {
   return (
     <QuantityStyled>
-      <Button onClick={handleCLickMinus}>
+      <Button onClick={handleCLickMinus} dataTestId="remove-qty">
         <Typography variant="smallBold">-</Typography>
       </Button>
-      <Typography variant="smallBold">{String(qty)}</Typography>
-      <Button onClick={handleClickPlus}>
+      <Typography variant="smallBold" dataTestId="quantity-to-add">
+        {String(qty)}
+      </Typography>
+      <Button onClick={handleClickPlus} dataTestId="add-qty">
         <Typography variant="smallBold">+</Typography>
       </Button>
     </QuantityStyled>

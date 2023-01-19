@@ -10,27 +10,27 @@ interface Props {
 }
 
 export const ButtonItem: FC<Props> = ({ qty, id }) => {
-  const { updateItemFromCart, removeItemFromCart } = useCartActions();
+  const { removeOneQtyToItem, addOneQtyToItem } = useCartActions();
 
   return (
     <ButtonItemStyled>
       <Button
         variant="text"
+        dataTestId="decrease-item-from-cart"
         onClick={() => {
-          if (qty === 1) {
-            removeItemFromCart(id);
-          } else {
-            updateItemFromCart(id, --qty);
-          }
+          removeOneQtyToItem(id, qty);
         }}
       >
         <Typography variant="body1">-</Typography>
       </Button>
-      <Typography variant="body1">{String(qty)}</Typography>
+      <Typography variant="body1" dataTestId="cart-item-qty">
+        {String(qty)}
+      </Typography>
       <Button
         variant="text"
+        dataTestId="increase-item-from-cart"
         onClick={() => {
-          updateItemFromCart(id, ++qty);
+          addOneQtyToItem(id, ++qty);
         }}
       >
         <Typography variant="body1">+</Typography>

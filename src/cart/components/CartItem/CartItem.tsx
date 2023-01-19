@@ -14,10 +14,12 @@ export const CartItem: FC<Props> = ({ data }) => {
     <CartItemStyled>
       <img src={data.image} alt={data.name} />
       <Box>
-        <Typography variant="body1">
+        <Typography variant="body1" dataTestId="cart-item-name">
           {removeLastWord(data.name, " ")}
         </Typography>
-        <Typography variant="body1">{data.price + "$"}</Typography>
+        <Typography variant="body1" dataTestId="cart-item-price">
+          {"$ " + data.price}
+        </Typography>
       </Box>
       <ButtonItem qty={data.qty} id={data.id} />
     </CartItemStyled>

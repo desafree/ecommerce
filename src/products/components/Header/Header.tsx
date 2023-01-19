@@ -33,7 +33,11 @@ export const Header = () => {
         >
           {translate("header.description")}
         </Typography>
-        <Link variant="primary" to="/speakers/xx99-mark-two-headphones">
+        <Link
+          variant="primary"
+          to="/speakers/xx99-mark-two-headphones"
+          dataTestId="xx99-mark-two-headphones-go-to"
+        >
           {translate("header.button")}
         </Link>
       </Container>
