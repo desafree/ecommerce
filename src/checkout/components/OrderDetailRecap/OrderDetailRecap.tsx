@@ -22,7 +22,7 @@ export const OrderDetailRecap: FC<Props> = ({ items }) => {
         })
       )}
       {items.length > 1 && (
-        <Button variant="text" onClick={toggle}>
+        <Button variant="text" onClick={toggle} dataTestId="view-more-items">
           {viewMore
             ? translate("checkout.detail.view-less")
             : translate("checkout.detail.view-more")}

@@ -24,6 +24,7 @@ export const OrderRecapContainer = () => {
       <Typography
         variant="h3"
         style={{ marginBottom: "24px", marginTop: "33px" }}
+        dataTestId="thank-you-notification"
       >
         {translate("checkout.detail.thanks")}
       </Typography>
@@ -31,7 +32,11 @@ export const OrderRecapContainer = () => {
         {translate("checkout.detail.notification")}
       </Typography>
       <ItemsRecap />
-      <Button variant="primary" onClick={handleCLick}>
+      <Button
+        variant="primary"
+        onClick={handleCLick}
+        dataTestId="checkout-back-to-home"
+      >
         {translate("checkout.detail.back")}
       </Button>
     </OrderRecapContainerStyled>

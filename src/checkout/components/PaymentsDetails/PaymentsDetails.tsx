@@ -14,6 +14,7 @@ export const PaymentsDetails = () => {
         <Radio
           label={translate("checkout.payment.payment-method.title")}
           name="payment-method"
+          dataTestId="payment-method-radio"
           items={[
             {
               value: "e-money",
@@ -32,12 +33,14 @@ export const PaymentsDetails = () => {
         <Input
           label={translate("checkout.payment.e-money-number")}
           name="e-money-number"
+          dataTestId="e-money-number-input"
         />
       </Grid>
       <Grid item xs={12} lg={6}>
         <Input
           label={translate("checkout.payment.e-money-pin")}
           name="e-money-pin"
+          dataTestId="e-money-pin-input"
         />
       </Grid>
     </Grid>

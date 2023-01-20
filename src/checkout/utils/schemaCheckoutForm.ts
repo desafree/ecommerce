@@ -9,8 +9,8 @@ export const schemaCheckoutForm: yup.SchemaOf<CheckOutData> = yup
     email: yup.string().email("errors.email").required("errors.required"),
     phone: yup
       .string()
-      .matches(phoneRegex, "errors.phone")
-      .required("errors.required"),
+      .required("errors.required")
+      .matches(phoneRegex, "errors.phone"),
     address: yup.string().required("errors.required"),
     zip: yup
       .string()

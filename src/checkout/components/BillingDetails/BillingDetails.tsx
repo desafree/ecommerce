@@ -16,13 +16,25 @@ export const BillingDetails = () => {
         </Typography>
       </Grid>
       <Grid item xs={12} lg={6}>
-        <Input label={translate("checkout.billing.name")} name="name" />
+        <Input
+          label={translate("checkout.billing.name")}
+          name="name"
+          dataTestId="name-input"
+        />
       </Grid>
       <Grid item xs={12} lg={6}>
-        <Input label={translate("checkout.billing.email")} name="email" />
+        <Input
+          label={translate("checkout.billing.email")}
+          name="email"
+          dataTestId="email-input"
+        />
       </Grid>
       <Grid item xs={12} lg={6}>
-        <Input label={translate("checkout.billing.phone")} name="phone" />
+        <Input
+          label={translate("checkout.billing.phone")}
+          name="phone"
+          dataTestId="phone-input"
+        />
       </Grid>
     </Grid>
   );

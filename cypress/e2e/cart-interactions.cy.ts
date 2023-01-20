@@ -1,5 +1,11 @@
 describe("cart should perform cart-actions correctly from both cart component and product detail page", () => {
   beforeEach(() => {
+    cy.intercept("GET", "http://localhost:3001/items", {
+      fixture: "data.json",
+    });
+  });
+
+  beforeEach(() => {
     cy.visit("/speakers/xx99-mark-two-headphones");
   });
 

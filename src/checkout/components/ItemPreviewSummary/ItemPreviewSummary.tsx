@@ -15,12 +15,16 @@ export const ItemPreviewSummary: FC<Props> = ({ data }) => {
         alignItems="flex-start"
         style={{ marginRight: "auto !important" }}
       >
-        <Typography variant="smallBold">
+        <Typography variant="smallBold" dataTestId="item-name-summary-form">
           {removeLastWord(data.name, " ")}
         </Typography>
-        <Typography variant="smallBold">{"$" + data.price}</Typography>
+        <Typography variant="smallBold" dataTestId="item-price-summary-form">
+          {"$" + data.price}
+        </Typography>
       </Stack>
-      <Typography variant="body1">{"x" + data.qty}</Typography>
+      <Typography variant="body1" dataTestId="item-qty-summary-form">
+        {"x" + data.qty}
+      </Typography>
     </Stack>
   );
 };

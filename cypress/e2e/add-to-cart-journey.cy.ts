@@ -1,5 +1,11 @@
 describe("can add a product to the cart starting from the homepage", () => {
   beforeEach(() => {
+    cy.intercept("GET", "http://localhost:3001/items", {
+      fixture: "data.json",
+    });
+  });
+
+  beforeEach(() => {
     cy.visit("/");
   });
 

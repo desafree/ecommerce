@@ -7,9 +7,10 @@ import { useTranslate } from "../../../i18n";
 interface Props {
   name: string;
   label: string;
+  dataTestId?: string;
 }
 
-const Input: FC<Props> = ({ name, label }) => {
+const Input: FC<Props> = ({ name, label, dataTestId }) => {
   const translate = useTranslate();
 
   return (
@@ -26,6 +27,7 @@ const Input: FC<Props> = ({ name, label }) => {
             value={value}
             label={label}
             error={invalid}
+            dataTestId={dataTestId}
             errorMessage={
               invalid && error && error.message ? translate(error.message) : ""
             }

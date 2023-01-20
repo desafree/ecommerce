@@ -9,6 +9,7 @@ interface Props {
   label: string;
   errorMessage: string;
   error: boolean;
+  dataTestId?: string;
 }
 
 export const TextField: FC<Props> = ({
@@ -18,6 +19,7 @@ export const TextField: FC<Props> = ({
   label,
   errorMessage,
   error,
+  dataTestId,
 }) => {
   return (
     <TextFieldMUI
@@ -27,6 +29,7 @@ export const TextField: FC<Props> = ({
       label={label}
       error={error}
       helperText={errorMessage}
+      data-test-id={dataTestId}
     ></TextFieldMUI>
   );
 };

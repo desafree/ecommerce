@@ -8,9 +8,10 @@ interface Props {
   name: string;
   items: CheckoutItemRadio[];
   label: string;
+  dataTestId?: string;
 }
 
-const Input: FC<Props> = ({ name, items, label }) => {
+const Input: FC<Props> = ({ name, items, label, dataTestId }) => {
   return (
     <>
       <Typography variant="smallBold">{name}</Typography>
@@ -21,7 +22,11 @@ const Input: FC<Props> = ({ name, items, label }) => {
           fieldState: { invalid, error },
         }) => (
           <>
-            <RadioGroup value={value} onChange={onChange}>
+            <RadioGroup
+              value={value}
+              onChange={onChange}
+              dataTestId={dataTestId}
+            >
               {items.map((item) => {
                 return (
                   <RadioButton

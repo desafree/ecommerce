@@ -26,7 +26,9 @@ export const Summary = () => {
         vat={vat}
         grandTotal={grandTotal}
       />
-      <Button type="submit">{translate("checkout.summary.continue")}</Button>
+      <Button type="submit" dataTestId="submit-form">
+        {translate("checkout.summary.continue")}
+      </Button>
     </Stack>
   );
 };
