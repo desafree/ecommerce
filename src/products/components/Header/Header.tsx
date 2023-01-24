@@ -1,6 +1,7 @@
 import React from "react";
 import { HeaderStyled } from "./Header.styled";
 import { useTranslate, Container, Typography, Link } from "../../../_shared";
+import GoUp from "../../../_shared/animation/goUp";
 
 export const Header = () => {
   const translate = useTranslate();
@@ -33,9 +34,11 @@ export const Header = () => {
         >
           {translate("header.description")}
         </Typography>
-        <Link variant="primary" to="/speakers/xx99-mark-two-headphones">
-          {translate("header.button")}
-        </Link>
+        <GoUp>
+          <Link variant="primary" to="/speakers/xx99-mark-two-headphones">
+            {translate("header.button")}
+          </Link>
+        </GoUp>
       </Container>
     </HeaderStyled>
   );
