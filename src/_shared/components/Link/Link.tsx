@@ -1,7 +1,9 @@
 import { Link as LinkMUI } from "@mui/material";
-import React, { FC, forwardRef, ReactNode } from "react";
+import React, { forwardRef, ReactNode, FC } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { TypographyProps } from "@mui/material/Typography";
+import { motion } from "framer-motion";
+import { animationMap } from "../../animation/animationMap";
 
 interface Props {
   children: ReactNode;
@@ -36,25 +38,33 @@ export const Link = forwardRef<HTMLAnchorElement, Props>(
   }
 );
 
-/*export const Link: FC<Props> = ({
+type Animations = keyof typeof animationMap;
+
+interface PropsEnhanced extends Props {
+  animationRef: Animations;
+}
+
+const LinkAnimatable = motion(Link, { forwardMotionProps: true });
+
+export const EnhancedLink: FC<PropsEnhanced> = ({
   children,
   to,
   variant = "smallBold",
+  animationRef,
   style,
 }) => {
   return (
-    <LinkMUI component={RouterLink} to={to} variant={variant} sx={style}>
+    <LinkAnimatable
+      style={style}
+      to={to}
+      variant={variant}
+      variants={animationMap[animationRef]}
+      initial="hidden"
+      animate="visible"
+      whileInView="onView"
+      exit="hidden"
+    >
       {children}
-      {variant === "transparent" ? (
-        <span>
-          <img
-            src="/assets/shared/desktop/icon-arrow-right.svg"
-            alt="arrow right"
-          />
-        </span>
-      ) : (
-        ""
-      )}
-    </LinkMUI>
+    </LinkAnimatable>
   );
-};*/
+};

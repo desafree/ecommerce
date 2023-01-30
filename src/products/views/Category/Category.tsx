@@ -8,6 +8,7 @@ import {
   Categories,
 } from "../../components";
 import { useSelectProductByCategory } from "../../hooks";
+import { Animated } from "../../../_shared/animation/Animated";
 
 type CategoryParams = {
   category: CategoryType;
@@ -20,7 +21,12 @@ export const Category = () => {
 
   return (
     <>
-      <CategoryHeader category={category!} />
+      <Animated
+        animationRef="fadeIn"
+        component={CategoryHeader}
+        category={category!}
+      ></Animated>
+
       <Container maxWidth="lg">
         {products.map((product, index) => {
           return (
@@ -32,6 +38,7 @@ export const Category = () => {
           );
         })}
         <Categories></Categories>
+
         <HalfSectionImage
           title={translate("info.title")}
           text={translate("info.description")}

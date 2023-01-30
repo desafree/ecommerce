@@ -7,19 +7,22 @@ import { PersistGate } from "redux-persist/integration/react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./_shared/styles/theme/themeMUI";
 import { GlobalStyle } from "./_shared/styles";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <PersistGate persistor={persistor} loading={null}>
-          <App />
-        </PersistGate>
-      </ThemeProvider>
-    </Provider>
-  </React.StrictMode>
+  <BrowserRouter>
+    <React.StrictMode>
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <PersistGate persistor={persistor} loading={null}>
+            <App />
+          </PersistGate>
+        </ThemeProvider>
+      </Provider>
+    </React.StrictMode>
+  </BrowserRouter>
 );

@@ -12,22 +12,34 @@ export const FooterNavigation = () => {
       </Link>
       <ul>
         <li>
-          <Link to="/" variant="h6" style={{ color: "white" }}>
+          <Link to="/" variant="h6" style={{ color: "white !important" }}>
             {translate("navigation.home")}
           </Link>
         </li>
         <li>
-          <Link to="/headphones" variant="h6" style={{ color: "white" }}>
+          <Link
+            to="/headphones"
+            variant="h6"
+            style={{ color: "white !important" }}
+          >
             {translate("navigation.headphones")}
           </Link>
         </li>
         <li>
-          <Link to="/speakers" variant="h6" style={{ color: "white" }}>
+          <Link
+            to="/speakers"
+            variant="h6"
+            style={{ color: "white !important" }}
+          >
             {translate("navigation.speakers")}
           </Link>
         </li>
         <li>
-          <Link to="/earphones" variant="h6" style={{ color: "white" }}>
+          <Link
+            to="/earphones"
+            variant="h6"
+            style={{ color: "white !important" }}
+          >
             {translate("navigation.earphones")}
           </Link>
         </li>

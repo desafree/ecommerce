@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { ProductImagesStyled } from "./ProductImages.styled";
+import { Animated } from "../../../_shared/animation/Animated";
 
 interface Props {
   imageList: [string, string, string];
@@ -7,10 +8,14 @@ interface Props {
 
 export const ProductImages: FC<Props> = ({ imageList }) => {
   return (
-    <ProductImagesStyled imageList={imageList}>
-      <div className="container1"></div>
-      <div className="container2"></div>
-      <div className="container3"></div>
-    </ProductImagesStyled>
+    <Animated
+      animationRef="fadeOnView"
+      component={ProductImagesStyled}
+      imageList={imageList}
+    >
+      <div className="container1" />
+      <div className="container2" />
+      <div className="container3" />
+    </Animated>
   );
 };

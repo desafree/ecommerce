@@ -20,7 +20,7 @@ export const OrderTotalRecap: FC<Props> = ({ total }) => {
       >
         {translate("checkout.detail.total")}
       </Typography>
-      <Typography variant="h6" style={{ color: "white" }}>
+      <Typography variant="h6" style={{ color: "white !important" }}>
         {"$" + total}
       </Typography>
     </Stack>

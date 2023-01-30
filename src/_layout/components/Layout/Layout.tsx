@@ -13,6 +13,7 @@ export const Layout: FC<Props> = ({ children }) => {
   return (
     <>
       <Navbar />
+
       {children}
       <Footer />
     </>

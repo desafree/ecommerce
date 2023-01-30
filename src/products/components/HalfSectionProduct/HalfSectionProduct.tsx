@@ -1,6 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, forwardRef } from "react";
 import { Grid, Typography, Link, useTranslate } from "../../../_shared";
 import { useSelectProductBySlug } from "../../hooks";
+import { Animated } from "../../../_shared/animation/Animated";
 
 interface Props {
   product: string;
@@ -9,11 +10,12 @@ interface Props {
 
 export const HalfSectionProduct: FC<Props> = ({ product, direction }) => {
   const productData = useSelectProductBySlug(product)!;
-
   const translate = useTranslate();
 
   return (
-    <Grid
+    <Animated
+      animationRef="comeFromRightOnView"
+      component={Grid}
       container
       alignItems="center"
       justifyContent="center"
@@ -44,11 +46,12 @@ export const HalfSectionProduct: FC<Props> = ({ product, direction }) => {
           {productData.description}
         </Typography>
         <Link
-            variant="primary"
-            to={`/${productData.category}/${productData.slug}`}
+          variant="primary"
+          to={`/${productData.category}/${productData.slug}`}
         >
           {translate("productAction.see")}
-        </Link>      </Grid>
-    </Grid>
+        </Link>{" "}
+      </Grid>
+    </Animated>
   );
 };

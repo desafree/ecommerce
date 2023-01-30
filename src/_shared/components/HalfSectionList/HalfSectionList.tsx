@@ -4,6 +4,7 @@ import { List } from "@mui/material";
 import { ListItem } from "@mui/material";
 import { HalfSectionListStyled } from "./HalfSectionList.styled";
 import { Stack } from "../Stack";
+import { Animated } from "../../animation/Animated";
 
 interface Props {
   descriptionTitle: string;
@@ -19,7 +20,7 @@ export const HalfSectionList: FC<Props> = ({
   list,
 }) => {
   return (
-    <HalfSectionListStyled>
+    <Animated component={HalfSectionListStyled} animationRef="fadeOnView">
       <Stack direction="column" spacing={3}>
         <Typography variant="h3">{descriptionTitle}</Typography>
         <Typography variant="body1">{description}</Typography>
@@ -41,6 +42,6 @@ export const HalfSectionList: FC<Props> = ({
           })}
         </List>
       </Stack>
-    </HalfSectionListStyled>
+    </Animated>
   );
 };

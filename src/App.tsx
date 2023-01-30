@@ -1,18 +1,20 @@
 import React from "react";
 import { initialization as initializeLanguages } from "./_shared";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Home, CategoryPage, Detail, useInitFetchProducts } from "./products";
 import { Checkout } from "./checkout";
 import { Layout } from "./_layout";
+import { AnimatePresence } from "framer-motion";
 
 initializeLanguages();
 
 function App() {
   const status = useInitFetchProducts();
+  const location = useLocation();
 
   return (
-    <BrowserRouter>
-      <Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.key}>
         <Route
           path="/"
           element={
@@ -54,7 +56,7 @@ function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </AnimatePresence>
   );
 }
 

@@ -4,6 +4,7 @@ import { TextContainer } from "../TextContainer";
 import { Grid, useTranslate, ImageContainer } from "../../../_shared";
 import { Product } from "../../types";
 import { Link } from "../../../_shared";
+import { Animated } from "../../../_shared/animation/Animated";
 
 interface Props {
   productData: Product;
@@ -13,7 +14,7 @@ export const ProductDetail: FC<Props> = ({ productData }) => {
   const translate = useTranslate();
 
   return (
-    <ProductDetailStyled>
+    <Animated animationRef="fadeIn" component={ProductDetailStyled}>
       <Link variant="goBack" to="/">
         {translate("productAction.back")}
       </Link>
@@ -30,6 +31,6 @@ export const ProductDetail: FC<Props> = ({ productData }) => {
           <TextContainer product={productData}></TextContainer>
         </Grid>
       </Grid>
-    </ProductDetailStyled>
+    </Animated>
   );
 };

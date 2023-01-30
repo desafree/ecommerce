@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, forwardRef } from "react";
 import { Typography as TypographyMUI } from "@mui/material";
 
 interface Props {
@@ -20,15 +20,12 @@ interface Props {
   style?: React.CSSProperties;
 }
 
-export const Typography: FC<Props> = ({
-  variant = "h1",
-  align = "inherit",
-  children,
-  style,
-}) => {
-  return (
-    <TypographyMUI variant={variant} sx={style} align={align}>
-      {children}
-    </TypographyMUI>
-  );
-};
+export const Typography = forwardRef<HTMLElement, Props>(
+  ({ variant = "h1", align = "inherit", children, style }, ref) => {
+    return (
+      <TypographyMUI variant={variant} sx={style} align={align} ref={ref}>
+        {children}
+      </TypographyMUI>
+    );
+  }
+);

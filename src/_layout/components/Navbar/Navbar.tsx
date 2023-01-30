@@ -10,6 +10,7 @@ import {
 } from "../../../_shared";
 import { useToggle, CartPopup } from "../../../cart";
 import { NavBarLinksMobile } from "../NavBarLinksMobile";
+import { Animated } from "../../../_shared/animation/Animated";
 
 export const Navbar = () => {
   const { on: showCart, toggle: toggleCart } = useToggle();
@@ -19,9 +20,10 @@ export const Navbar = () => {
   return (
     <NavbarStyled>
       <Container maxWidth="lg" className="desktop">
-        <Link to="/">
+        <Animated animationRef="fadeIn" component={Link} to="/">
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
-        </Link>
+        </Animated>
+
         <NavbarLinks />
         <Button variant="text" onClick={toggleCart}>
           <img src="/assets/shared/desktop/icon-cart.svg" alt="" />
@@ -39,6 +41,7 @@ export const Navbar = () => {
         <Link to="/">
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
         </Link>
+
         <Button variant="text" onClick={toggleCart}>
           <img
             src="/assets/shared/desktop/icon-cart.svg"

@@ -10,9 +10,5 @@ export const OrderRecapContainerStyled = styled("div")(({ theme }) => ({
     maxWidth: "300px",
     maxHeight: "90vh",
     overflowY: "scroll",
-
-    img: {
-      width: "50px",
-    },
   },
 }));

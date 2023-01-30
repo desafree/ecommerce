@@ -7,7 +7,7 @@ export const CartPopupStyled = styled("div")(({ theme }) => ({
   left: 0,
   right: 0,
   background: "rgba(0, 0, 0, 0.3)",
-  zIndex: 10,
+  zIndex: 99999,
 
   [theme.breakpoints.down("md")]: {
     display: "flex",

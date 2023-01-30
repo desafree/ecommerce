@@ -4,6 +4,8 @@ import { Typography, Button, useTranslate } from "../../../_shared";
 import { ItemsRecap } from "../ItemsRecap";
 import { useCartActions } from "../../../cart";
 import { useGoTo } from "../../../_shared";
+import { Check } from "../OrderRecap/Check";
+import { Animated } from "../../../_shared/animation/Animated";
 
 export const OrderRecapContainer = () => {
   const translate = useTranslate();
@@ -16,11 +18,8 @@ export const OrderRecapContainer = () => {
   };
 
   return (
-    <OrderRecapContainerStyled>
-      <img
-        src="/assets/checkout/icon-order-confirmation.svg"
-        alt="cart check"
-      />
+    <Animated animationRef="fadeIn" component={OrderRecapContainerStyled}>
+      <Check />
       <Typography
         variant="h3"
         style={{ marginBottom: "24px", marginTop: "33px" }}
@@ -34,6 +33,6 @@ export const OrderRecapContainer = () => {
       <Button variant="primary" onClick={handleCLick}>
         {translate("checkout.detail.back")}
       </Button>
-    </OrderRecapContainerStyled>
+    </Animated>
   );
 };
