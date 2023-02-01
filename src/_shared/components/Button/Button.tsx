@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, forwardRef, ReactNode } from "react";
 import { Button as ButtonMUI } from "@mui/material";
 import { ButtonTypes } from "../../types";
 
@@ -11,35 +11,32 @@ interface Props {
   type?: "submit" | "button" | "reset";
 }
 
-const Button: FC<Props> = ({
-  children,
-  disabled = false,
-  variant = "primary",
-  href,
-  onClick,
-  type,
-}) => {
-  return (
-    <ButtonMUI
-      disabled={disabled}
-      variant={variant}
-      href={href}
-      onClick={onClick}
-      type={type}
-    >
-      {children}
-      {variant === "transparent" ? (
-        <span>
-          <img
-            src="/assets/shared/desktop/icon-arrow-right.svg"
-            alt="arrow right"
-          />
-        </span>
-      ) : (
-        ""
-      )}
-    </ButtonMUI>
-  );
-};
-
-export default Button;
+export const Button = forwardRef<HTMLButtonElement, Props>(
+  (
+    { children, disabled = false, variant = "primary", href, onClick, type },
+    ref
+  ) => {
+    return (
+      <ButtonMUI
+        disabled={disabled}
+        variant={variant}
+        href={href}
+        onClick={onClick}
+        type={type}
+        ref={ref}
+      >
+        {children}
+        {variant === "transparent" ? (
+          <span>
+            <img
+              src="/assets/shared/desktop/icon-arrow-right.svg"
+              alt="arrow right"
+            />
+          </span>
+        ) : (
+          ""
+        )}
+      </ButtonMUI>
+    );
+  }
+);

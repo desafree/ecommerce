@@ -2,6 +2,8 @@ import React, { FC } from "react";
 import { Grid } from "../Grid";
 import { Typography } from "../Typography";
 import { Section } from "../../../_layout";
+import { ImageContainerStyled } from "./ImageContainer.styled";
+import { Animated } from "../../animation/Animated";
 
 interface Props {
   title: string;
@@ -20,11 +22,9 @@ export const HalfSectionImage: FC<Props> = ({ title, text, imgUrl }) => {
           <Typography variant="body1">{text}</Typography>
         </Grid>
         <Grid item xs={12} md={6} style={{ textAlign: "center" }}>
-          <img
-            src={imgUrl}
-            alt=""
-            style={{ width: "100%", maxWidth: "500px", margin: "0 auto" }}
-          />
+          <Animated animationRef="imageReveal" Component={ImageContainerStyled}>
+            <img src={imgUrl} alt="" />
+          </Animated>
         </Grid>
       </Grid>
     </Section>

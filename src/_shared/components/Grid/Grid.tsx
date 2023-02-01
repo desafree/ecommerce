@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { forwardRef, ReactNode } from "react";
 import { Grid as GridMUI } from "@mui/material";
 
 export type GridDirection = "row" | "row-reverse" | "column" | "column-reverse";
@@ -38,56 +38,63 @@ interface Props {
     | "inherit";
 }
 
-export const Grid: FC<Props> = ({
-  children,
-  columnSpacing,
-  container = false,
-  item = false,
-  rowSpacing,
-  xs = 12,
-  sm = xs,
-  md = sm,
-  lg = md,
-  xl = lg,
-  spacing,
-  wrap = "wrap",
-  direction = "row",
-  justifyContent = "flex-start",
-  alignItems = "stretch",
-  className,
-  style,
-}) => {
-  if (container) {
+export const Grid = forwardRef<HTMLDivElement, Props>(
+  (
+    {
+      children,
+      columnSpacing,
+      container = false,
+      item = false,
+      rowSpacing,
+      xs = 12,
+      sm = xs,
+      md = sm,
+      lg = md,
+      xl = lg,
+      spacing,
+      wrap = "wrap",
+      direction = "row",
+      justifyContent = "flex-start",
+      alignItems = "stretch",
+      className,
+      style,
+    },
+    ref
+  ) => {
+    if (container) {
+      return (
+        <GridMUI
+          columnSpacing={columnSpacing}
+          container={container}
+          rowSpacing={rowSpacing}
+          spacing={spacing}
+          wrap={wrap}
+          direction={direction}
+          alignItems={alignItems}
+          justifyContent={justifyContent}
+          className={className}
+          sx={style}
+          ref={ref}
+        >
+          {children}
+        </GridMUI>
+      );
+    }
+
     return (
       <GridMUI
-        columnSpacing={columnSpacing}
-        container={container}
-        rowSpacing={rowSpacing}
-        spacing={spacing}
-        wrap={wrap}
-        direction={direction}
-        alignItems={alignItems}
-        justifyContent={justifyContent}
+        item={item}
+        xs={xs}
+        sm={sm}
+        md={md}
+        lg={lg}
+        xl={xl}
         className={className}
         sx={style}
+        ref={ref}
       >
         {children}
       </GridMUI>
     );
   }
-
-  return (
-    <GridMUI
-      item={item}
-      xs={xs}
-      sm={sm}
-      md={md}
-      lg={lg}
-      xl={xl}
-      className={className}
-      sx={style}
-    >
-      {children}
-    </GridMUI>
-  );
-};
+);

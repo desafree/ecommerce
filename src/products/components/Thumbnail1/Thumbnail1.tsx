@@ -1,12 +1,13 @@
 import React from "react";
 import { Thumbnail1Styled } from "./Thumbnail1.styled";
 import { Typography, Link, Stack, useTranslate } from "../../../_shared";
+import { Animated } from "../../../_shared/animation/Animated";
 
 export const Thumbnail1 = () => {
   const translate = useTranslate();
 
   return (
-    <Thumbnail1Styled>
+    <Animated Component={Thumbnail1Styled} animationRef="comeFromBottomOnView">
       <img
         src="/assets/home/desktop/image-speaker-zx9.png"
         alt=""
@@ -31,6 +32,6 @@ export const Thumbnail1 = () => {
           {translate("productAction.see")}
         </Link>
       </Stack>
-    </Thumbnail1Styled>
+    </Animated>
   );
 };

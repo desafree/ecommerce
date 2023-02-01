@@ -3,6 +3,7 @@ import React from "react";
 
 export const FooterAboutStyled = styled("div")(({ theme }) => ({
   display: "flex",
+  gap: "30px",
   justifyContent: "space-between",
   marginTop: "36px",
 

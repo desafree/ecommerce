@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, forwardRef, ReactNode } from "react";
 import { Stack as StackMUI } from "@mui/material";
 
 interface Props {
@@ -27,25 +27,31 @@ interface Props {
   component?: React.ElementType;
 }
 
-export const Stack: FC<Props> = ({
-  children,
-  direction = "row",
-  spacing,
-  style,
-  justifyContent = "flex-start",
-  alignItems = "stretch",
-  component = "div",
-}) => {
-  return (
-    <StackMUI
-      spacing={spacing}
-      direction={direction}
-      sx={style}
-      justifyContent={justifyContent}
-      alignItems={alignItems}
-      component={component}
-    >
-      {children}
-    </StackMUI>
-  );
-};
+export const Stack = forwardRef<HTMLDivElement, Props>(
+  (
+    {
+      children,
+      direction = "row",
+      spacing,
+      style,
+      justifyContent = "flex-start",
+      alignItems = "stretch",
+      component = "div",
+    },
+    ref
+  ) => {
+    return (
+      <StackMUI
+        spacing={spacing}
+        direction={direction}
+        sx={style}
+        justifyContent={justifyContent}
+        alignItems={alignItems}
+        component={component}
+        ref={ref}
+      >
+        {children}
+      </StackMUI>
+    );
+  }
+);

@@ -1,5 +1,5 @@
 import { Container as ContainerMUI } from "@mui/material";
-import { FC, ReactNode } from "react";
+import { FC, forwardRef, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
@@ -8,15 +8,17 @@ interface Props {
   className?: string;
 }
 
-export const Container: FC<Props> = ({
-  children,
-  maxWidth,
-  style,
-  className,
-}) => {
-  return (
-    <ContainerMUI maxWidth={maxWidth} sx={style} className={className}>
-      {children}
-    </ContainerMUI>
-  );
-};
+export const Container = forwardRef<HTMLDivElement, Props>(
+  ({ children, maxWidth, style, className }, ref) => {
+    return (
+      <ContainerMUI
+        maxWidth={maxWidth}
+        sx={style}
+        className={className}
+        ref={ref}
+      >
+        {children}
+      </ContainerMUI>
+    );
+  }
+);

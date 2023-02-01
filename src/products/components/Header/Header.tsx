@@ -1,13 +1,18 @@
 import React from "react";
 import { HeaderStyled } from "./Header.styled";
 import { useTranslate, Container, Typography, Link } from "../../../_shared";
+import { Animated } from "../../../_shared/animation/Animated";
 
 export const Header = () => {
   const translate = useTranslate();
 
   return (
     <HeaderStyled>
-      <Container maxWidth="lg">
+      <Animated
+        Component={Container}
+        maxWidth="lg"
+        animationRef="fadeInStaggered"
+      >
         <Typography
           variant="overline"
           style={{
@@ -36,7 +41,7 @@ export const Header = () => {
         <Link variant="primary" to="/speakers/xx99-mark-two-headphones">
           {translate("header.button")}
         </Link>
-      </Container>
+      </Animated>
     </HeaderStyled>
   );
 };

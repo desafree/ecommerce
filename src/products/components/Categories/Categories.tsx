@@ -1,10 +1,11 @@
 import React from "react";
 import { CategoriesStyled } from "./Categories.styled";
 import { CategoryPreview } from "../../../_shared";
+import { Animated } from "../../../_shared/animation/Animated";
 
 export const Categories = () => {
   return (
-    <CategoriesStyled>
+    <Animated Component={CategoriesStyled} animationRef="fadeInOnViewStaggered">
       <CategoryPreview
         category="headphones"
         url="/assets/shared/desktop/image-category-thumbnail-headphones.png"
@@ -17,6 +18,6 @@ export const Categories = () => {
         category="earphones"
         url="/assets/shared/desktop/image-category-thumbnail-earphones.png"
       />
-    </CategoriesStyled>
+    </Animated>
   );
 };

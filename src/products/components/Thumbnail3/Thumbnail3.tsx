@@ -7,12 +7,13 @@ import {
   ImageContainer,
   useTranslate,
 } from "../../../_shared";
+import { Animated } from "../../../_shared/animation/Animated";
 
 export const Thumbnail3 = () => {
   const translate = useTranslate();
 
   return (
-    <Thumbnail3Styled>
+    <Animated Component={Thumbnail3Styled} animationRef="comeFromLeftOnView">
       <ImageContainer
         size="cover"
         url="/assets/home/desktop/image-earphones-yx1.jpg"
@@ -34,6 +35,6 @@ export const Thumbnail3 = () => {
           {translate("productAction.see")}
         </Link>
       </Stack>
-    </Thumbnail3Styled>
+    </Animated>
   );
 };

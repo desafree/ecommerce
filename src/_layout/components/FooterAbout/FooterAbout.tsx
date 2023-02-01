@@ -4,12 +4,13 @@ import { useTranslate, Typography } from "../../../_shared";
 import { ReactComponent as Facebook } from "./icon-facebook.svg";
 import { ReactComponent as Twitter } from "./icon-twitter.svg";
 import { ReactComponent as Instagram } from "./icon-instagram.svg";
+import { Animated } from "../../../_shared/animation/Animated";
 
 export const FooterAbout = () => {
   const translate = useTranslate();
 
   return (
-    <FooterAboutStyled>
+    <Animated animationRef="fadeInOnView" Component={FooterAboutStyled}>
       <Typography variant="body1" style={{ color: "rgba(255,255,255,0.5)" }}>
         {translate("footer.text")}
       </Typography>
@@ -30,6 +31,6 @@ export const FooterAbout = () => {
           </a>
         </li>
       </ul>
-    </FooterAboutStyled>
+    </Animated>
   );
 };
