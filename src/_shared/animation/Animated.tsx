@@ -21,6 +21,7 @@ export function Animated<C extends JSXElementConstructor<any>>({
 
   return (
     <AnimatedComponent
+      variants={animationMap[animationRef]}
       initial={StaggeredItem ? undefined : "hidden"}
       animate={StaggeredItem ? undefined : "visible"}
       whileInView={StaggeredItem ? undefined : "onView"}
